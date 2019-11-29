@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, cosz">
-    <meta name="description" content="分类 | cosz">
+    <meta name="keywords" content="分类: NAO机器人, cosz">
+    <meta name="description" content="分类: NAO机器人 | cosz">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>分类 | cosz</title>
+    <title>分类: NAO机器人 | cosz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -301,7 +301,7 @@
                 
                 <a href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" title="NAO机器人: 3">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #F5EEF8;">NAO机器人
                         <span class="tag-length">3</span>
                     </span>
@@ -323,64 +323,160 @@
 </div>
 
     
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/guanyupeizhibhumantongyongpingtaihuanjingxinde/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="关于配置Bhuman通用平台环境心得">
+                            
+                            <span class="card-title">关于配置Bhuman通用平台环境心得</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+   因为实验室考核，从19.7.3开始接触Bhuman，在此之前的第一步是配置环境根据Coderelease2107上面的信息开始部署
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
+写在最前面整体的步骤
+安装Ubuntu系统（见我的另一篇博文：https://blog.csdn.
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="post-category">
+                                    NAO机器人
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+                            <span class="chip bg-color">NAO机器人</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/guanyubhumanwenjianjiegou/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="关于bhuman文件结构">
+                            
+                            <span class="card-title">关于bhuman文件结构</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                代码结构进入Src目录，主要是Representations和Modules两个目录。其中Representations是可调用的部分，通过调用其中的函数，可以编写角色的策略代码文件。Modules是实现Representations的部分
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="post-category">
+                                    NAO机器人
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"计算机相关","max":5},{"name":"NAO机器人","max":5},{"name":"科学上网","max":5}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [4,3,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+                            <span class="chip bg-color">NAO机器人</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/duiyubhumanzhongstrikerwenjianjiexi/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="对于bhuman中striker文件解析">
+                            
+                            <span class="card-title">对于bhuman中striker文件解析</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+参考人間クズ和Aaronworry的一定文章内容，感谢原作者
 
-    radarChart.setOption(option);
-</script>
-    
+一、部分代码中的名词解释看pdf的时候发现下面这一部分：个人总结就是：options中的代码和普通的C++不同，option里的语法是CABSL结构，这些语法都是通过宏来实现
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="post-category">
+                                    NAO机器人
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+                            <span class="chip bg-color">NAO机器人</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
