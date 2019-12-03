@@ -4,14 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于科学上网, cosz">
-    <meta name="description" content="更新（2019.11.24）tips：
+    <meta name="keywords" content="程序设计基础要点, cosz">
+    <meta name="description" content="程序设计基础考试内容概略流程图以及ns图例题：
 
-增加bbr加速，新的4、5节点速度上限将取决于你的网速。 更换新加坡节点为东京，降低ping值
-ssr系统由centos更换为debian
-开启客户端数量限制
-更换加密方式和混淆方式
-如果发现无法上">
+求5！的算法 注意判断后置
+打印50个学生中成绩高于80分的学号和成绩
+求1-1/2+1/3……
+判断素数
+
+伪代码注意：
+array数组
+mod相当于c语言%
+div相当于c语言/
+定义函">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +24,7 @@ ssr系统由centos更换为debian
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>关于科学上网 | cosz</title>
+    <title>程序设计基础要点 | cosz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -224,7 +229,7 @@ ssr系统由centos更换为debian
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '9dc96c5f823c420301d47715960de699d8499b3d2e4ca3721b204215203efb6f';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入密码（我的姓氏大写全拼）')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -237,13 +242,13 @@ ssr系统由centos更换为debian
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        关于科学上网
+                        程序设计基础要点
                     </div>
                 </div>
             </div>
@@ -353,25 +358,12 @@ ssr系统由centos更换为debian
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-                                <span class="chip bg-color">科学上网</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="post-category">
-                                科学上网
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -380,7 +372,7 @@ ssr系统由centos更换为debian
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-27
+                    2019-12-03
                 </div>
                 
 
@@ -389,14 +381,14 @@ ssr系统由centos更换为debian
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    160
+                    678
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -407,16 +399,55 @@ ssr系统由centos更换为debian
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="更新（2019-11-24）"><a href="#更新（2019-11-24）" class="headerlink" title="更新（2019.11.24）"></a>更新（2019.11.24）</h1><p><strong>tips</strong>：</p>
-<ul>
-<li>增加bbr加速，新的4、5节点速度上限将取决于你的网速。 更换新加坡节点为东京，降低ping值</li>
-<li>ssr系统由centos更换为debian</li>
-<li>开启客户端数量限制</li>
-<li>更换加密方式和混淆方式</li>
-<li>如果发现无法上网私聊我获取更新。每次更新注意删除旧节点</li>
-<li>如果发现windows不能正常上网，注意设置中是否自动开启了手动代理，关闭即可。</li>
-</ul>
-<p>以下为新节点<br><img src="https://img-blog.csdnimg.cn/20191129212024598.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191129212035858.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191129212045757.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>以下为过去保留的唯一节点：添加方法：<br>截图-扫描二维码添加即可</p>
+                <h1 id="程序设计基础考试内容概略"><a href="#程序设计基础考试内容概略" class="headerlink" title="程序设计基础考试内容概略"></a>程序设计基础考试内容概略</h1><h3 id="流程图以及ns图"><a href="#流程图以及ns图" class="headerlink" title="流程图以及ns图"></a>流程图以及ns图</h3><p>例题：</p>
+<ol>
+<li>求5！的算法 <em>注意判断后置</em></li>
+<li>打印50个学生中成绩高于80分的学号和成绩</li>
+<li>求1-1/2+1/3……</li>
+<li>判断素数</li>
+</ol>
+<h3 id="伪代码注意："><a href="#伪代码注意：" class="headerlink" title="伪代码注意："></a>伪代码注意：</h3><ol>
+<li>array数组</li>
+<li>mod相当于c语言%</li>
+<li>div相当于c语言/</li>
+<li>定义函数function name （）</li>
+<li>伪代码中a[1]是第一个元素</li>
+<li>不等于是&lt;&gt;</li>
+<li>end结尾</li>
+<li>注意for中的箭头</li>
+</ol>
+<h3 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h3><p>用自身的结构来描述自身就称为“递归”</p>
+<h3 id="递归的特点"><a href="#递归的特点" class="headerlink" title="递归的特点"></a>递归的特点</h3><ol>
+<li>必须有一个明确的结束条件</li>
+<li>问题规模每递归一次比上一次问题规模有所减少</li>
+<li>效率较低，消耗的时间和占用的内存空间比非递归大</li>
+<li>算法简单，易于操作</li>
+</ol>
+<h3 id="对于表达式的理解"><a href="#对于表达式的理解" class="headerlink" title="对于表达式的理解"></a>对于表达式的理解</h3><p>表达式的定义：使用操作符对数据和操作数进行处理</p>
+<h3 id="对于运算符的理解"><a href="#对于运算符的理解" class="headerlink" title="对于运算符的理解"></a>对于运算符的理解</h3><p>运算符定义：用于通知计算机对数据进行什么样的操作<br>包括数学操作符、关系操作符、罗技操作符及其他<br>优先级：数学大于关系大于逻辑</p>
+<h3 id="结构化算法"><a href="#结构化算法" class="headerlink" title="结构化算法"></a>结构化算法</h3><p>是由一些基本结构顺序组成的、在基本结构之间不存在向前或者向后的跨步形跳转，流程的转移只存在于一个基本结构范围内</p>
+<h3 id="排序问题："><a href="#排序问题：" class="headerlink" title="排序问题："></a>排序问题：</h3><p>见ppt函数部分，注意函数分离（function name （））</p>
+<h3 id="算法列表：（伪代码表示）"><a href="#算法列表：（伪代码表示）" class="headerlink" title="算法列表：（伪代码表示）"></a>算法列表：（伪代码表示）</h3><ol>
+<li>求1-1/2+1/3……</li>
+<li>对于一个大于或者等于3的正整数，判断他是不是一个素数。（注意他的改进算法）</li>
+<li>判断2000-2500的每一年是否为闰年</li>
+<li>将1-1000之间的素数打印出来   <em>在注意优化方法</em></li>
+<li>乌龟第一秒爬1米，第二秒爬1/2米，问爬20米需要多久？</li>
+<li>输入一个正数，将该数字倒序输出</li>
+<li>求斐波那契数列第n项（用数组优化）（另外考虑递归法）</li>
+<li>质因数分解</li>
+<li>最大公约数「（辗转相除法）（注意大小顺序）」「递归法」</li>
+<li>s=a+aa+aaa+aaaa….</li>
+<li>有1234任选三个不相同的数组成一个三位数，有多少这样的三位数？（注意不相等条件）</li>
+<li>计算三角形面积（单独函数）</li>
+<li>（以上函数单独拎出）</li>
+<li>十进制转换为八进制（有无数组两种）</li>
+<li>从键盘任意输入十个数，用选择法将他们从高到低排序</li>
+<li>输出杨辉三角</li>
+<li>给出日期ymd，计算该日期是该年的第几天（用到case）记得考虑闰年</li>
+<li>用冒泡排序法排序a[1…10]</li>
+<li>对半查找</li>
+</ol>
 
             </div>
             <hr/>
@@ -432,7 +463,7 @@ ssr系统由centos更换为debian
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cosz.club" rel="external nofollow noreferrer">cosz</a>
+                    <a href="https://cosz.club" rel="external nofollow noreferrer">Athus_c</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -442,7 +473,7 @@ ssr系统由centos更换为debian
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cosz.club/guanyukexueshangwang/">https://cosz.club/guanyukexueshangwang/</a>
+                    <a href="https://cosz.club/chengxushejijichuyaodian/">https://cosz.club/chengxushejijichuyaodian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -455,7 +486,7 @@ ssr系统由centos更换为debian
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://cosz.club" target="_blank">cosz</a>
+                    <a href="https://cosz.club" target="_blank">Athus_c</a>
                     !
                 </span>
             </div>
@@ -479,11 +510,7 @@ ssr系统由centos更换为debian
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-                                    <span class="chip bg-color">科学上网</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -647,9 +674,10 @@ ssr系统由centos更换为debian
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/chengxushejijichuyaodian/">
                     <div class="card-image">
@@ -678,9 +706,9 @@ div相当于c语言/
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -689,6 +717,7 @@ div相当于c语言/
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -699,22 +728,25 @@ div相当于c语言/
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/guanyuy7000anzhuangubuntudeyixiexindetihui/">
+                <a href="/guanyukexueshangwang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="关于y7000安装Ubuntu的一些心得体会">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="关于科学上网">
                         
-                        <span class="card-title">关于y7000安装Ubuntu的一些心得体会</span>
+                        <span class="card-title">关于科学上网</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-之前第一次装Ubuntu还是在另一台老设备装着玩，那时候还不是efi引导，那时候也没有secure boot。如今在y7000上装Ubuntu遇到了一些设备问题和一些安装上的不同点，记录下来备用。
+                            更新（2019.11.24）tips：
 
-一、关于关闭secure boot之前
+增加bbr加速，新的4、5节点速度上限将取决于你的网速。 更换新加坡节点为东京，降低ping值
+ssr系统由centos更换为debian
+开启客户端数量限制
+更换加密方式和混淆方式
+如果发现无法上
                         
                     </div>
                     <div class="publish-info">
@@ -725,8 +757,8 @@ div相当于c语言/
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" class="post-category">
-                                    计算机相关
+                            <a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="post-category">
+                                    科学上网
                                 </a>
                             
                             
@@ -736,8 +768,8 @@ div相当于c语言/
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">
-                        <span class="chip bg-color">计算机相关</span>
+                    <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
+                        <span class="chip bg-color">科学上网</span>
                     </a>
                     
                 </div>
