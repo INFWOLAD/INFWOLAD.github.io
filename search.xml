@@ -54,31 +54,6 @@
     
     
     <entry>
-      <title>关于y7000安装Ubuntu的一些心得体会</title>
-      <link href="/guanyuy7000anzhuangubuntudeyixiexindetihui/"/>
-      <url>/guanyuy7000anzhuangubuntudeyixiexindetihui/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>之前第一次装Ubuntu还是在另一台老设备装着玩，那时候还不是efi引导，那时候也没有secure boot。<br>如今在y7000上装Ubuntu遇到了一些设备问题和一些安装上的不同点，记录下来备用。</p></blockquote><h2 id="一、关于关闭secure-boot"><a href="#一、关于关闭secure-boot" class="headerlink" title="一、关于关闭secure boot"></a>一、关于关闭secure boot</h2><p>之前了解到secure还是因为当时微软推出这个的时候被喷惨了。本身一为了防止恶意软件侵入的设定不仅没有起到作用，相反还会给安装除了有密钥以外的系统带来多余的一步。<br>进入bios，<code>关闭</code>，开始制作启动盘。</p><hr><h2 id="二、关于系统盘的制作问题"><a href="#二、关于系统盘的制作问题" class="headerlink" title="二、关于系统盘的制作问题"></a>二、关于系统盘的制作问题</h2><p>一开始我把u盘格式化为了ntfs格式，结果发现快速启动项里面有问题，之后查阅资料发现<code>应该格式化为fat32格式</code>以方便uefi引导的ubuntu。</p><hr><h2 id="三、安装之后的一些问题"><a href="#三、安装之后的一些问题" class="headerlink" title="三、安装之后的一些问题"></a>三、安装之后的一些问题</h2><p>安装之后遇到了以下的几个问题</p><ol><li>安装过程中要自己手动分区，在那之前先压缩磁盘。我本身是512的固态所以只给Ubuntu留了100g。其中swap给了8g，/home给了50，/给了40，efi分了512mb。分区的时候<code>务必注意格式和主逻辑的选择</code>。</li><li>安装之后发现wifi不能用。查驱动发现<code>联想的ideapad驱动和本身的网卡驱动有冲突</code>。于是屏蔽来实现正常使用<br>附上代码方便下次使用<pre class=" language-javascript"><code class="language-javascript">sudo susudo touch <span class="token operator">/</span>etc<span class="token operator">/</span>modprobe<span class="token punctuation">.</span>d<span class="token operator">/</span>ideapad<span class="token punctuation">.</span>confsudo nautilus<span class="token comment" spellcheck="true">//找到/etc/modprobe.d/ideapad.conf文件，文件内输入</span><span class="token comment" spellcheck="true">//blacklist ideapad_laptop</span></code></pre></li></ol><hr><h2 id="四、为了方便而做的种种"><a href="#四、为了方便而做的种种" class="headerlink" title="四、为了方便而做的种种"></a>四、为了方便而做的种种</h2><ol><li>搜狗输入法的调试<br>安装完搜狗滞后发现没有任何的反应，也调用不出来，后来发现需要<code>把ibus改为fcitx重启</code>之后<code>按ctrl＋blank</code>即可。但是这里导致了后续tim的一个问题。</li></ol><p>##########################################################################</p><ol start="2"><li>为了方便后续的使用，我配置了<code>Flatpak框架来安装Windows程序</code>。操作过程极其类似当时在macos上配置wine（事实上发现其实就是<code>通过flatpak框架把deepin下的wine平台移植到了Ubuntu上</code>）<br>附上参考的教程链接<br><a href="https://blog.csdn.net/u011469138/article/details/82320761" target="_blank" rel="noopener">https://blog.csdn.net/u011469138/article/details/82320761</a><br>此外这里附上flatpak的使用细则<br><a href="https://linux.cn/article-10459-1.html?pr" target="_blank" rel="noopener">https://linux.cn/article-10459-1.html?pr</a><br>这方便以后的使用<br>感谢原作者</li></ol><p>##########################################################################</p><ol start="3"><li>在这个过程中一直出现tim没办法使用搜狗输入法的问题。多次尝试无果想到是否应该在安装一个flatpad下的输入法才能实现。觉得麻烦的情况下尝试搜索能不能<code>直接安装wine</code>。于是在github上发现了deepin-wine Ubuntu<br>附上链接<br><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" target="_blank" rel="noopener">https://github.com/wszqkzqk/deepin-wine-ubuntu</a><br><code>打包zip下载之后文件内sudo sh ./install.sh安装</code>。因为连接问题花了十分钟左右，之后下载deb包安装<br>附上下载链接<br><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/" target="_blank" rel="noopener">http://mirrors.aliyun.com/deepin/pool/non-free/d/</a><br>这样就可以正常使用qq了。<br><strong>记得原来装Ubuntu的时候还有linux版本qq…</strong><br>附上截图<br><img src="https://img-blog.csdnimg.cn/20190703112453460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="初步只装了暂时需要的qq和微信"></li></ol><hr><h2 id="至此Ubuntu安装完成"><a href="#至此Ubuntu安装完成" class="headerlink" title="至此Ubuntu安装完成"></a>至此Ubuntu安装完成</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 计算机相关 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 计算机相关 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于配置Bhuman通用平台环境心得</title>
       <link href="/guanyupeizhibhumantongyongpingtaihuanjingxinde/"/>
       <url>/guanyupeizhibhumantongyongpingtaihuanjingxinde/</url>
@@ -96,6 +71,31 @@
         <tags>
             
             <tag> NAO机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于y7000安装Ubuntu的一些心得体会</title>
+      <link href="/guanyuy7000anzhuangubuntudeyixiexindetihui/"/>
+      <url>/guanyuy7000anzhuangubuntudeyixiexindetihui/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>之前第一次装Ubuntu还是在另一台老设备装着玩，那时候还不是efi引导，那时候也没有secure boot。<br>如今在y7000上装Ubuntu遇到了一些设备问题和一些安装上的不同点，记录下来备用。</p></blockquote><h2 id="一、关于关闭secure-boot"><a href="#一、关于关闭secure-boot" class="headerlink" title="一、关于关闭secure boot"></a>一、关于关闭secure boot</h2><p>之前了解到secure还是因为当时微软推出这个的时候被喷惨了。本身一为了防止恶意软件侵入的设定不仅没有起到作用，相反还会给安装除了有密钥以外的系统带来多余的一步。<br>进入bios，<code>关闭</code>，开始制作启动盘。</p><hr><h2 id="二、关于系统盘的制作问题"><a href="#二、关于系统盘的制作问题" class="headerlink" title="二、关于系统盘的制作问题"></a>二、关于系统盘的制作问题</h2><p>一开始我把u盘格式化为了ntfs格式，结果发现快速启动项里面有问题，之后查阅资料发现<code>应该格式化为fat32格式</code>以方便uefi引导的ubuntu。</p><hr><h2 id="三、安装之后的一些问题"><a href="#三、安装之后的一些问题" class="headerlink" title="三、安装之后的一些问题"></a>三、安装之后的一些问题</h2><p>安装之后遇到了以下的几个问题</p><ol><li>安装过程中要自己手动分区，在那之前先压缩磁盘。我本身是512的固态所以只给Ubuntu留了100g。其中swap给了8g，/home给了50，/给了40，efi分了512mb。分区的时候<code>务必注意格式和主逻辑的选择</code>。</li><li>安装之后发现wifi不能用。查驱动发现<code>联想的ideapad驱动和本身的网卡驱动有冲突</code>。于是屏蔽来实现正常使用<br>附上代码方便下次使用<pre class=" language-javascript"><code class="language-javascript">sudo susudo touch <span class="token operator">/</span>etc<span class="token operator">/</span>modprobe<span class="token punctuation">.</span>d<span class="token operator">/</span>ideapad<span class="token punctuation">.</span>confsudo nautilus<span class="token comment" spellcheck="true">//找到/etc/modprobe.d/ideapad.conf文件，文件内输入</span><span class="token comment" spellcheck="true">//blacklist ideapad_laptop</span></code></pre></li></ol><hr><h2 id="四、为了方便而做的种种"><a href="#四、为了方便而做的种种" class="headerlink" title="四、为了方便而做的种种"></a>四、为了方便而做的种种</h2><ol><li>搜狗输入法的调试<br>安装完搜狗滞后发现没有任何的反应，也调用不出来，后来发现需要<code>把ibus改为fcitx重启</code>之后<code>按ctrl＋blank</code>即可。但是这里导致了后续tim的一个问题。</li></ol><p>##########################################################################</p><ol start="2"><li>为了方便后续的使用，我配置了<code>Flatpak框架来安装Windows程序</code>。操作过程极其类似当时在macos上配置wine（事实上发现其实就是<code>通过flatpak框架把deepin下的wine平台移植到了Ubuntu上</code>）<br>附上参考的教程链接<br><a href="https://blog.csdn.net/u011469138/article/details/82320761" target="_blank" rel="noopener">https://blog.csdn.net/u011469138/article/details/82320761</a><br>此外这里附上flatpak的使用细则<br><a href="https://linux.cn/article-10459-1.html?pr" target="_blank" rel="noopener">https://linux.cn/article-10459-1.html?pr</a><br>这方便以后的使用<br>感谢原作者</li></ol><p>##########################################################################</p><ol start="3"><li>在这个过程中一直出现tim没办法使用搜狗输入法的问题。多次尝试无果想到是否应该在安装一个flatpad下的输入法才能实现。觉得麻烦的情况下尝试搜索能不能<code>直接安装wine</code>。于是在github上发现了deepin-wine Ubuntu<br>附上链接<br><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" target="_blank" rel="noopener">https://github.com/wszqkzqk/deepin-wine-ubuntu</a><br><code>打包zip下载之后文件内sudo sh ./install.sh安装</code>。因为连接问题花了十分钟左右，之后下载deb包安装<br>附上下载链接<br><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/" target="_blank" rel="noopener">http://mirrors.aliyun.com/deepin/pool/non-free/d/</a><br>这样就可以正常使用qq了。<br><strong>记得原来装Ubuntu的时候还有linux版本qq…</strong><br>附上截图<br><img src="https://img-blog.csdnimg.cn/20190703112453460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="初步只装了暂时需要的qq和微信"></li></ol><hr><h2 id="至此Ubuntu安装完成"><a href="#至此Ubuntu安装完成" class="headerlink" title="至此Ubuntu安装完成"></a>至此Ubuntu安装完成</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
             
         </tags>
       
