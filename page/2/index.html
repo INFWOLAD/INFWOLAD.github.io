@@ -1,641 +1,576 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="cosz">
-    <meta name="description" content="cosz">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>cosz</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="欢迎来到奇奇怪怪的分享站" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     cosz
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/logo.ico" />
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
-    <script src="/libs/jquery/jquery.min.js"></script>
-    
+  
+
+  
+
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
+</html>
 
 <body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper head-container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">cosz</span>
-                </a>
-            </div>
-            
+  <div id="app">
+    <main class="content">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover3.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">cosz</a></h1>
+      <h2>Welcome to cosz club!</h2>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" target="_blank" rel="noopener" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
 
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article id="post-关于bhuman文件结构" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/guanyubhumanwenjianjiegou/"
+    >关于bhuman文件结构</a
+  >
+</h2>
   
-  <li class="hide-on-med-and-down nav-item">
+
+    </header>
     
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
+
     
-  </li>
+    <div class="article-meta">
+      <a href="/guanyubhumanwenjianjiegou/" class="article-date">
+  <time datetime="2019-11-27T14:01:16.000Z" itemprop="datePublished">2019-11-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">NAO机器人</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>进入Src目录，主要是Representations和Modules两个目录。其中Representations是可调用的部分，通过调用其中的函数，可以编写角色的策略代码文件。Modules是实现Representations的部分。即调用Representations是通过执行Modules中的函数而执行相关action。<br><img src="https://img-blog.csdnimg.cn/20190716155639844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="策略文件"><a href="#策略文件" class="headerlink" title="策略文件"></a>策略文件</h2><p>进入Modules下的BehaviorControl下的BehaviorControl目录。包含Options目录，以及2个h文件及1个cpp文件。</p>
+<ol>
+<li>Options文件夹：包含行为控制的文件，每一个文件是以图的结构表示</li>
+<li>Options.h ：  包含所有Options中的文件的路径，通过一个c++头文件将其关联在一起</li>
+<li>BehaviorControl.h： 包含options文件中所调用的函数，关联调用的Representations中的文件<br><img src="https://img-blog.csdnimg.cn/20190716155724355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>进入options目录下的GameControl，PlayingState文件中为比赛开始时的行为，ReadyState为比赛中ready状态时的行为，一般是机器人入场。Options/Roles中包含各种角色代码文件。</li>
+</ol>
+<h2 id="可调用接口文件"><a href="#可调用接口文件" class="headerlink" title="可调用接口文件"></a>可调用接口文件</h2><p>进入Src的Representations，可以看到8个模块</p>
+<blockquote>
+<p>这里是引用</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20190716155753842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中pdf文档介绍了其中5个部分。剩余的3个部分Communication和Configuration以及Infrastructure是文档中5个的底层。<br><img src="https://img-blog.csdnimg.cn/20190716155851134.png" alt="在这里插入图片描述"><br>我们可以配合Modules修改或添加其中的内容，满足我们的要求。</p>
+<h2 id="对于representations中文件结构的解释"><a href="#对于representations中文件结构的解释" class="headerlink" title="对于representations中文件结构的解释"></a>对于representations中文件结构的解释</h2><blockquote>
+<p>基于对第四章到第八章的pdf大致理解</p>
+</blockquote>
+<p> <strong>1. perception感知模块</strong><br>基于两个摄像头，通过建立坐标系来实现对外界感知。其中涉及到防止识别自身身体，颜色管理识别，边界识别，检测黑白球（之前为橙色球），罚分和对障碍物识别以及对手的检测。<br><img src="https://img-blog.csdnimg.cn/20190717152741545.png" alt="perception"><br> <strong>2. modeling建模模块</strong><br>对于自我位置定位，对于球定位，对于障碍物定位，通过自身以及队友的感知数据来建模。同时口哨声的识别也存在于这里。<br><img src="https://img-blog.csdnimg.cn/20190717154132625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="文件"><br> <strong>3. behaviorcontrol行为控制模块</strong><br>策略的规划，包括角色安排等等（注意与motioncontrol区分）<br> <strong>4. proprioception自身感知模块</strong><br>如图所示：<br><img src="https://img-blog.csdnimg.cn/20190717162002770.png" alt="xx"><br> <strong>5. motioncontrol动作控制模块</strong><br>主要的行为操作，包括步行踢腿等等<br><img src="https://img-blog.csdnimg.cn/20190717162412103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="MOTION"></p>
+<h2 id="关于Modules与Representation的主要不同"><a href="#关于Modules与Representation的主要不同" class="headerlink" title="关于Modules与Representation的主要不同"></a>关于Modules与Representation的主要不同</h2><p>一定程度参考<code>飞_飞</code>的博客：</p>
+<ul>
+<li>Modules文件夹的内容与Representation文件夹中的内容能一一对应。比如,Modules包含了BehaviorControl、Configuration、Sensing等,而Representation也包含了这些模块。</li>
+<li>STREAM宏、以及serialize方法等“流”方法,在Representations中的所有模块都首先使用此宏进行了定义,以及blackboard也属于此文件夹,可见,Representation的真正用途为信息交流,因为STREAM的作用,所以使得各个模块可以相互传递信息。</li>
+<li>MODULES宏的真正作用是创建BehaviorControl、Sensing、Modeling等模块,在这些模块中,模块的必要条件(用REQUIRES宏包含)从Representation文件夹内的各个模块获得。即在Modules文件夹中的各个模块使用include包含所需要的Representation头文件。因此,Representation描述了机器人的各个参数、以及基本物理信息,甚至各个模块的描述(但也不完全是,需要下次进行更输入的分析)。</li>
+</ul>
+<hr>
+<p><strong>另外部署可以参考下面这篇文章：</strong><br><a href="https://blog.csdn.net/qq_34062822/article/details/80326273" target="_blank" rel="noopener">https://blog.csdn.net/qq_34062822/article/details/80326273</a><br>感谢原作者</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/guanyubhumanwenjianjiegou/" data-id="ck5adhxm0000aroiy45z46ki5"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
+
+    </footer>
+
+  </div>
+
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
+
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
+
   
-  <li class="hide-on-med-and-down nav-item">
+
+</article>
     
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
+    <article id="post-对于bhuman中striker文件解析" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
     
-  </li>
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/duiyubhumanzhongstrikerwenjianjiexi/"
+    >对于bhuman中striker文件解析</a
+  >
+</h2>
   
-  <li class="hide-on-med-and-down nav-item">
+
+    </header>
     
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
+
     
-  </li>
+    <div class="article-meta">
+      <a href="/duiyubhumanzhongstrikerwenjianjiexi/" class="article-date">
+  <time datetime="2019-11-27T14:01:00.000Z" itemprop="datePublished">2019-11-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">NAO机器人</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <blockquote>
+<p>参考<code>人間クズ</code>和<code>Aaronworry</code>的一定文章内容，感谢原作者</p>
+</blockquote>
+<h2 id="一、部分代码中的名词解释"><a href="#一、部分代码中的名词解释" class="headerlink" title="一、部分代码中的名词解释"></a>一、部分代码中的名词解释</h2><p>看pdf的时候发现下面这一部分：<br><img src="https://img-blog.csdnimg.cn/20190716131607577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="截图"><br>个人总结就是：options中的代码和普通的C++不同，option里的语法是CABSL结构，这些语法都是通过宏来实现的，可以理解成一种图结构的代码，每一个option就是一个图。</p>
+<ol>
+<li>option（name，xx，xx）：括号中第一个参数为名字，一般与图的名字相同; 第二或以后的参数为变量，一般可省略。<br>例如：<code>option(BigKick ,(KickRequest::KickMotionID)(KickRequest::kickForward) id, (bool)(true) mirror)</code></li>
+<li>common_transition: 最高优先级，不管当前执行到该option的哪一个state，一旦满足条件就会结束当前行为，goto相应的state</li>
+<li>initial_state(stateName): 进option中的初始化状态，自动执行 initial_state中的行为。</li>
+<li>state：对应各种状态，其中state中可以有transition，这里的transition只在当前的state中判断，满足条件xxxxx，goto yyyyy state。action是当前state执行的行为，可以是某些函数或者跳到别的option中。</li>
+</ol>
+<blockquote>
+<p>这里可以把state理解成一个while循环，一直循环action中内容，一旦满足transition中的条件即可跳出循环goto到对应state</p>
+</blockquote>
+<p>注意：state(stateName): 状态，只能通过goto语句跳转。另外本身option也是一个状态，可以理解为state是option中的小状态。</p>
+<hr>
+<h2 id="二、关于一些底层文件的调用格式"><a href="#二、关于一些底层文件的调用格式" class="headerlink" title="二、关于一些底层文件的调用格式"></a>二、关于一些底层文件的调用格式</h2><p>先看另一篇关于bhuman文件结构的理解的文章：<br><a href="https://blog.csdn.net/Athus_c/article/details/96144437" target="_blank" rel="noopener">https://blog.csdn.net/Athus_c/article/details/96144437</a><br>关于调用representations下的文件：the + str(Name).对象名，例如<br>theLibCodeRelease.timeSinceBallWasSeen<br>调用的是LibCodeRelease下的timeSinceBallWasSeen对象</p>
+<hr>
+<h2 id="三、对于bhuman文件中strike样本文件的注释帮助理解："><a href="#三、对于bhuman文件中strike样本文件的注释帮助理解：" class="headerlink" title="三、对于bhuman文件中strike样本文件的注释帮助理解："></a>三、对于bhuman文件中strike样本文件的注释帮助理解：</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/** A test striker option without common decision */</span>
+<span class="token function">option</span><span class="token punctuation">(</span>Striker<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//进攻球员</span>
+<span class="token punctuation">{</span>
+  <span class="token function">initial_state</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//最先开始状态</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">1000</span><span class="token punctuation">)</span>
+        goto turnToBall<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果静止时间超过1000转向turntoball状态（下方）</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//执行底层的向前看动作</span>
+      <span class="token function">Stand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">state</span><span class="token punctuation">(</span>turnToBall<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//turntoball状态代码块</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
+        goto searchForBall<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//如果未看到球时间超过超时时间（可以转到定义看到是7000）</span>
+下面续   </code></pre>
+<hr>
+<p><strong>这里附上对于ballnotseentimeout的定义截图：</strong><br><img src="https://img-blog.csdnimg.cn/20190716141148162.png" alt="7000截图"><br>注意其中（int）（7000）ballnotseentimeout</p>
+<p> <code>接着看代码</code></p>
+<hr>
+<pre class=" language-javascript"><code class="language-javascript">接上面
+      <span class="token keyword">if</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">angle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 5_deg<span class="token punctuation">)</span>
+        goto walkToBall<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//如果角度小于5转向走向球动作</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">angle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>                        <span class="token comment" spellcheck="true">//转到定义发现walktotarget对应的有两个传入变量，速度和角度</span>
+下面续</code></pre>
+<hr>
+<p>附上walktotarget的定义截图：<br><img src="https://img-blog.csdnimg.cn/20190716141427312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="定义"><br>其中walktotarget里面的变量有两个，速度和目标</p>
+<pre><code>接着看代码</code></pre><hr>
+<pre class=" language-javascript"><code class="language-javascript">接上面
+  <span class="token function">state</span><span class="token punctuation">(</span>walkToBall<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
+        goto searchForBall<span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">norm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">500</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
+        goto alignToGoal<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//状态跳转之前头朝前站立</span>
+      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">state</span><span class="token punctuation">(</span>alignToGoal<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
+        goto searchForBall<span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">)</span> <span class="token operator">&lt;</span> 10_deg <span class="token operator">&amp;&amp;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
+        goto alignBehindBall<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">400</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment" spellcheck="true">//走到球的后面对准球门</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">state</span><span class="token punctuation">(</span>alignBehindBall<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
+        goto searchForBall<span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
+         <span class="token operator">&amp;&amp;</span> theLibCodeRelease<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
+         <span class="token operator">&amp;&amp;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">)</span> <span class="token operator">&lt;</span> 2_deg<span class="token punctuation">)</span>
+        goto kick<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      theHeadControlMode <span class="token operator">=</span> HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">;</span>
+      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">170</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//再次对准球门</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+<span class="token function">state</span><span class="token punctuation">(</span>kick<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">//射门动作代码</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">3000</span> <span class="token operator">||</span> <span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">10</span> <span class="token operator">&amp;&amp;</span> action_done<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        goto start<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">InWalkKick</span><span class="token punctuation">(</span><span class="token function">WalkKickVariant</span><span class="token punctuation">(</span>WalkKicks<span class="token punctuation">:</span><span class="token punctuation">:</span>forward<span class="token punctuation">,</span> Legs<span class="token punctuation">:</span><span class="token punctuation">:</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">160</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">55</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//表示机器人走到球的后方160mm，左方55mm处，朝着angleToGoal方向，使用左脚以forward的方式踢球。</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">state</span><span class="token punctuation">(</span>searchForBall<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    transition
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span>
+        goto turnToBall<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    action
+    <span class="token punctuation">{</span>
+      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">WalkAtRelativeSpeed</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//原地旋转寻找球</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>其中<code>InWalkKick(WalkKickVariant(WalkKicks::forward, Legs::left), Pose2f(theLibCodeRelease.angleToGoal, theBallModel.estimate.position.x() - 160.f, theBallModel.estimate.position.y() - 55.f));</code>这个射门动作在kicktest分支中被替换成了bigkick，后面如果有研究会更新。</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/duiyubhumanzhongstrikerwenjianjiexi/" data-id="ck5adhxm3000froiy9w0k22zo"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
+
+    </footer>
+
+  </div>
+
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
+
   
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
+
+  
+
+</article>
+    
+    <article id="post-macbook运行移动硬盘中windows及bootcamp下载出错问题的解决-1" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/"
+    >macbook运行移动硬盘中windows及bootcamp下载出错问题的解决</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/" class="article-date">
+  <time datetime="2019-11-27T14:00:00.000Z" itemprop="datePublished">2019-11-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>经济原因不少人会选择128g版本或者256g版本的macbook作为入门款。<br>优秀的macos确实很吸引人，但是总有一些时候需要用到windows来处理一些事情<br>过去往往会选择使用bootcamp安装双系统或者用vm虚拟机。但是这样带来的问题在于</p>
+<h2 id="储存空间的紧张"><a href="#储存空间的紧张" class="headerlink" title="储存空间的紧张"></a>储存空间的紧张</h2><p>动辄40g的占用实在让人头疼。于是想到了这个曲线救国方法。只需要一个移动硬盘即可。</p>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><p>先在msdn上下载win镜像文件。同时下载wtg辅助程序（这里注意萝卜的连接挂了）。<br>另外打开bootcamp选择下载windows驱动程序。这里注意如果你之前使用过bootcamp这里可能会提示无法存储的错误。解决方法：</p>
+<blockquote>
+<p>到极限苹果论坛按照对应的版本下载bootcamp的zip包，解压后放在驱动盘里。<br><a href="https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/" target="_blank" rel="noopener">https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/</a></p>
+</blockquote>
+<h2 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2. 开始安装"></a>2. 开始安装</h2><p>打开wtg辅助程序，选择镜像后安装在移动硬盘中。等到安装完成提示重启时拔下硬盘，插到macbook上重启。<br>重启时按住option选择efi磁盘，继续完成安装<br>这个过程中由于没有驱动会很卡很慢还没网络。等到进入win之后插入你放bootcamp的u盘，选择setup安装。等待安装完成后激活即可。</p>
+<h2 id="3-完善工作"><a href="#3-完善工作" class="headerlink" title="3. 完善工作"></a>3. 完善工作</h2><ul>
+<li>由于wtg辅助工具安装完之后是没有分区的，你可以选择用diskgenius进行分区。</li>
+<li>网上很多实用nt6安装的方法我发现在win10下很容易出问题。比如启动选项2不能够正确加载等等，而直接安装到硬盘会导致没有引导项后续比较难以处理。wtg是个人感觉最折中的办法。</li>
+<li>bootcamp的方法如果能够直接运行，则安装完win之后直接运行桌面上的bootcamp即可。</li>
 </ul>
 
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">cosz</div>
-        <div class="logo-desc">
-            
-            欢迎来到奇奇怪怪的分享站
-            
-        </div>
+      
+      <!-- 打赏 -->
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/" data-id="ck5adhxly0008roiydjk1casr"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
 
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+
+</article>
     
+  </article>
+  
 
-    <ul class="menu-list mobile-menu-list">
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2015-2020
+        Athus_c
+      </li>
+      <li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
+      </li>
     </ul>
-</div>
-
-        </div>
-
+    <ul class="list-inline">
+      <li>
         
-    </nav>
-
-</header>
-
-    
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                cosz
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['Welcome to cosz','欢迎来到这里~'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
-</script>
-
-
-    </div>
-</div>
-
-
-<main class="content">
-
-    
-
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/guanyubhumanwenjianjiegou/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="关于bhuman文件结构">
-                            
-                            <span class="card-title">关于bhuman文件结构</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                代码结构进入Src目录，主要是Representations和Modules两个目录。其中Representations是可调用的部分，通过调用其中的函数，可以编写角色的策略代码文件。Modules是实现Representations的部分
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="post-category">
-                                    NAO机器人
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                            <span class="chip bg-color">NAO机器人</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/duiyubhumanzhongstrikerwenjianjiexi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="对于bhuman中striker文件解析">
-                            
-                            <span class="card-title">对于bhuman中striker文件解析</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-参考人間クズ和Aaronworry的一定文章内容，感谢原作者
-
-一、部分代码中的名词解释看pdf的时候发现下面这一部分：个人总结就是：options中的代码和普通的C++不同，option里的语法是CABSL结构，这些语法都是通过宏来实现
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="post-category">
-                                    NAO机器人
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                            <span class="chip bg-color">NAO机器人</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="macbook运行移动硬盘中windows及bootcamp下载出错问题的解决">
-                            
-                            <span class="card-title">macbook运行移动硬盘中windows及bootcamp下载出错问题的解决</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                经济原因不少人会选择128g版本或者256g版本的macbook作为入门款。优秀的macos确实很吸引人，但是总有一些时候需要用到windows来处理一些事情过去往往会选择使用bootcamp安装双系统或者用vm虚拟机。但是这样带来的问题在
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" class="post-category">
-                                    计算机相关
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">
-                            <span class="chip bg-color">计算机相关</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/404/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="404">
-                            
-                            <span class="card-title">404</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Athus_c
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
-
-</main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a href="/"
-               class="left btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a class="right btn-floating btn-large disabled">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-    <footer class="page-footer bg-color">
-    <div class="container row center-align">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            <span id="year">年份</span>
-            <a href="https://cosz.club" target="_blank">Athus_c</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-            
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    window.setTimeout("siteTime()", 1000);
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2018";
-                    var startMonth = "6";
-                    var startDate = "28";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link ">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-    </div>
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
 </footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+      <aside class="sidebar">
+        
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.svg" alt="cosz"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
 
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>如果你有所收获可以请我喝杯嘿糖~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
     </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
 </div>
-
-<script src="/js/search.js"></script>
-<script type="text/javascript">
-$(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
-});
-</script>
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
+      <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
 
 <script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
+  var ayerConfig = {
+    mathjax: false
+  }
 </script>
 
-    
-    
+<script src="/js/ayer.js"></script>
 
-    
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
 
-    
 
-    
 
-    
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
 
-    
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
-    
-    
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
+  </div>
 </body>
 
 </html>
