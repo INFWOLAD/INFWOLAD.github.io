@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于v2ray传输协议的选择</title>
+    <url>/guanyuv2raychuanshuxieyidexuanze/</url>
+    <content><![CDATA[<h2 id="关于传输协议选择问题"><a href="#关于传输协议选择问题" class="headerlink" title="关于传输协议选择问题"></a>关于传输协议选择问题</h2><blockquote>
+<p>本文章不再写关于ss或者ssr的传输协议的选择，更多的是描述v2ray的传输协议的选择</p>
+</blockquote>
+<h4 id="1-tcp"><a href="#1-tcp" class="headerlink" title="1.tcp"></a>1.tcp</h4><p>该种方法是最简单的方式，也是233默认方式。实际使用情况看看人品，我日常是一星期存活，不是很推荐。</p>
+<h4 id="2-mkcp"><a href="#2-mkcp" class="headerlink" title="2.mkcp"></a>2.mkcp</h4><p>低延迟首选，但是由于协议问题会成倍耗费流量，在前段时间被封锁过但是又可以使用，总而言之想要省事首选。但是注意流量，对于流量计费的gcp以及固定限额的aws慎用。另外mkcp伪装成微信啊bt下载啊之类的个人觉得可选可不选，本身mkcp对于个人使用来说被ban的几率就很小。</p>
+<h4 id="3-ws"><a href="#3-ws" class="headerlink" title="3.ws"></a>3.ws</h4><p>不加tls基本上直接gg。本质上，ws直接http协议传输，虽然实际内容是vmess加密的，但是ws的http特征还是明文的，这就给监听和分析留下了把柄。</p>
+<h4 id="4-ws-tls"><a href="#4-ws-tls" class="headerlink" title="4.ws+tls"></a>4.ws+tls</h4><p>为什么之前我一直不采用这种传输方式其主要原因是需要自有域名。我本身的cosz.club用作搭建个人网站，而最近新域名cosz.xyz开始使用才有机会使用ws+tls。域名解析到vps后设置即可，没什么难度。将流量伪装成访问网址会安全得多，而且速度上看不会有太多的影响。</p>
+<p>但是！我设置了两次都是存活时间一天。没有套cf虽说确实会影响但是不该这么恐怖吧…没有打开分流和伪装应该是真正原因但是解析又需要时间干脆换成mkcp了。</p>
+<h4 id="5-Quic"><a href="#5-Quic" class="headerlink" title="5.Quic"></a>5.Quic</h4><p>未使用过，油管上的经验来看基本处于不可用状态。</p>
+<h6 id="PS：mkcp的最令我烦恼的："><a href="#PS：mkcp的最令我烦恼的：" class="headerlink" title="PS：mkcp的最令我烦恼的："></a>PS：mkcp的最令我烦恼的：</h6><p>2-5倍流量损耗。虽说用了udp就该做好准备但是…谷歌一块多一g流量真的伤不起，上个月单月跑了50刀损失巨大…</p>
+]]></content>
+      <categories>
+        <category>科学上网</category>
+      </categories>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科学上网的一些教程</title>
     <url>/kexueshangwangdeyixiejiaocheng/</url>
     <content><![CDATA[<p><em>我将在这里留下脚本文件备份以及精简的教程。</em></p>
