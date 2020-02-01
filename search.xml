@@ -1,602 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>关于2020年2月1日的梯子说明</title>
-    <url>/guanyu2020nian2yue1ridetizishuoming/</url>
-    <content><![CDATA[<p>/* 节省字数省去了所有的敬语谦辞：*/</p>
-<h4 id="务必注意事项："><a href="#务必注意事项：" class="headerlink" title="务必注意事项："></a>务必注意事项：</h4><p>1.节省使用流量，现在为了速度和稳定用的全是多倍流量，在平时不用的时候记得把vpn关了，能不用全局就不要用全局。</p>
-<p>2.按照优先级顺序从1-4使用，后面的优先级是留着所有梯子掉了的时候修复用的，把它用废了最后更新就会像今天一样要几个多小时才能修复。</p>
-<p>3.不要外传节点信息。同时在线的人越多机器负载越大，响应速度自然就越慢，何况这并不是能拿到台面上的东西。</p>
-<p>4.以后我会把更新时间放在一个节点的备注上，这个节点是不能用的不要选错了。</p>
-<h4 id="更新详细信息："><a href="#更新详细信息：" class="headerlink" title="更新详细信息："></a>更新详细信息：</h4><p>1.更换脚本文件，之前的233脚本caddy上存在问题换成了wulabing_v2ray的脚本，并且该脚本使用的也不再是过去的方案理论上稳定性有提升。</p>
-<p>2.两个域名均投入使用来隐藏节点。</p>
-<p>3.ssr和ss将不再受支持，全部换为v2ray。其中两个gcp用ws+tls，aws用mkcp。</p>
-<p>4.使用锐速作为加速核心代替bbrplus。速度提升明显但是多倍发包浪费流量。</p>
-<pre><code>2020.2.1 21:10</code></pre>]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于2020年2月1日的梯子说明</title>
+      <link href="/guanyu2020nian2yue1ridetizishuoming/"/>
+      <url>/guanyu2020nian2yue1ridetizishuoming/</url>
+      
+        <content type="html"><![CDATA[<p>/* 节省字数省去了所有的敬语谦辞：*/</p><h4 id="务必注意事项："><a href="#务必注意事项：" class="headerlink" title="务必注意事项："></a>务必注意事项：</h4><p>1.节省使用流量，现在为了速度和稳定用的全是多倍流量，在平时不用的时候记得把vpn关了，能不用全局就不要用全局。</p><p>2.按照优先级顺序从1-4使用，后面的优先级是留着所有梯子掉了的时候修复用的，把它用废了最后更新就会像今天一样要几个多小时才能修复。</p><p>3.不要外传节点信息。同时在线的人越多机器负载越大，响应速度自然就越慢，何况这并不是能拿到台面上的东西。</p><p>4.以后我会把更新时间放在一个节点的备注上，这个节点是不能用的不要选错了。</p><h4 id="更新详细信息："><a href="#更新详细信息：" class="headerlink" title="更新详细信息："></a>更新详细信息：</h4><p>1.更换脚本文件，之前的233脚本caddy上存在问题换成了wulabing_v2ray的脚本，并且该脚本使用的也不再是过去的方案理论上稳定性有提升。</p><p>2.两个域名均投入使用来隐藏节点。</p><p>3.ssr和ss将不再受支持，全部换为v2ray。其中两个gcp用ws+tls，aws用mkcp。</p><p>4.使用锐速作为加速核心代替bbrplus。速度提升明显但是多倍发包浪费流量。</p><pre><code>2020.2.1 21:10</code></pre>]]></content>
+      
+      
       <categories>
-        <category>科学上网</category>
+          
+          <category> 科学上网 </category>
+          
       </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于linux中mail的多种用法</title>
-    <url>/guanyulinuxzhongmaildeduochongyongfa/</url>
-    <content><![CDATA[<p>发送邮件的几种方式（可以搭配《Linux就该这么学》P64）</p>
-<p>1.标准输入录入邮件信息</p>
-<p>直接把当前 shell 当成编辑器来用，可以输入正文，当邮件正文输入完成后，需要按 Ctrl+D 结束输入。</p>
-<pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com
-hello  # 邮件正文
-world  # 邮件正文
-EOT  # 按 Ctrl+D
-</code></pre><p>2.管道方式</p>
-<p>这种方式用的较多，其中 echo 后面的是邮件的正文。</p>
-<pre><code>[root@localhost ~]# echo &quot;邮件正文&quot; | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>以文件 file.txt 的内容为邮件正文发送。</p>
-<pre><code>[root@localhost ~]# cat file.txt | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>3.文件重定向</p>
-<p>以文件 file.txt 的内容为邮件正文发送。</p>
-<pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com &lt; file.txt</code></pre><p>注意：如果需要发送给多个收件人，收件人之间用逗号分隔，例如：<code>123456@qq.com,888888@qq.com。</code></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于linux中mail的多种用法</title>
+      <link href="/guanyulinuxzhongmaildeduochongyongfa/"/>
+      <url>/guanyulinuxzhongmaildeduochongyongfa/</url>
+      
+        <content type="html"><![CDATA[<p>发送邮件的几种方式（可以搭配《Linux就该这么学》P64）</p><p>1.标准输入录入邮件信息</p><p>直接把当前 shell 当成编辑器来用，可以输入正文，当邮件正文输入完成后，需要按 Ctrl+D 结束输入。</p><pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.comhello  # 邮件正文world  # 邮件正文EOT  # 按 Ctrl+D</code></pre><p>2.管道方式</p><p>这种方式用的较多，其中 echo 后面的是邮件的正文。</p><pre><code>[root@localhost ~]# echo &quot;邮件正文&quot; | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>以文件 file.txt 的内容为邮件正文发送。</p><pre><code>[root@localhost ~]# cat file.txt | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>3.文件重定向</p><p>以文件 file.txt 的内容为邮件正文发送。</p><pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com &lt; file.txt</code></pre><p>注意：如果需要发送给多个收件人，收件人之间用逗号分隔，例如：<code>123456@qq.com,888888@qq.com。</code></p>]]></content>
+      
+      
       <categories>
-        <category>计算机相关</category>
+          
+          <category> 计算机相关 </category>
+          
       </categories>
-      <tags>
-        <tag>计算机相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于v2ray传输协议的选择</title>
-    <url>/guanyuv2raychuanshuxieyidexuanze/</url>
-    <content><![CDATA[<h2 id="关于传输协议选择问题"><a href="#关于传输协议选择问题" class="headerlink" title="关于传输协议选择问题"></a>关于传输协议选择问题</h2><blockquote>
-<p>本文章不再写关于ss或者ssr的传输协议的选择，更多的是描述v2ray的传输协议的选择</p>
-</blockquote>
-<h4 id="1-tcp"><a href="#1-tcp" class="headerlink" title="1.tcp"></a>1.tcp</h4><p>该种方法是最简单的方式，也是233默认方式。实际使用情况看看人品，我日常是一星期存活，不是很推荐。</p>
-<h4 id="2-mkcp"><a href="#2-mkcp" class="headerlink" title="2.mkcp"></a>2.mkcp</h4><p>低延迟首选，但是由于协议问题会成倍耗费流量，在前段时间被封锁过但是又可以使用，总而言之想要省事首选。但是注意流量，对于流量计费的gcp以及固定限额的aws慎用。另外mkcp伪装成微信啊bt下载啊之类的个人觉得可选可不选，本身mkcp对于个人使用来说被ban的几率就很小。</p>
-<h4 id="3-ws"><a href="#3-ws" class="headerlink" title="3.ws"></a>3.ws</h4><p>不加tls基本上直接gg。本质上，ws直接http协议传输，虽然实际内容是vmess加密的，但是ws的http特征还是明文的，这就给监听和分析留下了把柄。</p>
-<h4 id="4-ws-tls"><a href="#4-ws-tls" class="headerlink" title="4.ws+tls"></a>4.ws+tls</h4><p>为什么之前我一直不采用这种传输方式其主要原因是需要自有域名。我本身的cosz.club用作搭建个人网站，而最近新域名cosz.xyz开始使用才有机会使用ws+tls。域名解析到vps后设置即可，没什么难度。将流量伪装成访问网址会安全得多，而且速度上看不会有太多的影响。</p>
-<p>但是！我设置了两次都是存活时间一天。没有套cf虽说确实会影响但是不该这么恐怖吧…没有打开分流和伪装应该是真正原因但是解析又需要时间干脆换成mkcp了。</p>
-<h4 id="5-Quic"><a href="#5-Quic" class="headerlink" title="5.Quic"></a>5.Quic</h4><p>未使用过，油管上的经验来看基本处于不可用状态。</p>
-<h6 id="PS：mkcp的最令我烦恼的："><a href="#PS：mkcp的最令我烦恼的：" class="headerlink" title="PS：mkcp的最令我烦恼的："></a>PS：mkcp的最令我烦恼的：</h6><p>2-5倍流量损耗。虽说用了udp就该做好准备但是…谷歌一块多一g流量真的伤不起，上个月单月跑了50刀损失巨大…</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于v2ray传输协议的选择</title>
+      <link href="/guanyuv2raychuanshuxieyidexuanze/"/>
+      <url>/guanyuv2raychuanshuxieyidexuanze/</url>
+      
+        <content type="html"><![CDATA[<h2 id="关于传输协议选择问题"><a href="#关于传输协议选择问题" class="headerlink" title="关于传输协议选择问题"></a>关于传输协议选择问题</h2><blockquote><p>本文章不再写关于ss或者ssr的传输协议的选择，更多的是描述v2ray的传输协议的选择</p></blockquote><h4 id="1-tcp"><a href="#1-tcp" class="headerlink" title="1.tcp"></a>1.tcp</h4><p>该种方法是最简单的方式，也是233默认方式。实际使用情况看看人品，我日常是一星期存活，不是很推荐。</p><h4 id="2-mkcp"><a href="#2-mkcp" class="headerlink" title="2.mkcp"></a>2.mkcp</h4><p>低延迟首选，但是由于协议问题会成倍耗费流量，在前段时间被封锁过但是又可以使用，总而言之想要省事首选。但是注意流量，对于流量计费的gcp以及固定限额的aws慎用。另外mkcp伪装成微信啊bt下载啊之类的个人觉得可选可不选，本身mkcp对于个人使用来说被ban的几率就很小。</p><h4 id="3-ws"><a href="#3-ws" class="headerlink" title="3.ws"></a>3.ws</h4><p>不加tls基本上直接gg。本质上，ws直接http协议传输，虽然实际内容是vmess加密的，但是ws的http特征还是明文的，这就给监听和分析留下了把柄。</p><h4 id="4-ws-tls"><a href="#4-ws-tls" class="headerlink" title="4.ws+tls"></a>4.ws+tls</h4><p>为什么之前我一直不采用这种传输方式其主要原因是需要自有域名。我本身的cosz.club用作搭建个人网站，而最近新域名cosz.xyz开始使用才有机会使用ws+tls。域名解析到vps后设置即可，没什么难度。将流量伪装成访问网址会安全得多，而且速度上看不会有太多的影响。</p><p>但是！我设置了两次都是存活时间一天。没有套cf虽说确实会影响但是不该这么恐怖吧…没有打开分流和伪装应该是真正原因但是解析又需要时间干脆换成mkcp了。</p><h4 id="5-Quic"><a href="#5-Quic" class="headerlink" title="5.Quic"></a>5.Quic</h4><p>未使用过，油管上的经验来看基本处于不可用状态。</p><h6 id="PS：mkcp的最令我烦恼的："><a href="#PS：mkcp的最令我烦恼的：" class="headerlink" title="PS：mkcp的最令我烦恼的："></a>PS：mkcp的最令我烦恼的：</h6><p>2-5倍流量损耗。虽说用了udp就该做好准备但是…谷歌一块多一g流量真的伤不起，上个月单月跑了50刀损失巨大…</p>]]></content>
+      
+      
       <categories>
-        <category>科学上网</category>
+          
+          <category> 科学上网 </category>
+          
       </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科学上网的一些教程</title>
-    <url>/kexueshangwangdeyixiejiaocheng/</url>
-    <content><![CDATA[<p><em>我将在这里留下脚本文件备份以及精简的教程。</em></p>
-<h5 id="v2ray一键脚本："><a href="#v2ray一键脚本：" class="headerlink" title="v2ray一键脚本："></a>v2ray一键脚本：</h5><pre><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></pre><h5 id="ss一键脚本："><a href="#ss一键脚本：" class="headerlink" title="ss一键脚本："></a>ss一键脚本：</h5><pre><code>bash &lt;(curl -s -L https://git.io/ss.sh)</code></pre><h5 id="BBR多合一脚本："><a href="#BBR多合一脚本：" class="headerlink" title="BBR多合一脚本："></a>BBR多合一脚本：</h5><pre><code>wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot;
-chmod +x tcp.sh
-./tcp.sh</code></pre><h5 id="针对centos7更换内核以使用BBR"><a href="#针对centos7更换内核以使用BBR" class="headerlink" title="针对centos7更换内核以使用BBR"></a>针对centos7更换内核以使用BBR</h5><pre><code>rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
-rpm -qa | grep kernel #查看内核是否安装成功
-reboot #重启</code></pre><h5 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h5><p>至于怎么设置订阅啊怎么选择协议啊怎么调vps啊<br>好问题emmmm就靠你们自己琢磨了<br>这里没有放ssr的因为ssr一不更新了二来用v2ray多香<br>但是我的订阅里大家会发现留了一个ss懒得说为啥啦</p>
-<pre><code>这里有针对233的备份：（仅复制未更改）   
-git clone https://github.com/INFWOLAD/v2ray -b master  
-cd v2ray   
-chmod +x install.sh   
-./install.sh local  
-（记得安装git）</code></pre>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>科学上网的一些教程</title>
+      <link href="/kexueshangwangdeyixiejiaocheng/"/>
+      <url>/kexueshangwangdeyixiejiaocheng/</url>
+      
+        <content type="html"><![CDATA[<p><em>我将在这里留下脚本文件备份以及精简的教程。</em></p><h5 id="v2ray一键脚本："><a href="#v2ray一键脚本：" class="headerlink" title="v2ray一键脚本："></a>v2ray一键脚本：</h5><pre><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></pre><h5 id="ss一键脚本："><a href="#ss一键脚本：" class="headerlink" title="ss一键脚本："></a>ss一键脚本：</h5><pre><code>bash &lt;(curl -s -L https://git.io/ss.sh)</code></pre><h5 id="BBR多合一脚本："><a href="#BBR多合一脚本：" class="headerlink" title="BBR多合一脚本："></a>BBR多合一脚本：</h5><pre><code>wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot;chmod +x tcp.sh./tcp.sh</code></pre><h5 id="针对centos7更换内核以使用BBR"><a href="#针对centos7更换内核以使用BBR" class="headerlink" title="针对centos7更换内核以使用BBR"></a>针对centos7更换内核以使用BBR</h5><pre><code>rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --forcerpm -qa | grep kernel #查看内核是否安装成功reboot #重启</code></pre><h5 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h5><p>至于怎么设置订阅啊怎么选择协议啊怎么调vps啊<br>好问题emmmm就靠你们自己琢磨了<br>这里没有放ssr的因为ssr一不更新了二来用v2ray多香<br>但是我的订阅里大家会发现留了一个ss懒得说为啥啦</p><pre><code>这里有针对233的备份：（仅复制未更改）   git clone https://github.com/INFWOLAD/v2ray -b master  cd v2ray   chmod +x install.sh   ./install.sh local  （记得安装git）</code></pre>]]></content>
+      
+      
       <categories>
-        <category>科学上网</category>
+          
+          <category> 科学上网 </category>
+          
       </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于科学上网</title>
-    <url>/guanyukexueshangwang/</url>
-    <content><![CDATA[<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog." />
-    <label for="pass">Please enter the password to read the blog.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+        <tags>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于科学上网</title>
+      <link href="/guanyukexueshangwang/"/>
+      <url>/guanyukexueshangwang/</url>
+      
+        <content type="html"><![CDATA[<div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog." />    <label for="pass">Please enter the password to read the blog.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19sG7ZIoqFy2qQING3RIB5nr6CsRsK1kJC2n+7ycl8lLtN7LBd+Dq2LPdRcfGpFXY6RPMVyzwhbrM3+Ekffh1DrPwykBM+DGzeOtan6jODqdUb/P9NLn0agJ5SL2w9q0+FIVCdxEKTYMivMsLQ8IiJKn0J8jia+KDMnU77uraJvBmP+kOb0Xfrk6xU6IJ3Dq++U5oXab+4r5ZAKyu74nDU5sJLz59jj4Y55uq/bfcW8JRfD2d/ULqWOOSg+1Sod63UR98jpoG3tr2uUq6SK+2KeUUbeSnRd67Xl5pjWbFG1jwkYdmFabqMMP3WQkB8DNS5lzFrS0DlSC9k2kk/ypL/FrjfCSPHx+BxTuGWtFHUvhviQ03xZbs/GAOr9mCF3KrhTP48REhkm6rB1qya5rhxCLjz8OJ5JRC9uuRnvwvZhPjm+jJ/AsSofCqq2Jy84viSkgujdTSip3hl3klBhZ94Bl6rDxG+yAPqx7fAyhUJUdJEzFQmuk57N7nkN+zqz1WDW7L7F7SCZBozeyy8MsEtTDaY3miDI3KcPPlV44VaHGq0jLbRaC1DDWGyTMnAgNNF6bQ/9WyNFFyMV6l8jKHKXxqsdcL9X69IhzAMKYymJ8wih3qMrUI58gyXzIxBEVHS+ZLOBDrmNubhFXQ6/I7SVjRUNw4NgY/fAV2IWigF8dWzb7vjKT8FFC24v7ZTS6Wv46LYVbavfe2iU8sIq9f6JU+iwCYHhzMIYRaaSSfQUe32qvryaD6fsLKUnJrTzxQkBEBn506iA+Gp3ckq4HyK5MrcMDArk9DgeMUlORkfzeNuqaQ/XU5W4K2q4FSh/xTH8CgMWv12r6zckZqASCx7rRupCaBLVfSbcbubjdtg4AsB66v4V+aDjmBZ0xRajDp/gli+iU008yvNBQtqioL7oDJ0gr8I0y4MlWr+lpipfg+T0p9yTR9rZpv3gHofwnlmzrTgq0YS9q1FGKw5WTkwouPPKG8Cum6K7uOAJgr0aVCzP4RgDhQpdhF1s8AeXKFCT+zLM9eEonUeKduRDL22JHevYVTPiypd7s95P1xupKBlCzSNVX/uwu+2qFCzvGcJ5sexOfa+4+f8miuaELofF4oeaqeO3nR2IU9J0yEfhYK6Yt+KeScaCNP27LKprVXMO6xiyjdHrFcQYM6fHJs2w4W7YzGs54eQroM/JsyGEsE46texUmNVvFY3Yd/yai+U/pfme2tP2Ph3xnXlBBqqXVOjuZO7CSmDs5d6uy/SQfx/eJFYl3Rg/xcTlSZ11la22bHaggfSyh0WfOwvbqCV4NnkF1iRbUMPVxQrQg/dWh/Ycn6Rbb3NkyWLzVRmteEtnaCBUvMVBs9LuZ9a2fLgr3Lshq3xg4CWfAwuZ3Abn3QfhvdZkxYx4Rk20cofqUMT00TLtxiXcjQlEvBgepLwQ5vmircRWGaDnMrfSyF+usB1zaJ24MCE6+OJd7bT04h/KXvtWzftpDCPFE65KAYvQosqnj22BzJ2tFXvXE4WCLFdAdfR3mb6kVT394VjmQLJBtoiAPoxFQArDafDJXe/oXZLK8kZhF4Etcy5IpudC6n4V1tszmPEnpytKfPsnRn9clkYhluSgS8vwF3X9+e68oSQF92MOpFHUZP6kQ/96zb2GEHsTMoEYmxK6GTYnYLWHAKQGSJy2xv/ajk8LkhNUvDtqbShAHdhju0XB2FzNkRrouFegWoGRxZG1y4Y5+VUEPlCsD91Lsocm4124Y5NmE+hLn2zB51c2aNTkdsOltzXRH+/idd0+/74RvXTQBcAaoY70LFg+pIR8vvsSvt9NO6+lsorNL1jOHnm6RI/WKuoITOxQ/dHc3VUWl7ddHYY1dO+yZtzYrfFQFHXARnoBsuApXQsbcaA7b1A0O8I6cW7IMGYCf7a9ORbGFrDb4HNn0e9ETq4U6kl3eL0Kwqirt7QxwLypGdBDDQpEfw/Ubt+CryFmz+3mGPMVpqFmowxzpezijfMFFSLZOBj3lp8Ht/6UpnFAO3D9w2DtgHItH+JBGlHcdq++MZXlNL4b5mLZ+7vMU/gkFqTGQz1/qZZmBVqJSZXTF8VaSVsuzO1eVO8AstwgzYSDHt/5ntY4iF6r5FOgZcXM1NBUuG7nLkIPA6e1aMGAYc3k/DXJkJXtd8SRjvw273CPsLVaWEjX2APlp0OanmIrcXeTRS+wtRBJpUzPz2haHLZLzQtQqZuuS68EE30gazOgptcImjKrON8mWzSI5RF6e4utMKZWOASMCm8Puba0DCxUEta4dGIFkicBOiMY5pIu6j6fbYbhXdezUoH4MGuU8Cat/AGqTe5XWpYYT+d988AQraTwjVPyh6PsYoJs/WHmOWwJcR680K6EZh5n6miNVRfIvnCXzVamEaxSlYsbI7jgBYC0Oq/n5VORVD2Pjm0igE6oZ5yznegzQdNgdk9cG/gCxSky0pI5D6F8A8SPUFVqjgA9VtsETdqMJbpuSs3K1v7WjIK8EhX75aD+DpQah+GotA+9eNzE/H6gyc99I/05NUVb5/Bb2VKhOH8r/X62wHcZULPeqyGB59WwCivdaYy3IkH58y1Kct7gBJ9OSXUP8q2Vs9XZ9kT6bsCqgHNuqRtvo5JKGCid2Q8y99BuqqksNpXqNCvpFZ0Y12bMGlxF9B5fFAOi+RSDjJwHISBogU9E/2mLWlHzeZ6uzMFTr74yOiBeIQWGS07Pstu0v4KfhA9SLuKMviRZ1TDhbkgemqW2rbJu26JaZ0yoSBtnHA==</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
       <categories>
-        <category>科学上网</category>
+          
+          <category> 科学上网 </category>
+          
       </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>程序设计基础要点</title>
-    <url>/chengxushejijichuyaodian/</url>
-    <content><![CDATA[<h1 id="程序设计基础考试内容概略"><a href="#程序设计基础考试内容概略" class="headerlink" title="程序设计基础考试内容概略"></a>程序设计基础考试内容概略</h1><h3 id="流程图以及ns图"><a href="#流程图以及ns图" class="headerlink" title="流程图以及ns图"></a>流程图以及ns图</h3><p>例题：</p>
-<ol>
-<li>求5！的算法 <em>注意判断后置</em></li>
-<li>打印50个学生中成绩高于80分的学号和成绩</li>
-<li>求1-1/2+1/3……</li>
-<li>判断素数</li>
-</ol>
-<h3 id="伪代码注意："><a href="#伪代码注意：" class="headerlink" title="伪代码注意："></a>伪代码注意：</h3><ol>
-<li>array数组</li>
-<li>mod相当于c语言%</li>
-<li>div相当于c语言/</li>
-<li>定义函数function name （）</li>
-<li>伪代码中a[1]是第一个元素</li>
-<li>不等于是&lt;&gt;</li>
-<li>end结尾</li>
-<li>注意for中的箭头</li>
-</ol>
-<h3 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h3><p>用自身的结构来描述自身就称为“递归”</p>
-<h3 id="递归的特点"><a href="#递归的特点" class="headerlink" title="递归的特点"></a>递归的特点</h3><ol>
-<li>必须有一个明确的结束条件</li>
-<li>问题规模每递归一次比上一次问题规模有所减少</li>
-<li>效率较低，消耗的时间和占用的内存空间比非递归大</li>
-<li>算法简单，易于操作</li>
-</ol>
-<h3 id="对于表达式的理解"><a href="#对于表达式的理解" class="headerlink" title="对于表达式的理解"></a>对于表达式的理解</h3><p>表达式的定义：使用操作符对数据和操作数进行处理</p>
-<h3 id="对于运算符的理解"><a href="#对于运算符的理解" class="headerlink" title="对于运算符的理解"></a>对于运算符的理解</h3><p>运算符定义：用于通知计算机对数据进行什么样的操作<br>包括数学操作符、关系操作符、罗技操作符及其他<br>优先级：数学大于关系大于逻辑</p>
-<h3 id="结构化算法"><a href="#结构化算法" class="headerlink" title="结构化算法"></a>结构化算法</h3><p>是由一些基本结构顺序组成的、在基本结构之间不存在向前或者向后的跨步形跳转，流程的转移只存在于一个基本结构范围内</p>
-<h3 id="排序问题："><a href="#排序问题：" class="headerlink" title="排序问题："></a>排序问题：</h3><p>见ppt函数部分，注意函数分离（function name （））</p>
-<h3 id="算法列表：（伪代码表示）"><a href="#算法列表：（伪代码表示）" class="headerlink" title="算法列表：（伪代码表示）"></a>算法列表：（伪代码表示）</h3><ol>
-<li>求1-1/2+1/3……</li>
-<li>对于一个大于或者等于3的正整数，判断他是不是一个素数。（注意他的改进算法）</li>
-<li>判断2000-2500的每一年是否为闰年</li>
-<li>将1-1000之间的素数打印出来   <em>在注意优化方法</em></li>
-<li>乌龟第一秒爬1米，第二秒爬1/2米，问爬20米需要多久？</li>
-<li>输入一个正数，将该数字倒序输出</li>
-<li>求斐波那契数列第n项（用数组优化）（另外考虑递归法）</li>
-<li>质因数分解</li>
-<li>最大公约数「（辗转相除法）（注意大小顺序）」「递归法」</li>
-<li>s=a+aa+aaa+aaaa….</li>
-<li>有1234任选三个不相同的数组成一个三位数，有多少这样的三位数？（注意不相等条件）</li>
-<li>计算三角形面积（单独函数）</li>
-<li>（以上函数单独拎出）</li>
-<li>十进制转换为八进制（有无数组两种）</li>
-<li>从键盘任意输入十个数，用选择法将他们从高到低排序</li>
-<li>输出杨辉三角</li>
-<li>给出日期ymd，计算该日期是该年的第几天（用到case）记得考虑闰年</li>
-<li>用冒泡排序法排序a[1…10]</li>
-<li>对半查找</li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>程序设计基础要点</title>
+      <link href="/chengxushejijichuyaodian/"/>
+      <url>/chengxushejijichuyaodian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="程序设计基础考试内容概略"><a href="#程序设计基础考试内容概略" class="headerlink" title="程序设计基础考试内容概略"></a>程序设计基础考试内容概略</h1><h3 id="流程图以及ns图"><a href="#流程图以及ns图" class="headerlink" title="流程图以及ns图"></a>流程图以及ns图</h3><p>例题：</p><ol><li>求5！的算法 <em>注意判断后置</em></li><li>打印50个学生中成绩高于80分的学号和成绩</li><li>求1-1/2+1/3……</li><li>判断素数</li></ol><h3 id="伪代码注意："><a href="#伪代码注意：" class="headerlink" title="伪代码注意："></a>伪代码注意：</h3><ol><li>array数组</li><li>mod相当于c语言%</li><li>div相当于c语言/</li><li>定义函数function name （）</li><li>伪代码中a[1]是第一个元素</li><li>不等于是&lt;&gt;</li><li>end结尾</li><li>注意for中的箭头</li></ol><h3 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h3><p>用自身的结构来描述自身就称为“递归”</p><h3 id="递归的特点"><a href="#递归的特点" class="headerlink" title="递归的特点"></a>递归的特点</h3><ol><li>必须有一个明确的结束条件</li><li>问题规模每递归一次比上一次问题规模有所减少</li><li>效率较低，消耗的时间和占用的内存空间比非递归大</li><li>算法简单，易于操作</li></ol><h3 id="对于表达式的理解"><a href="#对于表达式的理解" class="headerlink" title="对于表达式的理解"></a>对于表达式的理解</h3><p>表达式的定义：使用操作符对数据和操作数进行处理</p><h3 id="对于运算符的理解"><a href="#对于运算符的理解" class="headerlink" title="对于运算符的理解"></a>对于运算符的理解</h3><p>运算符定义：用于通知计算机对数据进行什么样的操作<br>包括数学操作符、关系操作符、罗技操作符及其他<br>优先级：数学大于关系大于逻辑</p><h3 id="结构化算法"><a href="#结构化算法" class="headerlink" title="结构化算法"></a>结构化算法</h3><p>是由一些基本结构顺序组成的、在基本结构之间不存在向前或者向后的跨步形跳转，流程的转移只存在于一个基本结构范围内</p><h3 id="排序问题："><a href="#排序问题：" class="headerlink" title="排序问题："></a>排序问题：</h3><p>见ppt函数部分，注意函数分离（function name （））</p><h3 id="算法列表：（伪代码表示）"><a href="#算法列表：（伪代码表示）" class="headerlink" title="算法列表：（伪代码表示）"></a>算法列表：（伪代码表示）</h3><ol><li>求1-1/2+1/3……</li><li>对于一个大于或者等于3的正整数，判断他是不是一个素数。（注意他的改进算法）</li><li>判断2000-2500的每一年是否为闰年</li><li>将1-1000之间的素数打印出来   <em>在注意优化方法</em></li><li>乌龟第一秒爬1米，第二秒爬1/2米，问爬20米需要多久？</li><li>输入一个正数，将该数字倒序输出</li><li>求斐波那契数列第n项（用数组优化）（另外考虑递归法）</li><li>质因数分解</li><li>最大公约数「（辗转相除法）（注意大小顺序）」「递归法」</li><li>s=a+aa+aaa+aaaa….</li><li>有1234任选三个不相同的数组成一个三位数，有多少这样的三位数？（注意不相等条件）</li><li>计算三角形面积（单独函数）</li><li>（以上函数单独拎出）</li><li>十进制转换为八进制（有无数组两种）</li><li>从键盘任意输入十个数，用选择法将他们从高到低排序</li><li>输出杨辉三角</li><li>给出日期ymd，计算该日期是该年的第几天（用到case）记得考虑闰年</li><li>用冒泡排序法排序a[1…10]</li><li>对半查找</li></ol>]]></content>
+      
+      
       <categories>
-        <category>计算机相关</category>
+          
+          <category> 计算机相关 </category>
+          
       </categories>
-      <tags>
-        <tag>计算机相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于y7000安装Ubuntu的一些心得体会</title>
-    <url>/guanyuy7000anzhuangubuntudeyixiexindetihui/</url>
-    <content><![CDATA[<blockquote>
-<p>之前第一次装Ubuntu还是在另一台老设备装着玩，那时候还不是efi引导，那时候也没有secure boot。<br>如今在y7000上装Ubuntu遇到了一些设备问题和一些安装上的不同点，记录下来备用。</p>
-</blockquote>
-<h2 id="一、关于关闭secure-boot"><a href="#一、关于关闭secure-boot" class="headerlink" title="一、关于关闭secure boot"></a>一、关于关闭secure boot</h2><p>之前了解到secure还是因为当时微软推出这个的时候被喷惨了。本身一为了防止恶意软件侵入的设定不仅没有起到作用，相反还会给安装除了有密钥以外的系统带来多余的一步。<br>进入bios，<code>关闭</code>，开始制作启动盘。</p>
-<hr>
-<h2 id="二、关于系统盘的制作问题"><a href="#二、关于系统盘的制作问题" class="headerlink" title="二、关于系统盘的制作问题"></a>二、关于系统盘的制作问题</h2><p>一开始我把u盘格式化为了ntfs格式，结果发现快速启动项里面有问题，之后查阅资料发现<code>应该格式化为fat32格式</code>以方便uefi引导的ubuntu。</p>
-<hr>
-<h2 id="三、安装之后的一些问题"><a href="#三、安装之后的一些问题" class="headerlink" title="三、安装之后的一些问题"></a>三、安装之后的一些问题</h2><p>安装之后遇到了以下的几个问题</p>
-<ol>
-<li>安装过程中要自己手动分区，在那之前先压缩磁盘。我本身是512的固态所以只给Ubuntu留了100g。其中swap给了8g，/home给了50，/给了40，efi分了512mb。分区的时候<code>务必注意格式和主逻辑的选择</code>。</li>
-<li>安装之后发现wifi不能用。查驱动发现<code>联想的ideapad驱动和本身的网卡驱动有冲突</code>。于是屏蔽来实现正常使用<br>附上代码方便下次使用<pre class=" language-javascript"><code class="language-javascript">sudo su
-sudo touch <span class="token operator">/</span>etc<span class="token operator">/</span>modprobe<span class="token punctuation">.</span>d<span class="token operator">/</span>ideapad<span class="token punctuation">.</span>conf
-sudo nautilus
-<span class="token comment" spellcheck="true">//找到/etc/modprobe.d/ideapad.conf文件，文件内输入</span>
-<span class="token comment" spellcheck="true">//blacklist ideapad_laptop</span></code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="四、为了方便而做的种种"><a href="#四、为了方便而做的种种" class="headerlink" title="四、为了方便而做的种种"></a>四、为了方便而做的种种</h2><ol>
-<li>搜狗输入法的调试<br>安装完搜狗滞后发现没有任何的反应，也调用不出来，后来发现需要<code>把ibus改为fcitx重启</code>之后<code>按ctrl＋blank</code>即可。但是这里导致了后续tim的一个问题。</li>
-</ol>
-<p>##########################################################################</p>
-<ol start="2">
-<li>为了方便后续的使用，我配置了<code>Flatpak框架来安装Windows程序</code>。操作过程极其类似当时在macos上配置wine（事实上发现其实就是<code>通过flatpak框架把deepin下的wine平台移植到了Ubuntu上</code>）<br>附上参考的教程链接<br><a href="https://blog.csdn.net/u011469138/article/details/82320761" target="_blank" rel="noopener">https://blog.csdn.net/u011469138/article/details/82320761</a><br>此外这里附上flatpak的使用细则<br><a href="https://linux.cn/article-10459-1.html?pr" target="_blank" rel="noopener">https://linux.cn/article-10459-1.html?pr</a><br>这方便以后的使用<br>感谢原作者</li>
-</ol>
-<p>##########################################################################</p>
-<ol start="3">
-<li>在这个过程中一直出现tim没办法使用搜狗输入法的问题。多次尝试无果想到是否应该在安装一个flatpad下的输入法才能实现。觉得麻烦的情况下尝试搜索能不能<code>直接安装wine</code>。于是在github上发现了deepin-wine Ubuntu<br>附上链接<br><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" target="_blank" rel="noopener">https://github.com/wszqkzqk/deepin-wine-ubuntu</a><br><code>打包zip下载之后文件内sudo sh ./install.sh安装</code>。因为连接问题花了十分钟左右，之后下载deb包安装<br>附上下载链接<br><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/" target="_blank" rel="noopener">http://mirrors.aliyun.com/deepin/pool/non-free/d/</a><br>这样就可以正常使用qq了。<br><strong>记得原来装Ubuntu的时候还有linux版本qq…</strong><br>附上截图<br><img src="https://img-blog.csdnimg.cn/20190703112453460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="初步只装了暂时需要的qq和微信"></li>
-</ol>
-<hr>
-<h2 id="至此Ubuntu安装完成"><a href="#至此Ubuntu安装完成" class="headerlink" title="至此Ubuntu安装完成"></a>至此Ubuntu安装完成</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于y7000安装Ubuntu的一些心得体会</title>
+      <link href="/guanyuy7000anzhuangubuntudeyixiexindetihui/"/>
+      <url>/guanyuy7000anzhuangubuntudeyixiexindetihui/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>之前第一次装Ubuntu还是在另一台老设备装着玩，那时候还不是efi引导，那时候也没有secure boot。<br>如今在y7000上装Ubuntu遇到了一些设备问题和一些安装上的不同点，记录下来备用。</p></blockquote><h2 id="一、关于关闭secure-boot"><a href="#一、关于关闭secure-boot" class="headerlink" title="一、关于关闭secure boot"></a>一、关于关闭secure boot</h2><p>之前了解到secure还是因为当时微软推出这个的时候被喷惨了。本身一为了防止恶意软件侵入的设定不仅没有起到作用，相反还会给安装除了有密钥以外的系统带来多余的一步。<br>进入bios，<code>关闭</code>，开始制作启动盘。</p><hr><h2 id="二、关于系统盘的制作问题"><a href="#二、关于系统盘的制作问题" class="headerlink" title="二、关于系统盘的制作问题"></a>二、关于系统盘的制作问题</h2><p>一开始我把u盘格式化为了ntfs格式，结果发现快速启动项里面有问题，之后查阅资料发现<code>应该格式化为fat32格式</code>以方便uefi引导的ubuntu。</p><hr><h2 id="三、安装之后的一些问题"><a href="#三、安装之后的一些问题" class="headerlink" title="三、安装之后的一些问题"></a>三、安装之后的一些问题</h2><p>安装之后遇到了以下的几个问题</p><ol><li>安装过程中要自己手动分区，在那之前先压缩磁盘。我本身是512的固态所以只给Ubuntu留了100g。其中swap给了8g，/home给了50，/给了40，efi分了512mb。分区的时候<code>务必注意格式和主逻辑的选择</code>。</li><li>安装之后发现wifi不能用。查驱动发现<code>联想的ideapad驱动和本身的网卡驱动有冲突</code>。于是屏蔽来实现正常使用<br>附上代码方便下次使用<pre class=" language-javascript"><code class="language-javascript">sudo susudo touch <span class="token operator">/</span>etc<span class="token operator">/</span>modprobe<span class="token punctuation">.</span>d<span class="token operator">/</span>ideapad<span class="token punctuation">.</span>confsudo nautilus<span class="token comment" spellcheck="true">//找到/etc/modprobe.d/ideapad.conf文件，文件内输入</span><span class="token comment" spellcheck="true">//blacklist ideapad_laptop</span></code></pre></li></ol><hr><h2 id="四、为了方便而做的种种"><a href="#四、为了方便而做的种种" class="headerlink" title="四、为了方便而做的种种"></a>四、为了方便而做的种种</h2><ol><li>搜狗输入法的调试<br>安装完搜狗滞后发现没有任何的反应，也调用不出来，后来发现需要<code>把ibus改为fcitx重启</code>之后<code>按ctrl＋blank</code>即可。但是这里导致了后续tim的一个问题。</li></ol><p>##########################################################################</p><ol start="2"><li>为了方便后续的使用，我配置了<code>Flatpak框架来安装Windows程序</code>。操作过程极其类似当时在macos上配置wine（事实上发现其实就是<code>通过flatpak框架把deepin下的wine平台移植到了Ubuntu上</code>）<br>附上参考的教程链接<br><a href="https://blog.csdn.net/u011469138/article/details/82320761" target="_blank" rel="noopener">https://blog.csdn.net/u011469138/article/details/82320761</a><br>此外这里附上flatpak的使用细则<br><a href="https://linux.cn/article-10459-1.html?pr" target="_blank" rel="noopener">https://linux.cn/article-10459-1.html?pr</a><br>这方便以后的使用<br>感谢原作者</li></ol><p>##########################################################################</p><ol start="3"><li>在这个过程中一直出现tim没办法使用搜狗输入法的问题。多次尝试无果想到是否应该在安装一个flatpad下的输入法才能实现。觉得麻烦的情况下尝试搜索能不能<code>直接安装wine</code>。于是在github上发现了deepin-wine Ubuntu<br>附上链接<br><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" target="_blank" rel="noopener">https://github.com/wszqkzqk/deepin-wine-ubuntu</a><br><code>打包zip下载之后文件内sudo sh ./install.sh安装</code>。因为连接问题花了十分钟左右，之后下载deb包安装<br>附上下载链接<br><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/" target="_blank" rel="noopener">http://mirrors.aliyun.com/deepin/pool/non-free/d/</a><br>这样就可以正常使用qq了。<br><strong>记得原来装Ubuntu的时候还有linux版本qq…</strong><br>附上截图<br><img src="https://img-blog.csdnimg.cn/20190703112453460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="初步只装了暂时需要的qq和微信"></li></ol><hr><h2 id="至此Ubuntu安装完成"><a href="#至此Ubuntu安装完成" class="headerlink" title="至此Ubuntu安装完成"></a>至此Ubuntu安装完成</h2>]]></content>
+      
+      
       <categories>
-        <category>计算机相关</category>
+          
+          <category> 计算机相关 </category>
+          
       </categories>
-      <tags>
-        <tag>计算机相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于配置Bhuman通用平台环境心得</title>
-    <url>/guanyupeizhibhumantongyongpingtaihuanjingxinde/</url>
-    <content><![CDATA[<blockquote>
-<p>   因为实验室考核，从19.7.3开始接触Bhuman，在此之前的第一步是配置环境<br>根据Coderelease2107上面的信息开始部署</p>
-</blockquote>
-<pre><code>写在最前面</code></pre><h2 id="整体的步骤"><a href="#整体的步骤" class="headerlink" title="整体的步骤"></a>整体的步骤</h2><ol>
-<li>安装Ubuntu系统（见我的另一篇博文：<a href="https://blog.csdn.net/Athus_c/article/details/94495664" target="_blank" rel="noopener">https://blog.csdn.net/Athus_c/article/details/94495664</a></li>
-<li>安装相应软件包（alcommon单独安装）</li>
-<li>在主文件下make编译（包括安装codelite）</li>
-</ol>
-<pre><code>接下来是详细的步骤以及操作中遇到的问题</code></pre><h2 id="一、关于coderelease2017的一些"><a href="#一、关于coderelease2017的一些" class="headerlink" title="一、关于coderelease2017的一些"></a>一、关于coderelease2017的一些</h2><p>由于全英文一些时候不方便阅读，我是Adobe Acrobat DC pro转成word之后方便阅读、拷贝代码和对一些不了解的地方进行翻译。例外拆分成小文件谷歌直接翻译也可以。但是由于有一定专业名词直接翻译会影响阅读体验。</p>
-<p>另外coderelease里面<code>很多代码存在空格问题</code>，需要复制的时候先改一下之后在继续进行操作（例如下面图片的部分）<br><img src="https://img-blog.csdnimg.cn/20190703131721125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="该部分">这里面的qtbase5 - dev里面-左右是没用空格的。</p>
-<hr>
-<h2 id="二、解压过程中出现的问题（关联四）"><a href="#二、解压过程中出现的问题（关联四）" class="headerlink" title="二、解压过程中出现的问题（关联四）"></a>二、解压过程中出现的问题（关联四）</h2><p>在下载了群内的buhuman文件之后，我在ubuntu里面解压发现出现这样的提示：<br><img src="https://img-blog.csdnimg.cn/20190703223833462.png" alt="错误"><br>我一开始在想是不是文件出现了问题，于是重新下载了一次发现依然打不开。于是我换我的mac下载发现在mac上面是可以打开的，结果发现<code>ubuntu是不支持rar的</code><br><img src="https://img-blog.csdnimg.cn/20190703135109452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="mac上打开正常">于是我就在mac上先解压之后用u盘传到装ubuntu的电脑上了。<code>但是这也为出现下面的错误埋下了伏笔</code></p>
-<hr>
-<h2 id="三、安装除alcommon以外的软件"><a href="#三、安装除alcommon以外的软件" class="headerlink" title="三、安装除alcommon以外的软件"></a>三、安装除alcommon以外的软件</h2><p>直接在终端里运行下面代码即可（注意空格）</p>
-<pre class=" language-javascript"><code class="language-javascript">sudo apt install clang qtbase5<span class="token operator">-</span>dev libqt5svg5<span class="token operator">-</span>dev libglew<span class="token operator">-</span>dev libxml2<span class="token operator">-</span>dev graphviz xterm</code></pre>
-<p>但是我是先安装的clang5.0，后安装的剩下部分（如图）<br><img src="https://img-blog.csdnimg.cn/20190703224056992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="clang"><br><img src="https://img-blog.csdnimg.cn/20190703224120360.png" alt="第二部分"><br><code>再次注意要把-左右的空格删除</code>，不然会出现连接错误的提示。</p>
-<hr>
-<h2 id="四、安装alcommon遇到的解压缩问题"><a href="#四、安装alcommon遇到的解压缩问题" class="headerlink" title="四、安装alcommon遇到的解压缩问题"></a>四、安装alcommon遇到的解压缩问题</h2><p>按照文章的要求：<br><img src="https://img-blog.csdnimg.cn/20190703140312508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="alcommon"><br>我把在mac上解压的文件拷贝到home下，和naoqi-sdk-2.1.4.13-linux32.tar.gz一同放在了一个bhuman的文件夹里。之后把解压的bhuman重命名为bhumancode方便区分主目录和分目录。此时在bhumancode文件夹下面运行终端执行</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token operator">/</span>Install<span class="token operator">/</span>installAlcommon <span class="token operator">/</span>home<span class="token operator">/</span>bhuman<span class="token operator">/</span>naoqi<span class="token operator">-</span>sdk<span class="token number">-2.1</span><span class="token punctuation">.</span><span class="token number">4.13</span><span class="token operator">-</span>linux32<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz</code></pre>
-<p>但是出现了错误：<br><img src="https://img-blog.csdnimg.cn/20190703140759361.png" alt="第一次错误">我开始检查是不是naoqi-sdk-2.1.4.13-linux32.tar.gz的目录有问题，结果属性发现地址为</p>
-<blockquote>
-<p>/home/cosz/bhuman     （cosz是我的用户名）</p>
-</blockquote>
-<p>之后我就修改了但是运行还是错误。我仔细看了下报错信息发现<code>报错问题出在bhumancode文件里面</code>。我按照路径找到文件<br><img src="https://img-blog.csdnimg.cn/2019070314111488.png" alt="alcommon文件">并没有发现什么问题…</p>
-<p>网上也有几位也出现了问题，突然看到一篇文章：<br><a href="https://www.cnblogs.com/pangblog/p/3290028.html" target="_blank" rel="noopener">https://www.cnblogs.com/pangblog/p/3290028.html</a><br>写到windows下更改过文件导致这种问题出现</p>
-<blockquote>
-<p>原因：<br>  这个文件在Windows 下编辑过，在Windows下每一行结尾是\n\r，而Linux下则是\n</p>
-</blockquote>
-<p>豁然开朗，文章同时也给出了解决的办法：</p>
-<blockquote>
-<p>使用在终端输入sed -i ‘s/\r$//‘ make-all-linux-project.sh即可<br>其中make-all-linux-project.sh为我的文件名，这里改成自己需要的即可</p>
-</blockquote>
-<hr>
-<p><strong>但是这里我并没有这样操作</strong>，既然不能解压rar我就<code>安装解压rar的程序</code>呗</p>
-<pre class=" language-javascript"><code class="language-javascript"> sudo apt<span class="token operator">-</span><span class="token keyword">get</span> install unrar</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190703142302125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="rar"><br>之后打开提取，解压问题搞定。</p>
-<hr>
-<h2 id="五、权限问题"><a href="#五、权限问题" class="headerlink" title="五、权限问题"></a>五、权限问题</h2><p>之后在解压完成的文件夹中运行./Install/installAlcommon /home/cosz/bhuman/naoqi-sdk-2.1.4.13-linux32.tar.gz，出现了新问题<br><img src="https://img-blog.csdnimg.cn/2019070314274456.png" alt="权限问题">ok那就获取root权限</p>
-<p>但是<code>获取root之后发现依然出现问题，还是会出现上面的编译问题。</code></p>
-<p>于是我开始疯狂找问题所在，无意间在github上找到了Bhuman的账号<br><img src="https://img-blog.csdnimg.cn/2019070315115822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="bhuman"><a href="https://github.com/bhuman" target="_blank" rel="noopener">https://github.com/bhuman</a></p>
-<p>在上面下载了BHumanCodeRelease，解压重复上面的操作，<code>运行成功</code><br><img src="https://img-blog.csdnimg.cn/20190703224317261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="成功"><br>我详细对照了群里面文件和github文件中的installAlcommon文件<br><img src="https://img-blog.csdnimg.cn/20190703151614328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="对比"><br>未发现什么不同点，可能<code>问题还是出现在换行符的不同所造成的</code>。</p>
-<p>目前为止alcommon配置完成</p>
-<hr>
-<h2 id="六、编译"><a href="#六、编译" class="headerlink" title="六、编译"></a>六、编译</h2><p>依旧按照要求在目录下make<br><img src="https://img-blog.csdnimg.cn/20190703154525174.png" alt="要求">但是<code>出现了提示缺少clang++的问题...</code>我就重新装了一下clang<br><img src="https://img-blog.csdnimg.cn/20190703154612337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="clang">话说clang现在6.0了啊…发现第一步单独来一下有点多此一举。</p>
-<p>之后就正常的运行了。整个过程比较漫长，附上最后成功截图<br><img src="https://img-blog.csdnimg.cn/20190703154742443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="完成"></p>
-<hr>
-<h2 id="七、安装codelite"><a href="#七、安装codelite" class="headerlink" title="七、安装codelite"></a>七、安装codelite</h2><p>看到好像要用我就搜了一下安装了….<br>遵循下面这部分<br><img src="https://img-blog.csdnimg.cn/20190703161337143.png" alt="文件"><br>就一条代码</p>
-<pre class=" language-javascript"><code class="language-javascript"> sudo apt<span class="token operator">-</span><span class="token keyword">get</span> install codelite</code></pre>
-<p> 之后等待即可<br> <img src="https://img-blog.csdnimg.cn/20190703160353590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="codelite"><br> 之后在文件夹下运行Make/LinuxCodeLite/generate，提示完成<br> <img src="https://img-blog.csdnimg.cn/20190703161424873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="完成提示"></p>
-<h2 id="至此完成部署"><a href="#至此完成部署" class="headerlink" title="至此完成部署"></a><strong>至此完成部署</strong></h2><hr>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于配置Bhuman通用平台环境心得</title>
+      <link href="/guanyupeizhibhumantongyongpingtaihuanjingxinde/"/>
+      <url>/guanyupeizhibhumantongyongpingtaihuanjingxinde/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>   因为实验室考核，从19.7.3开始接触Bhuman，在此之前的第一步是配置环境<br>根据Coderelease2107上面的信息开始部署</p></blockquote><pre><code>写在最前面</code></pre><h2 id="整体的步骤"><a href="#整体的步骤" class="headerlink" title="整体的步骤"></a>整体的步骤</h2><ol><li>安装Ubuntu系统（见我的另一篇博文：<a href="https://blog.csdn.net/Athus_c/article/details/94495664" target="_blank" rel="noopener">https://blog.csdn.net/Athus_c/article/details/94495664</a></li><li>安装相应软件包（alcommon单独安装）</li><li>在主文件下make编译（包括安装codelite）</li></ol><pre><code>接下来是详细的步骤以及操作中遇到的问题</code></pre><h2 id="一、关于coderelease2017的一些"><a href="#一、关于coderelease2017的一些" class="headerlink" title="一、关于coderelease2017的一些"></a>一、关于coderelease2017的一些</h2><p>由于全英文一些时候不方便阅读，我是Adobe Acrobat DC pro转成word之后方便阅读、拷贝代码和对一些不了解的地方进行翻译。例外拆分成小文件谷歌直接翻译也可以。但是由于有一定专业名词直接翻译会影响阅读体验。</p><p>另外coderelease里面<code>很多代码存在空格问题</code>，需要复制的时候先改一下之后在继续进行操作（例如下面图片的部分）<br><img src="https://img-blog.csdnimg.cn/20190703131721125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="该部分">这里面的qtbase5 - dev里面-左右是没用空格的。</p><hr><h2 id="二、解压过程中出现的问题（关联四）"><a href="#二、解压过程中出现的问题（关联四）" class="headerlink" title="二、解压过程中出现的问题（关联四）"></a>二、解压过程中出现的问题（关联四）</h2><p>在下载了群内的buhuman文件之后，我在ubuntu里面解压发现出现这样的提示：<br><img src="https://img-blog.csdnimg.cn/20190703223833462.png" alt="错误"><br>我一开始在想是不是文件出现了问题，于是重新下载了一次发现依然打不开。于是我换我的mac下载发现在mac上面是可以打开的，结果发现<code>ubuntu是不支持rar的</code><br><img src="https://img-blog.csdnimg.cn/20190703135109452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="mac上打开正常">于是我就在mac上先解压之后用u盘传到装ubuntu的电脑上了。<code>但是这也为出现下面的错误埋下了伏笔</code></p><hr><h2 id="三、安装除alcommon以外的软件"><a href="#三、安装除alcommon以外的软件" class="headerlink" title="三、安装除alcommon以外的软件"></a>三、安装除alcommon以外的软件</h2><p>直接在终端里运行下面代码即可（注意空格）</p><pre class=" language-javascript"><code class="language-javascript">sudo apt install clang qtbase5<span class="token operator">-</span>dev libqt5svg5<span class="token operator">-</span>dev libglew<span class="token operator">-</span>dev libxml2<span class="token operator">-</span>dev graphviz xterm</code></pre><p>但是我是先安装的clang5.0，后安装的剩下部分（如图）<br><img src="https://img-blog.csdnimg.cn/20190703224056992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="clang"><br><img src="https://img-blog.csdnimg.cn/20190703224120360.png" alt="第二部分"><br><code>再次注意要把-左右的空格删除</code>，不然会出现连接错误的提示。</p><hr><h2 id="四、安装alcommon遇到的解压缩问题"><a href="#四、安装alcommon遇到的解压缩问题" class="headerlink" title="四、安装alcommon遇到的解压缩问题"></a>四、安装alcommon遇到的解压缩问题</h2><p>按照文章的要求：<br><img src="https://img-blog.csdnimg.cn/20190703140312508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="alcommon"><br>我把在mac上解压的文件拷贝到home下，和naoqi-sdk-2.1.4.13-linux32.tar.gz一同放在了一个bhuman的文件夹里。之后把解压的bhuman重命名为bhumancode方便区分主目录和分目录。此时在bhumancode文件夹下面运行终端执行</p><pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token operator">/</span>Install<span class="token operator">/</span>installAlcommon <span class="token operator">/</span>home<span class="token operator">/</span>bhuman<span class="token operator">/</span>naoqi<span class="token operator">-</span>sdk<span class="token number">-2.1</span><span class="token punctuation">.</span><span class="token number">4.13</span><span class="token operator">-</span>linux32<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz</code></pre><p>但是出现了错误：<br><img src="https://img-blog.csdnimg.cn/20190703140759361.png" alt="第一次错误">我开始检查是不是naoqi-sdk-2.1.4.13-linux32.tar.gz的目录有问题，结果属性发现地址为</p><blockquote><p>/home/cosz/bhuman     （cosz是我的用户名）</p></blockquote><p>之后我就修改了但是运行还是错误。我仔细看了下报错信息发现<code>报错问题出在bhumancode文件里面</code>。我按照路径找到文件<br><img src="https://img-blog.csdnimg.cn/2019070314111488.png" alt="alcommon文件">并没有发现什么问题…</p><p>网上也有几位也出现了问题，突然看到一篇文章：<br><a href="https://www.cnblogs.com/pangblog/p/3290028.html" target="_blank" rel="noopener">https://www.cnblogs.com/pangblog/p/3290028.html</a><br>写到windows下更改过文件导致这种问题出现</p><blockquote><p>原因：<br>  这个文件在Windows 下编辑过，在Windows下每一行结尾是\n\r，而Linux下则是\n</p></blockquote><p>豁然开朗，文章同时也给出了解决的办法：</p><blockquote><p>使用在终端输入sed -i ‘s/\r$//‘ make-all-linux-project.sh即可<br>其中make-all-linux-project.sh为我的文件名，这里改成自己需要的即可</p></blockquote><hr><p><strong>但是这里我并没有这样操作</strong>，既然不能解压rar我就<code>安装解压rar的程序</code>呗</p><pre class=" language-javascript"><code class="language-javascript"> sudo apt<span class="token operator">-</span><span class="token keyword">get</span> install unrar</code></pre><p><img src="https://img-blog.csdnimg.cn/20190703142302125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="rar"><br>之后打开提取，解压问题搞定。</p><hr><h2 id="五、权限问题"><a href="#五、权限问题" class="headerlink" title="五、权限问题"></a>五、权限问题</h2><p>之后在解压完成的文件夹中运行./Install/installAlcommon /home/cosz/bhuman/naoqi-sdk-2.1.4.13-linux32.tar.gz，出现了新问题<br><img src="https://img-blog.csdnimg.cn/2019070314274456.png" alt="权限问题">ok那就获取root权限</p><p>但是<code>获取root之后发现依然出现问题，还是会出现上面的编译问题。</code></p><p>于是我开始疯狂找问题所在，无意间在github上找到了Bhuman的账号<br><img src="https://img-blog.csdnimg.cn/2019070315115822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="bhuman"><a href="https://github.com/bhuman" target="_blank" rel="noopener">https://github.com/bhuman</a></p><p>在上面下载了BHumanCodeRelease，解压重复上面的操作，<code>运行成功</code><br><img src="https://img-blog.csdnimg.cn/20190703224317261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="成功"><br>我详细对照了群里面文件和github文件中的installAlcommon文件<br><img src="https://img-blog.csdnimg.cn/20190703151614328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="对比"><br>未发现什么不同点，可能<code>问题还是出现在换行符的不同所造成的</code>。</p><p>目前为止alcommon配置完成</p><hr><h2 id="六、编译"><a href="#六、编译" class="headerlink" title="六、编译"></a>六、编译</h2><p>依旧按照要求在目录下make<br><img src="https://img-blog.csdnimg.cn/20190703154525174.png" alt="要求">但是<code>出现了提示缺少clang++的问题...</code>我就重新装了一下clang<br><img src="https://img-blog.csdnimg.cn/20190703154612337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="clang">话说clang现在6.0了啊…发现第一步单独来一下有点多此一举。</p><p>之后就正常的运行了。整个过程比较漫长，附上最后成功截图<br><img src="https://img-blog.csdnimg.cn/20190703154742443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="完成"></p><hr><h2 id="七、安装codelite"><a href="#七、安装codelite" class="headerlink" title="七、安装codelite"></a>七、安装codelite</h2><p>看到好像要用我就搜了一下安装了….<br>遵循下面这部分<br><img src="https://img-blog.csdnimg.cn/20190703161337143.png" alt="文件"><br>就一条代码</p><pre class=" language-javascript"><code class="language-javascript"> sudo apt<span class="token operator">-</span><span class="token keyword">get</span> install codelite</code></pre><p> 之后等待即可<br> <img src="https://img-blog.csdnimg.cn/20190703160353590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="codelite"><br> 之后在文件夹下运行Make/LinuxCodeLite/generate，提示完成<br> <img src="https://img-blog.csdnimg.cn/20190703161424873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="完成提示"></p><h2 id="至此完成部署"><a href="#至此完成部署" class="headerlink" title="至此完成部署"></a><strong>至此完成部署</strong></h2><hr>]]></content>
+      
+      
       <categories>
-        <category>NAO机器人</category>
+          
+          <category> NAO机器人 </category>
+          
       </categories>
-      <tags>
-        <tag>NAO机器人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git 的使用总结</title>
-    <url>/gitdeshiyongzongjie/</url>
-    <content><![CDATA[<blockquote>
-<p>文章一定程度上参考 xiaopang1983的博客园博文，并作出修改</p>
-</blockquote>
-<h2 id="一、git-clone"><a href="#一、git-clone" class="headerlink" title="一、git clone"></a>一、git clone</h2><p>远程操作的第一步，通常是从远程主机克隆一个版本库，这时就要用到git clone命令。</p>
-<pre><code>$ git clone &lt;版本库的网址&gt;</code></pre><p>该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。</p>
-<pre><code>$ git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;</code></pre><h2 id="二、git-remote"><a href="#二、git-remote" class="headerlink" title="二、git remote"></a>二、git remote</h2><p>为了便于管理，Git要求每个远程主机都必须指定一个主机名。git remote命令就用于管理主机名。</p>
-<p>不带选项的时候，git remote命令列出所有远程主机。</p>
-<pre><code>$ git remote
-origin</code></pre><p>使用-v选项，可以参看远程主机的网址。</p>
-<pre><code>$ git remote -v
-origin  git@github.com:jquery/jquery.git (fetch)
-origin  git@github.com:jquery/jquery.git (push)</code></pre><p>上面命令表示，当前只有一台远程主机，叫做origin，以及它的网址。</p>
-<p>克隆版本库的时候，所使用的远程主机自动被Git命名为origin。如果想用其他的主机名，需要用git clone命令的-o选项指定。</p>
-<pre><code>$ git clone -o cosz https://github.com/jquery/jquery.git
-$ git remote
-cosz</code></pre><p>上面命令表示，克隆的时候，指定远程主机叫做cosz。</p>
-<p>git remote show命令加上主机名，可以查看该主机的详细信息。</p>
-<pre><code>$ git remote show &lt;主机名&gt;</code></pre><p>git remote add命令用于添加远程主机。</p>
-<pre><code>$ git remote add &lt;主机名&gt; &lt;网址&gt;</code></pre><p>git remote rm命令用于删除远程主机。</p>
-<pre><code>$ git remote rm &lt;主机名&gt;</code></pre><p>git remote rename命令用于远程主机的改名。</p>
-<pre><code>$ git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</code></pre><h2 id="三、git-fetch"><a href="#三、git-fetch" class="headerlink" title="三、git fetch"></a>三、git fetch</h2><p>一旦远程主机的版本库有了更新（commit），需要将这些更新取回本地，这时就要用到git fetch命令。</p>
-<pre><code>$ git fetch &lt;远程主机名&gt;</code></pre><p>上面命令将某个远程主机的更新，全部取回本地。</p>
-<p>git fetch命令通常用来查看其他人的进程，因为它取回的代码对你本地的开发代码没有影响。</p>
-<p>默认情况下，git fetch取回所有分支（branch）的更新。如果只想取回特定分支的更新，可以指定分支名。</p>
-<pre><code>$ git fetch &lt;远程主机名&gt; &lt;分支名&gt;</code></pre><p>比如，取回origin主机的master分支。</p>
-<pre><code>$ git fetch origin master</code></pre><p>所取回的更新，在本地主机上要用”远程主机名/分支名”的形式读取。比如origin主机的master，就要用origin/master读取。</p>
-<p>git branch命令的-r选项，可以用来查看远程分支，-a选项查看所有分支。</p>
-<pre><code>$ git branch -r
-origin/master
-
-$ git branch -a
-* master
-  remotes/origin/master</code></pre><p>上面命令表示，本地主机的当前分支是master，远程分支是origin/master。</p>
-<p>取回远程主机的更新以后，可以在它的基础上，使用git checkout命令创建一个新的分支。</p>
-<pre><code>$ git checkout -b newBrach origin/master</code></pre><p>上面命令表示，在origin/master的基础上，创建一个新分支。</p>
-<p>此外，也可以使用git merge命令或者git rebase命令，在本地分支上合并远程分支。</p>
-<pre><code>$ git merge origin/master
-# 或者
-$ git rebase origin/master</code></pre><p>上面命令表示在当前分支上，合并origin/master。</p>
-<h2 id="merge和rebase的区别见："><a href="#merge和rebase的区别见：" class="headerlink" title="merge和rebase的区别见："></a>merge和rebase的区别见：</h2><blockquote>
-<p><a href="https://www.cnblogs.com/xueweihan/p/5743327.html" target="_blank" rel="noopener">https://www.cnblogs.com/xueweihan/p/5743327.html</a></p>
-</blockquote>
-<hr>
-<h2 id="四、git-pull"><a href="#四、git-pull" class="headerlink" title="四、git pull"></a>四、git pull</h2><p>git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。</p>
-<pre><code>$ git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</code></pre><p>比如，取回origin主机的next分支，与本地的master分支合并，需要写成下面这样。</p>
-<pre><code>$ git pull origin next:master</code></pre><p>如果远程分支是与当前分支合并，则冒号后面的部分可以省略。</p>
-<pre><code>$ git pull origin next</code></pre><p><strong>上面命令表示，取回origin/next分支，再与当前分支合并。实质上，这等同于先做git fetch，再做git merge。</strong></p>
-<pre><code>$ git fetch origin
-$ git merge origin/next</code></pre><p>在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系（tracking）。比如，在git clone的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动”追踪”origin/master分支。</p>
-<p>Git也允许手动建立追踪关系。</p>
-<pre><code>git branch --set-upstream master origin/next</code></pre><p>上面命令指定master分支追踪origin/next分支。</p>
-<p>如果当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名。</p>
-<pre><code>$ git pull origin</code></pre><p>上面命令表示，本地的当前分支自动与对应的origin主机”追踪分支”（remote-tracking branch）进行合并。</p>
-<p>如果当前分支只有一个追踪分支，连远程主机名都可以省略。</p>
-<pre><code>$ git pull</code></pre><p>上面命令表示，当前分支自动与唯一一个追踪分支进行合并。</p>
-<p>如果合并需要采用rebase模式，可以使用–rebase选项。（默认merge）</p>
-<pre><code>$ git pull --rebase &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</code></pre><p>如果远程主机删除了某个分支，默认情况下，git pull 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致git pull不知不觉删除了本地分支。</p>
-<p>但是，你可以改变这个行为，加上参数 -p 就会在本地删除远程已经删除的分支。</p>
-<pre><code>$ git pull -p
-# 等同于下面的命令
-$ git fetch --prune origin 
-$ git fetch -p</code></pre><h2 id="五、git-push"><a href="#五、git-push" class="headerlink" title="五、git push"></a>五、git push</h2><p>git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。</p>
-<pre><code>$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code></pre><p><strong>注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，所以git pull是&lt;远程分支&gt;:&lt;本地分支&gt;，而git push是&lt;本地分支&gt;:&lt;远程分支&gt;。</strong></p>
-<p>如果省略远程分支名，则表示将本地分支推送与之存在”追踪关系”的远程分支（通常两者同名），如果该远程分支不存在，则会被新建。</p>
-<pre><code>$ git push origin master</code></pre><p><strong>上面命令表示，将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。<br>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。</strong></p>
-<pre><code>$ git push origin :master
-# 等同于
-$ git push origin --delete master</code></pre><p>上面命令表示删除origin主机的master分支。</p>
-<p>如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。</p>
-<pre><code>$ git push origin</code></pre><p>上面命令表示，将当前分支推送到origin主机的对应分支。</p>
-<p>如果当前分支只有一个追踪分支，那么主机名都可以省略。</p>
-<pre><code>$ git push</code></pre><p>如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。</p>
-<pre><code>$ git push -u origin master</code></pre><p>上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。</p>
-<p>不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。如果要修改这个设置，可以采用git config命令。</p>
-<pre><code>$ git config --global push.default matching
-# 或者
-$ git config --global push.default simple</code></pre><p>还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用–all选项。</p>
-<pre><code>$ git push --all origin</code></pre><p>上面命令表示，将所有本地分支都推送到origin主机。</p>
-<p>如果远程主机的版本比本地版本更新，推送时Git会报错，要求先在本地做git pull合并差异，然后再推送到远程主机。这时，如果你一定要推送，可以使用–force选项。</p>
-<pre><code>$ git push --force origin </code></pre><p>上面命令使用–force选项，结果导致远程主机上更新的版本被覆盖。除非你很确定要这样做，否则应该尽量避免使用–force选项。</p>
-<p>最后，git push不会推送标签（tag），除非使用–tags选项。</p>
-<pre><code>$ git push origin --tags</code></pre>]]></content>
+      
+      
+        <tags>
+            
+            <tag> NAO机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git 的使用总结</title>
+      <link href="/gitdeshiyongzongjie/"/>
+      <url>/gitdeshiyongzongjie/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>文章一定程度上参考 xiaopang1983的博客园博文，并作出修改</p></blockquote><h2 id="一、git-clone"><a href="#一、git-clone" class="headerlink" title="一、git clone"></a>一、git clone</h2><p>远程操作的第一步，通常是从远程主机克隆一个版本库，这时就要用到git clone命令。</p><pre><code>$ git clone &lt;版本库的网址&gt;</code></pre><p>该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。</p><pre><code>$ git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;</code></pre><h2 id="二、git-remote"><a href="#二、git-remote" class="headerlink" title="二、git remote"></a>二、git remote</h2><p>为了便于管理，Git要求每个远程主机都必须指定一个主机名。git remote命令就用于管理主机名。</p><p>不带选项的时候，git remote命令列出所有远程主机。</p><pre><code>$ git remoteorigin</code></pre><p>使用-v选项，可以参看远程主机的网址。</p><pre><code>$ git remote -vorigin  git@github.com:jquery/jquery.git (fetch)origin  git@github.com:jquery/jquery.git (push)</code></pre><p>上面命令表示，当前只有一台远程主机，叫做origin，以及它的网址。</p><p>克隆版本库的时候，所使用的远程主机自动被Git命名为origin。如果想用其他的主机名，需要用git clone命令的-o选项指定。</p><pre><code>$ git clone -o cosz https://github.com/jquery/jquery.git$ git remotecosz</code></pre><p>上面命令表示，克隆的时候，指定远程主机叫做cosz。</p><p>git remote show命令加上主机名，可以查看该主机的详细信息。</p><pre><code>$ git remote show &lt;主机名&gt;</code></pre><p>git remote add命令用于添加远程主机。</p><pre><code>$ git remote add &lt;主机名&gt; &lt;网址&gt;</code></pre><p>git remote rm命令用于删除远程主机。</p><pre><code>$ git remote rm &lt;主机名&gt;</code></pre><p>git remote rename命令用于远程主机的改名。</p><pre><code>$ git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</code></pre><h2 id="三、git-fetch"><a href="#三、git-fetch" class="headerlink" title="三、git fetch"></a>三、git fetch</h2><p>一旦远程主机的版本库有了更新（commit），需要将这些更新取回本地，这时就要用到git fetch命令。</p><pre><code>$ git fetch &lt;远程主机名&gt;</code></pre><p>上面命令将某个远程主机的更新，全部取回本地。</p><p>git fetch命令通常用来查看其他人的进程，因为它取回的代码对你本地的开发代码没有影响。</p><p>默认情况下，git fetch取回所有分支（branch）的更新。如果只想取回特定分支的更新，可以指定分支名。</p><pre><code>$ git fetch &lt;远程主机名&gt; &lt;分支名&gt;</code></pre><p>比如，取回origin主机的master分支。</p><pre><code>$ git fetch origin master</code></pre><p>所取回的更新，在本地主机上要用”远程主机名/分支名”的形式读取。比如origin主机的master，就要用origin/master读取。</p><p>git branch命令的-r选项，可以用来查看远程分支，-a选项查看所有分支。</p><pre><code>$ git branch -rorigin/master$ git branch -a* master  remotes/origin/master</code></pre><p>上面命令表示，本地主机的当前分支是master，远程分支是origin/master。</p><p>取回远程主机的更新以后，可以在它的基础上，使用git checkout命令创建一个新的分支。</p><pre><code>$ git checkout -b newBrach origin/master</code></pre><p>上面命令表示，在origin/master的基础上，创建一个新分支。</p><p>此外，也可以使用git merge命令或者git rebase命令，在本地分支上合并远程分支。</p><pre><code>$ git merge origin/master# 或者$ git rebase origin/master</code></pre><p>上面命令表示在当前分支上，合并origin/master。</p><h2 id="merge和rebase的区别见："><a href="#merge和rebase的区别见：" class="headerlink" title="merge和rebase的区别见："></a>merge和rebase的区别见：</h2><blockquote><p><a href="https://www.cnblogs.com/xueweihan/p/5743327.html" target="_blank" rel="noopener">https://www.cnblogs.com/xueweihan/p/5743327.html</a></p></blockquote><hr><h2 id="四、git-pull"><a href="#四、git-pull" class="headerlink" title="四、git pull"></a>四、git pull</h2><p>git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。</p><pre><code>$ git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</code></pre><p>比如，取回origin主机的next分支，与本地的master分支合并，需要写成下面这样。</p><pre><code>$ git pull origin next:master</code></pre><p>如果远程分支是与当前分支合并，则冒号后面的部分可以省略。</p><pre><code>$ git pull origin next</code></pre><p><strong>上面命令表示，取回origin/next分支，再与当前分支合并。实质上，这等同于先做git fetch，再做git merge。</strong></p><pre><code>$ git fetch origin$ git merge origin/next</code></pre><p>在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系（tracking）。比如，在git clone的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动”追踪”origin/master分支。</p><p>Git也允许手动建立追踪关系。</p><pre><code>git branch --set-upstream master origin/next</code></pre><p>上面命令指定master分支追踪origin/next分支。</p><p>如果当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名。</p><pre><code>$ git pull origin</code></pre><p>上面命令表示，本地的当前分支自动与对应的origin主机”追踪分支”（remote-tracking branch）进行合并。</p><p>如果当前分支只有一个追踪分支，连远程主机名都可以省略。</p><pre><code>$ git pull</code></pre><p>上面命令表示，当前分支自动与唯一一个追踪分支进行合并。</p><p>如果合并需要采用rebase模式，可以使用–rebase选项。（默认merge）</p><pre><code>$ git pull --rebase &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</code></pre><p>如果远程主机删除了某个分支，默认情况下，git pull 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致git pull不知不觉删除了本地分支。</p><p>但是，你可以改变这个行为，加上参数 -p 就会在本地删除远程已经删除的分支。</p><pre><code>$ git pull -p# 等同于下面的命令$ git fetch --prune origin $ git fetch -p</code></pre><h2 id="五、git-push"><a href="#五、git-push" class="headerlink" title="五、git push"></a>五、git push</h2><p>git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。</p><pre><code>$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code></pre><p><strong>注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，所以git pull是&lt;远程分支&gt;:&lt;本地分支&gt;，而git push是&lt;本地分支&gt;:&lt;远程分支&gt;。</strong></p><p>如果省略远程分支名，则表示将本地分支推送与之存在”追踪关系”的远程分支（通常两者同名），如果该远程分支不存在，则会被新建。</p><pre><code>$ git push origin master</code></pre><p><strong>上面命令表示，将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。<br>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。</strong></p><pre><code>$ git push origin :master# 等同于$ git push origin --delete master</code></pre><p>上面命令表示删除origin主机的master分支。</p><p>如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。</p><pre><code>$ git push origin</code></pre><p>上面命令表示，将当前分支推送到origin主机的对应分支。</p><p>如果当前分支只有一个追踪分支，那么主机名都可以省略。</p><pre><code>$ git push</code></pre><p>如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。</p><pre><code>$ git push -u origin master</code></pre><p>上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。</p><p>不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。如果要修改这个设置，可以采用git config命令。</p><pre><code>$ git config --global push.default matching# 或者$ git config --global push.default simple</code></pre><p>还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用–all选项。</p><pre><code>$ git push --all origin</code></pre><p>上面命令表示，将所有本地分支都推送到origin主机。</p><p>如果远程主机的版本比本地版本更新，推送时Git会报错，要求先在本地做git pull合并差异，然后再推送到远程主机。这时，如果你一定要推送，可以使用–force选项。</p><pre><code>$ git push --force origin </code></pre><p>上面命令使用–force选项，结果导致远程主机上更新的版本被覆盖。除非你很确定要这样做，否则应该尽量避免使用–force选项。</p><p>最后，git push不会推送标签（tag），除非使用–tags选项。</p><pre><code>$ git push origin --tags</code></pre>]]></content>
+      
+      
       <categories>
-        <category>计算机相关</category>
+          
+          <category> 计算机相关 </category>
+          
       </categories>
-      <tags>
-        <tag>计算机相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu和windows双系统时间错乱问题</title>
-    <url>/ubuntuhewindowsshuangxitongshijiancuoluanwenti/</url>
-    <content><![CDATA[<blockquote>
-<p>双系统过程中发现了一个神奇的事情，每次运行完ubuntu之后windows的时间都会被减少8个小时，修改之后只要进入一次ubuntu又会出现同样情况。</p>
-</blockquote>
-<p>于是开始寻找是否有前辈给出解决方法</p>
-<p>以下内容参考：<br><a href="https://www.jianshu.com/p/cf445a2c55e8" target="_blank" rel="noopener">https://www.jianshu.com/p/cf445a2c55e8</a></p>
-<h2 id="理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法"><a href="#理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法" class="headerlink" title="理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法"></a>理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法</h2><p>打开PowerShell（在Windows+X快捷菜单中），输入以下命令：</p>
-<pre><code>reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</code></pre><p>重启即可</p>
-<h2 id="顺便介绍一下原理："><a href="#顺便介绍一下原理：" class="headerlink" title="顺便介绍一下原理："></a>顺便介绍一下原理：</h2><blockquote>
-<p>摘自<a href="https://www.jianshu.com/p/cf445a2c55e8" target="_blank" rel="noopener">https://www.jianshu.com/p/cf445a2c55e8</a></p>
-</blockquote>
-<p><strong>为什么会出现时差？</strong><br>在了解时差出现的原因之前，我们先了解以下几个时钟的概念：</p>
-<p><strong>系统时间 / 本地时间（System time / Local time</strong>）<br>指Linux系统内部的时间。我们在系统任务栏中能直接看到的时间就是系统时间。<br><strong>实时时钟（Real-Time Clock, RTC）</strong><br>实时时钟是PC主板上的晶振及相关电路组成的时钟电路的生成脉冲，它控制着计算机系统的时间。操作系统中所提到的RTC，指的就是在计算机主板控制下的时间，即系统时间，为计算机硬件的内部时钟。<br><strong>协调世界时（Coordinated Universal Time, UTC）</strong><br>协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。</p>
-<hr>
-<p>实践中，UTC与GMT大致重合，其时间的值基本一致，但是它们在本质上各不相同。前者以原子时为依据，是确定时间值的标准，而后者则是时区上的概念，作为世界上不同地区人口生活的时间参照。<br>UTC也是计算机系统中的一个时间衡量标准，Ubuntu默认就将机器时间视为UTC[1]。Ubuntu 16.04及更高版本的时间管理工具timedatectl中，UTC时间被单独列出来.<br>CST<br>CST同时是以下两个时区的英文缩写：</p>
-<p>中国标准时间：China Standard Time<br>中部标准时间（美国）：Central Standard Time</p>
-<p>如此缩写相同，在没有明确区分的情况下极易混淆，例如，笔者在小米Max上使用date命令查看时区时，输出以下结果：<br>$ date<br>Tue Sep  4 16:51:00 CST 2018</p>
-<p>timedatectl工具的输出也不会那么明智。如果不知道这两个时区缩写相同，我还真以为系统拿美国的CST作为时区参照，使得这里的CST指的是美国标准时间了。幸好，为了避免歧义，Ubuntu的时区设置界面中特别标明了当前时区相对UTC的时差。<br><strong>格林尼治标准时间（Greenwich Mean Time, GMT）</strong><br>格林尼治平时（英语：Greenwich Mean Time，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的经线。<br><strong>为什么时差刚好是8个小时？</strong><br>在中国，双系统导致的时差不多不少，正好是8个小时。而这8个小时的时差，正是中国所在时区东八区（GMT+8）相对于GMT的时间差。UTC正与GMT重合，加上其又是Ubuntu系统的时间依据（Ubuntu认为机器时间是UTC），因此对于时区设置为东八区的中国用户来说，这八个小时，不多不少，“刚刚好”。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ubuntu和windows双系统时间错乱问题</title>
+      <link href="/ubuntuhewindowsshuangxitongshijiancuoluanwenti/"/>
+      <url>/ubuntuhewindowsshuangxitongshijiancuoluanwenti/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>双系统过程中发现了一个神奇的事情，每次运行完ubuntu之后windows的时间都会被减少8个小时，修改之后只要进入一次ubuntu又会出现同样情况。</p></blockquote><p>于是开始寻找是否有前辈给出解决方法</p><p>以下内容参考：<br><a href="https://www.jianshu.com/p/cf445a2c55e8" target="_blank" rel="noopener">https://www.jianshu.com/p/cf445a2c55e8</a></p><h2 id="理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法"><a href="#理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法" class="headerlink" title="理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法"></a>理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法</h2><p>打开PowerShell（在Windows+X快捷菜单中），输入以下命令：</p><pre><code>reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</code></pre><p>重启即可</p><h2 id="顺便介绍一下原理："><a href="#顺便介绍一下原理：" class="headerlink" title="顺便介绍一下原理："></a>顺便介绍一下原理：</h2><blockquote><p>摘自<a href="https://www.jianshu.com/p/cf445a2c55e8" target="_blank" rel="noopener">https://www.jianshu.com/p/cf445a2c55e8</a></p></blockquote><p><strong>为什么会出现时差？</strong><br>在了解时差出现的原因之前，我们先了解以下几个时钟的概念：</p><p><strong>系统时间 / 本地时间（System time / Local time</strong>）<br>指Linux系统内部的时间。我们在系统任务栏中能直接看到的时间就是系统时间。<br><strong>实时时钟（Real-Time Clock, RTC）</strong><br>实时时钟是PC主板上的晶振及相关电路组成的时钟电路的生成脉冲，它控制着计算机系统的时间。操作系统中所提到的RTC，指的就是在计算机主板控制下的时间，即系统时间，为计算机硬件的内部时钟。<br><strong>协调世界时（Coordinated Universal Time, UTC）</strong><br>协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。</p><hr><p>实践中，UTC与GMT大致重合，其时间的值基本一致，但是它们在本质上各不相同。前者以原子时为依据，是确定时间值的标准，而后者则是时区上的概念，作为世界上不同地区人口生活的时间参照。<br>UTC也是计算机系统中的一个时间衡量标准，Ubuntu默认就将机器时间视为UTC[1]。Ubuntu 16.04及更高版本的时间管理工具timedatectl中，UTC时间被单独列出来.<br>CST<br>CST同时是以下两个时区的英文缩写：</p><p>中国标准时间：China Standard Time<br>中部标准时间（美国）：Central Standard Time</p><p>如此缩写相同，在没有明确区分的情况下极易混淆，例如，笔者在小米Max上使用date命令查看时区时，输出以下结果：<br>$ date<br>Tue Sep  4 16:51:00 CST 2018</p><p>timedatectl工具的输出也不会那么明智。如果不知道这两个时区缩写相同，我还真以为系统拿美国的CST作为时区参照，使得这里的CST指的是美国标准时间了。幸好，为了避免歧义，Ubuntu的时区设置界面中特别标明了当前时区相对UTC的时差。<br><strong>格林尼治标准时间（Greenwich Mean Time, GMT）</strong><br>格林尼治平时（英语：Greenwich Mean Time，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的经线。<br><strong>为什么时差刚好是8个小时？</strong><br>在中国，双系统导致的时差不多不少，正好是8个小时。而这8个小时的时差，正是中国所在时区东八区（GMT+8）相对于GMT的时间差。UTC正与GMT重合，加上其又是Ubuntu系统的时间依据（Ubuntu认为机器时间是UTC），因此对于时区设置为东八区的中国用户来说，这八个小时，不多不少，“刚刚好”。</p>]]></content>
+      
+      
       <categories>
-        <category>计算机相关</category>
+          
+          <category> 计算机相关 </category>
+          
       </categories>
-      <tags>
-        <tag>计算机相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于bhuman文件结构</title>
-    <url>/guanyubhumanwenjianjiegou/</url>
-    <content><![CDATA[<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>进入Src目录，主要是Representations和Modules两个目录。其中Representations是可调用的部分，通过调用其中的函数，可以编写角色的策略代码文件。Modules是实现Representations的部分。即调用Representations是通过执行Modules中的函数而执行相关action。<br><img src="https://img-blog.csdnimg.cn/20190716155639844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="策略文件"><a href="#策略文件" class="headerlink" title="策略文件"></a>策略文件</h2><p>进入Modules下的BehaviorControl下的BehaviorControl目录。包含Options目录，以及2个h文件及1个cpp文件。</p>
-<ol>
-<li>Options文件夹：包含行为控制的文件，每一个文件是以图的结构表示</li>
-<li>Options.h ：  包含所有Options中的文件的路径，通过一个c++头文件将其关联在一起</li>
-<li>BehaviorControl.h： 包含options文件中所调用的函数，关联调用的Representations中的文件<br><img src="https://img-blog.csdnimg.cn/20190716155724355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>进入options目录下的GameControl，PlayingState文件中为比赛开始时的行为，ReadyState为比赛中ready状态时的行为，一般是机器人入场。Options/Roles中包含各种角色代码文件。</li>
-</ol>
-<h2 id="可调用接口文件"><a href="#可调用接口文件" class="headerlink" title="可调用接口文件"></a>可调用接口文件</h2><p>进入Src的Representations，可以看到8个模块</p>
-<blockquote>
-<p>这里是引用</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190716155753842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中pdf文档介绍了其中5个部分。剩余的3个部分Communication和Configuration以及Infrastructure是文档中5个的底层。<br><img src="https://img-blog.csdnimg.cn/20190716155851134.png" alt="在这里插入图片描述"><br>我们可以配合Modules修改或添加其中的内容，满足我们的要求。</p>
-<h2 id="对于representations中文件结构的解释"><a href="#对于representations中文件结构的解释" class="headerlink" title="对于representations中文件结构的解释"></a>对于representations中文件结构的解释</h2><blockquote>
-<p>基于对第四章到第八章的pdf大致理解</p>
-</blockquote>
-<p> <strong>1. perception感知模块</strong><br>基于两个摄像头，通过建立坐标系来实现对外界感知。其中涉及到防止识别自身身体，颜色管理识别，边界识别，检测黑白球（之前为橙色球），罚分和对障碍物识别以及对手的检测。<br><img src="https://img-blog.csdnimg.cn/20190717152741545.png" alt="perception"><br> <strong>2. modeling建模模块</strong><br>对于自我位置定位，对于球定位，对于障碍物定位，通过自身以及队友的感知数据来建模。同时口哨声的识别也存在于这里。<br><img src="https://img-blog.csdnimg.cn/20190717154132625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="文件"><br> <strong>3. behaviorcontrol行为控制模块</strong><br>策略的规划，包括角色安排等等（注意与motioncontrol区分）<br> <strong>4. proprioception自身感知模块</strong><br>如图所示：<br><img src="https://img-blog.csdnimg.cn/20190717162002770.png" alt="xx"><br> <strong>5. motioncontrol动作控制模块</strong><br>主要的行为操作，包括步行踢腿等等<br><img src="https://img-blog.csdnimg.cn/20190717162412103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="MOTION"></p>
-<h2 id="关于Modules与Representation的主要不同"><a href="#关于Modules与Representation的主要不同" class="headerlink" title="关于Modules与Representation的主要不同"></a>关于Modules与Representation的主要不同</h2><p>一定程度参考<code>飞_飞</code>的博客：</p>
-<ul>
-<li>Modules文件夹的内容与Representation文件夹中的内容能一一对应。比如,Modules包含了BehaviorControl、Configuration、Sensing等,而Representation也包含了这些模块。</li>
-<li>STREAM宏、以及serialize方法等“流”方法,在Representations中的所有模块都首先使用此宏进行了定义,以及blackboard也属于此文件夹,可见,Representation的真正用途为信息交流,因为STREAM的作用,所以使得各个模块可以相互传递信息。</li>
-<li>MODULES宏的真正作用是创建BehaviorControl、Sensing、Modeling等模块,在这些模块中,模块的必要条件(用REQUIRES宏包含)从Representation文件夹内的各个模块获得。即在Modules文件夹中的各个模块使用include包含所需要的Representation头文件。因此,Representation描述了机器人的各个参数、以及基本物理信息,甚至各个模块的描述(但也不完全是,需要下次进行更输入的分析)。</li>
-</ul>
-<hr>
-<p><strong>另外部署可以参考下面这篇文章：</strong><br><a href="https://blog.csdn.net/qq_34062822/article/details/80326273" target="_blank" rel="noopener">https://blog.csdn.net/qq_34062822/article/details/80326273</a><br>感谢原作者</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于bhuman文件结构</title>
+      <link href="/guanyubhumanwenjianjiegou/"/>
+      <url>/guanyubhumanwenjianjiegou/</url>
+      
+        <content type="html"><![CDATA[<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>进入Src目录，主要是Representations和Modules两个目录。其中Representations是可调用的部分，通过调用其中的函数，可以编写角色的策略代码文件。Modules是实现Representations的部分。即调用Representations是通过执行Modules中的函数而执行相关action。<br><img src="https://img-blog.csdnimg.cn/20190716155639844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="策略文件"><a href="#策略文件" class="headerlink" title="策略文件"></a>策略文件</h2><p>进入Modules下的BehaviorControl下的BehaviorControl目录。包含Options目录，以及2个h文件及1个cpp文件。</p><ol><li>Options文件夹：包含行为控制的文件，每一个文件是以图的结构表示</li><li>Options.h ：  包含所有Options中的文件的路径，通过一个c++头文件将其关联在一起</li><li>BehaviorControl.h： 包含options文件中所调用的函数，关联调用的Representations中的文件<br><img src="https://img-blog.csdnimg.cn/20190716155724355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>进入options目录下的GameControl，PlayingState文件中为比赛开始时的行为，ReadyState为比赛中ready状态时的行为，一般是机器人入场。Options/Roles中包含各种角色代码文件。</li></ol><h2 id="可调用接口文件"><a href="#可调用接口文件" class="headerlink" title="可调用接口文件"></a>可调用接口文件</h2><p>进入Src的Representations，可以看到8个模块</p><blockquote><p>这里是引用</p></blockquote><p><img src="https://img-blog.csdnimg.cn/20190716155753842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中pdf文档介绍了其中5个部分。剩余的3个部分Communication和Configuration以及Infrastructure是文档中5个的底层。<br><img src="https://img-blog.csdnimg.cn/20190716155851134.png" alt="在这里插入图片描述"><br>我们可以配合Modules修改或添加其中的内容，满足我们的要求。</p><h2 id="对于representations中文件结构的解释"><a href="#对于representations中文件结构的解释" class="headerlink" title="对于representations中文件结构的解释"></a>对于representations中文件结构的解释</h2><blockquote><p>基于对第四章到第八章的pdf大致理解</p></blockquote><p> <strong>1. perception感知模块</strong><br>基于两个摄像头，通过建立坐标系来实现对外界感知。其中涉及到防止识别自身身体，颜色管理识别，边界识别，检测黑白球（之前为橙色球），罚分和对障碍物识别以及对手的检测。<br><img src="https://img-blog.csdnimg.cn/20190717152741545.png" alt="perception"><br> <strong>2. modeling建模模块</strong><br>对于自我位置定位，对于球定位，对于障碍物定位，通过自身以及队友的感知数据来建模。同时口哨声的识别也存在于这里。<br><img src="https://img-blog.csdnimg.cn/20190717154132625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="文件"><br> <strong>3. behaviorcontrol行为控制模块</strong><br>策略的规划，包括角色安排等等（注意与motioncontrol区分）<br> <strong>4. proprioception自身感知模块</strong><br>如图所示：<br><img src="https://img-blog.csdnimg.cn/20190717162002770.png" alt="xx"><br> <strong>5. motioncontrol动作控制模块</strong><br>主要的行为操作，包括步行踢腿等等<br><img src="https://img-blog.csdnimg.cn/20190717162412103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="MOTION"></p><h2 id="关于Modules与Representation的主要不同"><a href="#关于Modules与Representation的主要不同" class="headerlink" title="关于Modules与Representation的主要不同"></a>关于Modules与Representation的主要不同</h2><p>一定程度参考<code>飞_飞</code>的博客：</p><ul><li>Modules文件夹的内容与Representation文件夹中的内容能一一对应。比如,Modules包含了BehaviorControl、Configuration、Sensing等,而Representation也包含了这些模块。</li><li>STREAM宏、以及serialize方法等“流”方法,在Representations中的所有模块都首先使用此宏进行了定义,以及blackboard也属于此文件夹,可见,Representation的真正用途为信息交流,因为STREAM的作用,所以使得各个模块可以相互传递信息。</li><li>MODULES宏的真正作用是创建BehaviorControl、Sensing、Modeling等模块,在这些模块中,模块的必要条件(用REQUIRES宏包含)从Representation文件夹内的各个模块获得。即在Modules文件夹中的各个模块使用include包含所需要的Representation头文件。因此,Representation描述了机器人的各个参数、以及基本物理信息,甚至各个模块的描述(但也不完全是,需要下次进行更输入的分析)。</li></ul><hr><p><strong>另外部署可以参考下面这篇文章：</strong><br><a href="https://blog.csdn.net/qq_34062822/article/details/80326273" target="_blank" rel="noopener">https://blog.csdn.net/qq_34062822/article/details/80326273</a><br>感谢原作者</p>]]></content>
+      
+      
       <categories>
-        <category>NAO机器人</category>
+          
+          <category> NAO机器人 </category>
+          
       </categories>
-      <tags>
-        <tag>NAO机器人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>对于bhuman中striker文件解析</title>
-    <url>/duiyubhumanzhongstrikerwenjianjiexi/</url>
-    <content><![CDATA[<blockquote>
-<p>参考<code>人間クズ</code>和<code>Aaronworry</code>的一定文章内容，感谢原作者</p>
-</blockquote>
-<h2 id="一、部分代码中的名词解释"><a href="#一、部分代码中的名词解释" class="headerlink" title="一、部分代码中的名词解释"></a>一、部分代码中的名词解释</h2><p>看pdf的时候发现下面这一部分：<br><img src="https://img-blog.csdnimg.cn/20190716131607577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="截图"><br>个人总结就是：options中的代码和普通的C++不同，option里的语法是CABSL结构，这些语法都是通过宏来实现的，可以理解成一种图结构的代码，每一个option就是一个图。</p>
-<ol>
-<li>option（name，xx，xx）：括号中第一个参数为名字，一般与图的名字相同; 第二或以后的参数为变量，一般可省略。<br>例如：<code>option(BigKick ,(KickRequest::KickMotionID)(KickRequest::kickForward) id, (bool)(true) mirror)</code></li>
-<li>common_transition: 最高优先级，不管当前执行到该option的哪一个state，一旦满足条件就会结束当前行为，goto相应的state</li>
-<li>initial_state(stateName): 进option中的初始化状态，自动执行 initial_state中的行为。</li>
-<li>state：对应各种状态，其中state中可以有transition，这里的transition只在当前的state中判断，满足条件xxxxx，goto yyyyy state。action是当前state执行的行为，可以是某些函数或者跳到别的option中。</li>
-</ol>
-<blockquote>
-<p>这里可以把state理解成一个while循环，一直循环action中内容，一旦满足transition中的条件即可跳出循环goto到对应state</p>
-</blockquote>
-<p>注意：state(stateName): 状态，只能通过goto语句跳转。另外本身option也是一个状态，可以理解为state是option中的小状态。</p>
-<hr>
-<h2 id="二、关于一些底层文件的调用格式"><a href="#二、关于一些底层文件的调用格式" class="headerlink" title="二、关于一些底层文件的调用格式"></a>二、关于一些底层文件的调用格式</h2><p>先看另一篇关于bhuman文件结构的理解的文章：<br><a href="https://blog.csdn.net/Athus_c/article/details/96144437" target="_blank" rel="noopener">https://blog.csdn.net/Athus_c/article/details/96144437</a><br>关于调用representations下的文件：the + str(Name).对象名，例如<br>theLibCodeRelease.timeSinceBallWasSeen<br>调用的是LibCodeRelease下的timeSinceBallWasSeen对象</p>
-<hr>
-<h2 id="三、对于bhuman文件中strike样本文件的注释帮助理解："><a href="#三、对于bhuman文件中strike样本文件的注释帮助理解：" class="headerlink" title="三、对于bhuman文件中strike样本文件的注释帮助理解："></a>三、对于bhuman文件中strike样本文件的注释帮助理解：</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/** A test striker option without common decision */</span>
-<span class="token function">option</span><span class="token punctuation">(</span>Striker<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//进攻球员</span>
-<span class="token punctuation">{</span>
-  <span class="token function">initial_state</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//最先开始状态</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">1000</span><span class="token punctuation">)</span>
-        goto turnToBall<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果静止时间超过1000转向turntoball状态（下方）</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//执行底层的向前看动作</span>
-      <span class="token function">Stand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">state</span><span class="token punctuation">(</span>turnToBall<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//turntoball状态代码块</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
-        goto searchForBall<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//如果未看到球时间超过超时时间（可以转到定义看到是7000）</span>
-下面续   </code></pre>
-<hr>
-<p><strong>这里附上对于ballnotseentimeout的定义截图：</strong><br><img src="https://img-blog.csdnimg.cn/20190716141148162.png" alt="7000截图"><br>注意其中（int）（7000）ballnotseentimeout</p>
-<p> <code>接着看代码</code></p>
-<hr>
-<pre class=" language-javascript"><code class="language-javascript">接上面
-      <span class="token keyword">if</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">angle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 5_deg<span class="token punctuation">)</span>
-        goto walkToBall<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//如果角度小于5转向走向球动作</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">angle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>                        <span class="token comment" spellcheck="true">//转到定义发现walktotarget对应的有两个传入变量，速度和角度</span>
-下面续</code></pre>
-<hr>
-<p>附上walktotarget的定义截图：<br><img src="https://img-blog.csdnimg.cn/20190716141427312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="定义"><br>其中walktotarget里面的变量有两个，速度和目标</p>
-<pre><code>接着看代码</code></pre><hr>
-<pre class=" language-javascript"><code class="language-javascript">接上面
-  <span class="token function">state</span><span class="token punctuation">(</span>walkToBall<span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
-        goto searchForBall<span class="token punctuation">;</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">norm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">500</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
-        goto alignToGoal<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//状态跳转之前头朝前站立</span>
-      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">state</span><span class="token punctuation">(</span>alignToGoal<span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
-        goto searchForBall<span class="token punctuation">;</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">)</span> <span class="token operator">&lt;</span> 10_deg <span class="token operator">&amp;&amp;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
-        goto alignBehindBall<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">400</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment" spellcheck="true">//走到球的后面对准球门</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">state</span><span class="token punctuation">(</span>alignBehindBall<span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>
-        goto searchForBall<span class="token punctuation">;</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
-         <span class="token operator">&amp;&amp;</span> theLibCodeRelease<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>
-         <span class="token operator">&amp;&amp;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">)</span> <span class="token operator">&lt;</span> 2_deg<span class="token punctuation">)</span>
-        goto kick<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      theHeadControlMode <span class="token operator">=</span> HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">;</span>
-      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">170</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//再次对准球门</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-<span class="token function">state</span><span class="token punctuation">(</span>kick<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">//射门动作代码</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">3000</span> <span class="token operator">||</span> <span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">10</span> <span class="token operator">&amp;&amp;</span> action_done<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        goto start<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">InWalkKick</span><span class="token punctuation">(</span><span class="token function">WalkKickVariant</span><span class="token punctuation">(</span>WalkKicks<span class="token punctuation">:</span><span class="token punctuation">:</span>forward<span class="token punctuation">,</span> Legs<span class="token punctuation">:</span><span class="token punctuation">:</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">160</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">55</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//表示机器人走到球的后方160mm，左方55mm处，朝着angleToGoal方向，使用左脚以forward的方式踢球。</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">state</span><span class="token punctuation">(</span>searchForBall<span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-    transition
-    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span>
-        goto turnToBall<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    action
-    <span class="token punctuation">{</span>
-      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">WalkAtRelativeSpeed</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//原地旋转寻找球</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>其中<code>InWalkKick(WalkKickVariant(WalkKicks::forward, Legs::left), Pose2f(theLibCodeRelease.angleToGoal, theBallModel.estimate.position.x() - 160.f, theBallModel.estimate.position.y() - 55.f));</code>这个射门动作在kicktest分支中被替换成了bigkick，后面如果有研究会更新。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> NAO机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>对于bhuman中striker文件解析</title>
+      <link href="/duiyubhumanzhongstrikerwenjianjiexi/"/>
+      <url>/duiyubhumanzhongstrikerwenjianjiexi/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>参考<code>人間クズ</code>和<code>Aaronworry</code>的一定文章内容，感谢原作者</p></blockquote><h2 id="一、部分代码中的名词解释"><a href="#一、部分代码中的名词解释" class="headerlink" title="一、部分代码中的名词解释"></a>一、部分代码中的名词解释</h2><p>看pdf的时候发现下面这一部分：<br><img src="https://img-blog.csdnimg.cn/20190716131607577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="截图"><br>个人总结就是：options中的代码和普通的C++不同，option里的语法是CABSL结构，这些语法都是通过宏来实现的，可以理解成一种图结构的代码，每一个option就是一个图。</p><ol><li>option（name，xx，xx）：括号中第一个参数为名字，一般与图的名字相同; 第二或以后的参数为变量，一般可省略。<br>例如：<code>option(BigKick ,(KickRequest::KickMotionID)(KickRequest::kickForward) id, (bool)(true) mirror)</code></li><li>common_transition: 最高优先级，不管当前执行到该option的哪一个state，一旦满足条件就会结束当前行为，goto相应的state</li><li>initial_state(stateName): 进option中的初始化状态，自动执行 initial_state中的行为。</li><li>state：对应各种状态，其中state中可以有transition，这里的transition只在当前的state中判断，满足条件xxxxx，goto yyyyy state。action是当前state执行的行为，可以是某些函数或者跳到别的option中。</li></ol><blockquote><p>这里可以把state理解成一个while循环，一直循环action中内容，一旦满足transition中的条件即可跳出循环goto到对应state</p></blockquote><p>注意：state(stateName): 状态，只能通过goto语句跳转。另外本身option也是一个状态，可以理解为state是option中的小状态。</p><hr><h2 id="二、关于一些底层文件的调用格式"><a href="#二、关于一些底层文件的调用格式" class="headerlink" title="二、关于一些底层文件的调用格式"></a>二、关于一些底层文件的调用格式</h2><p>先看另一篇关于bhuman文件结构的理解的文章：<br><a href="https://blog.csdn.net/Athus_c/article/details/96144437" target="_blank" rel="noopener">https://blog.csdn.net/Athus_c/article/details/96144437</a><br>关于调用representations下的文件：the + str(Name).对象名，例如<br>theLibCodeRelease.timeSinceBallWasSeen<br>调用的是LibCodeRelease下的timeSinceBallWasSeen对象</p><hr><h2 id="三、对于bhuman文件中strike样本文件的注释帮助理解："><a href="#三、对于bhuman文件中strike样本文件的注释帮助理解：" class="headerlink" title="三、对于bhuman文件中strike样本文件的注释帮助理解："></a>三、对于bhuman文件中strike样本文件的注释帮助理解：</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/** A test striker option without common decision */</span><span class="token function">option</span><span class="token punctuation">(</span>Striker<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//进攻球员</span><span class="token punctuation">{</span>  <span class="token function">initial_state</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//最先开始状态</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">1000</span><span class="token punctuation">)</span>        goto turnToBall<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//如果静止时间超过1000转向turntoball状态（下方）</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//执行底层的向前看动作</span>      <span class="token function">Stand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span>  <span class="token function">state</span><span class="token punctuation">(</span>turnToBall<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//turntoball状态代码块</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>        goto searchForBall<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//如果未看到球时间超过超时时间（可以转到定义看到是7000）</span>下面续   </code></pre><hr><p><strong>这里附上对于ballnotseentimeout的定义截图：</strong><br><img src="https://img-blog.csdnimg.cn/20190716141148162.png" alt="7000截图"><br>注意其中（int）（7000）ballnotseentimeout</p><p> <code>接着看代码</code></p><hr><pre class=" language-javascript"><code class="language-javascript">接上面      <span class="token keyword">if</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">angle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> 5_deg<span class="token punctuation">)</span>        goto walkToBall<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//如果角度小于5转向走向球动作</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">angle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>                        <span class="token comment" spellcheck="true">//转到定义发现walktotarget对应的有两个传入变量，速度和角度</span>下面续</code></pre><hr><p>附上walktotarget的定义截图：<br><img src="https://img-blog.csdnimg.cn/20190716141427312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="定义"><br>其中walktotarget里面的变量有两个，速度和目标</p><pre><code>接着看代码</code></pre><hr><pre class=" language-javascript"><code class="language-javascript">接上面  <span class="token function">state</span><span class="token punctuation">(</span>walkToBall<span class="token punctuation">)</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>        goto searchForBall<span class="token punctuation">;</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">norm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">500</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>        goto alignToGoal<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//状态跳转之前头朝前站立</span>      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span>  <span class="token function">state</span><span class="token punctuation">(</span>alignToGoal<span class="token punctuation">)</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>        goto searchForBall<span class="token punctuation">;</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">)</span> <span class="token operator">&lt;</span> 10_deg <span class="token operator">&amp;&amp;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>        goto alignBehindBall<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">400</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment" spellcheck="true">//走到球的后面对准球门</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span>  <span class="token function">state</span><span class="token punctuation">(</span>alignBehindBall<span class="token punctuation">)</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">></span> theBehaviorParameters<span class="token punctuation">.</span>ballNotSeenTimeOut<span class="token punctuation">)</span>        goto searchForBall<span class="token punctuation">;</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>         <span class="token operator">&amp;&amp;</span> theLibCodeRelease<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span>         <span class="token operator">&amp;&amp;</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">abs</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">)</span> <span class="token operator">&lt;</span> 2_deg<span class="token punctuation">)</span>        goto kick<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      theHeadControlMode <span class="token operator">=</span> HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">;</span>      <span class="token function">WalkToTarget</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">170</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//再次对准球门</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token function">state</span><span class="token punctuation">(</span>kick<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">//射门动作代码</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">3000</span> <span class="token operator">||</span> <span class="token punctuation">(</span>state_time <span class="token operator">></span> <span class="token number">10</span> <span class="token operator">&amp;&amp;</span> action_done<span class="token punctuation">)</span><span class="token punctuation">)</span>        goto start<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token function">InWalkKick</span><span class="token punctuation">(</span><span class="token function">WalkKickVariant</span><span class="token punctuation">(</span>WalkKicks<span class="token punctuation">:</span><span class="token punctuation">:</span>forward<span class="token punctuation">,</span> Legs<span class="token punctuation">:</span><span class="token punctuation">:</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Pose2f</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>angleToGoal<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">160</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> theBallModel<span class="token punctuation">.</span>estimate<span class="token punctuation">.</span>position<span class="token punctuation">.</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">55</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//表示机器人走到球的后方160mm，左方55mm处，朝着angleToGoal方向，使用左脚以forward的方式踢球。</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span>  <span class="token function">state</span><span class="token punctuation">(</span>searchForBall<span class="token punctuation">)</span>  <span class="token punctuation">{</span>    transition    <span class="token punctuation">{</span>      <span class="token keyword">if</span><span class="token punctuation">(</span>theLibCodeRelease<span class="token punctuation">.</span>timeSinceBallWasSeen <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span>        goto turnToBall<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    action    <span class="token punctuation">{</span>      <span class="token function">HeadControlMode</span><span class="token punctuation">(</span>HeadControl<span class="token punctuation">:</span><span class="token punctuation">:</span>lookForward<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token function">WalkAtRelativeSpeed</span><span class="token punctuation">(</span><span class="token function">Pose2f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//原地旋转寻找球</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><p>其中<code>InWalkKick(WalkKickVariant(WalkKicks::forward, Legs::left), Pose2f(theLibCodeRelease.angleToGoal, theBallModel.estimate.position.x() - 160.f, theBallModel.estimate.position.y() - 55.f));</code>这个射门动作在kicktest分支中被替换成了bigkick，后面如果有研究会更新。</p>]]></content>
+      
+      
       <categories>
-        <category>NAO机器人</category>
+          
+          <category> NAO机器人 </category>
+          
       </categories>
-      <tags>
-        <tag>NAO机器人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>macbook运行移动硬盘中windows及bootcamp下载出错问题的解决</title>
-    <url>/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/</url>
-    <content><![CDATA[<p>经济原因不少人会选择128g版本或者256g版本的macbook作为入门款。<br>优秀的macos确实很吸引人，但是总有一些时候需要用到windows来处理一些事情<br>过去往往会选择使用bootcamp安装双系统或者用vm虚拟机。但是这样带来的问题在于</p>
-<h2 id="储存空间的紧张"><a href="#储存空间的紧张" class="headerlink" title="储存空间的紧张"></a>储存空间的紧张</h2><p>动辄40g的占用实在让人头疼。于是想到了这个曲线救国方法。只需要一个移动硬盘即可。</p>
-<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><p>先在msdn上下载win镜像文件。同时下载wtg辅助程序（这里注意萝卜的连接挂了）。<br>另外打开bootcamp选择下载windows驱动程序。这里注意如果你之前使用过bootcamp这里可能会提示无法存储的错误。解决方法：</p>
-<blockquote>
-<p>到极限苹果论坛按照对应的版本下载bootcamp的zip包，解压后放在驱动盘里。<br><a href="https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/" target="_blank" rel="noopener">https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/</a></p>
-</blockquote>
-<h2 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2. 开始安装"></a>2. 开始安装</h2><p>打开wtg辅助程序，选择镜像后安装在移动硬盘中。等到安装完成提示重启时拔下硬盘，插到macbook上重启。<br>重启时按住option选择efi磁盘，继续完成安装<br>这个过程中由于没有驱动会很卡很慢还没网络。等到进入win之后插入你放bootcamp的u盘，选择setup安装。等待安装完成后激活即可。</p>
-<h2 id="3-完善工作"><a href="#3-完善工作" class="headerlink" title="3. 完善工作"></a>3. 完善工作</h2><ul>
-<li>由于wtg辅助工具安装完之后是没有分区的，你可以选择用diskgenius进行分区。</li>
-<li>网上很多实用nt6安装的方法我发现在win10下很容易出问题。比如启动选项2不能够正确加载等等，而直接安装到硬盘会导致没有引导项后续比较难以处理。wtg是个人感觉最折中的办法。</li>
-<li>bootcamp的方法如果能够直接运行，则安装完win之后直接运行桌面上的bootcamp即可。</li>
-</ul>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> NAO机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>macbook运行移动硬盘中windows及bootcamp下载出错问题的解决</title>
+      <link href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/"/>
+      <url>/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/</url>
+      
+        <content type="html"><![CDATA[<p>经济原因不少人会选择128g版本或者256g版本的macbook作为入门款。<br>优秀的macos确实很吸引人，但是总有一些时候需要用到windows来处理一些事情<br>过去往往会选择使用bootcamp安装双系统或者用vm虚拟机。但是这样带来的问题在于</p><h2 id="储存空间的紧张"><a href="#储存空间的紧张" class="headerlink" title="储存空间的紧张"></a>储存空间的紧张</h2><p>动辄40g的占用实在让人头疼。于是想到了这个曲线救国方法。只需要一个移动硬盘即可。</p><h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><p>先在msdn上下载win镜像文件。同时下载wtg辅助程序（这里注意萝卜的连接挂了）。<br>另外打开bootcamp选择下载windows驱动程序。这里注意如果你之前使用过bootcamp这里可能会提示无法存储的错误。解决方法：</p><blockquote><p>到极限苹果论坛按照对应的版本下载bootcamp的zip包，解压后放在驱动盘里。<br><a href="https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/" target="_blank" rel="noopener">https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/</a></p></blockquote><h2 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2. 开始安装"></a>2. 开始安装</h2><p>打开wtg辅助程序，选择镜像后安装在移动硬盘中。等到安装完成提示重启时拔下硬盘，插到macbook上重启。<br>重启时按住option选择efi磁盘，继续完成安装<br>这个过程中由于没有驱动会很卡很慢还没网络。等到进入win之后插入你放bootcamp的u盘，选择setup安装。等待安装完成后激活即可。</p><h2 id="3-完善工作"><a href="#3-完善工作" class="headerlink" title="3. 完善工作"></a>3. 完善工作</h2><ul><li>由于wtg辅助工具安装完之后是没有分区的，你可以选择用diskgenius进行分区。</li><li>网上很多实用nt6安装的方法我发现在win10下很容易出问题。比如启动选项2不能够正确加载等等，而直接安装到硬盘会导致没有引导项后续比较难以处理。wtg是个人感觉最折中的办法。</li><li>bootcamp的方法如果能够直接运行，则安装完win之后直接运行桌面上的bootcamp即可。</li></ul>]]></content>
+      
+      
       <categories>
-        <category>计算机相关</category>
+          
+          <category> 计算机相关 </category>
+          
       </categories>
-      <tags>
-        <tag>计算机相关</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 计算机相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
