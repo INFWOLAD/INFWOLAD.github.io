@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    ubuntu和windows双系统时间错乱问题 |  cosz
+    关于2020年2月1日的梯子说明 |  cosz
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -29,7 +29,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-ubuntu和windows双系统时间错乱问题" class="article article-type-post" itemscope
+  <article id="post-关于2020年2月1日的梯子说明" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -37,7 +37,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  ubuntu和windows双系统时间错乱问题
+  关于2020年2月1日的梯子说明
 </h1>
   
 
@@ -46,12 +46,12 @@
 
     
     <div class="article-meta">
-      <a href="/ubuntuhewindowsshuangxitongshijiancuoluanwenti/" class="article-date">
-  <time datetime="2019-11-27T14:02:00.000Z" itemprop="datePublished">2019-11-27</time>
+      <a href="/guanyu2020nian2yue1ridetizishuoming/" class="article-date">
+  <time datetime="2020-02-01T12:57:00.000Z" itemprop="datePublished">2020-02-01</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
+    <a class="article-category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
   </div>
 
       
@@ -61,7 +61,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">898字</span>
+            <span class="post-count">340字</span>
         </span>
     </span>
 
@@ -70,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3分钟</span>
+            <span class="post-count">1分钟</span>
         </span>
     </span>
 </div>
@@ -96,24 +96,16 @@
       
 
       
-      <blockquote>
-<p>双系统过程中发现了一个神奇的事情，每次运行完ubuntu之后windows的时间都会被减少8个小时，修改之后只要进入一次ubuntu又会出现同样情况。</p>
-</blockquote>
-<p>于是开始寻找是否有前辈给出解决方法</p>
-<p>以下内容参考：<br><a href="https://www.jianshu.com/p/cf445a2c55e8" target="_blank" rel="noopener">https://www.jianshu.com/p/cf445a2c55e8</a></p>
-<h2 id="理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法"><a href="#理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法" class="headerlink" title="理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法"></a>理论上是有两种方法的，但是由于当前处在windows中故采用在Windows中设置的方法</h2><p>打开PowerShell（在Windows+X快捷菜单中），输入以下命令：</p>
-<pre><code>reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</code></pre><p>重启即可</p>
-<h2 id="顺便介绍一下原理："><a href="#顺便介绍一下原理：" class="headerlink" title="顺便介绍一下原理："></a>顺便介绍一下原理：</h2><blockquote>
-<p>摘自<a href="https://www.jianshu.com/p/cf445a2c55e8" target="_blank" rel="noopener">https://www.jianshu.com/p/cf445a2c55e8</a></p>
-</blockquote>
-<p><strong>为什么会出现时差？</strong><br>在了解时差出现的原因之前，我们先了解以下几个时钟的概念：</p>
-<p><strong>系统时间 / 本地时间（System time / Local time</strong>）<br>指Linux系统内部的时间。我们在系统任务栏中能直接看到的时间就是系统时间。<br><strong>实时时钟（Real-Time Clock, RTC）</strong><br>实时时钟是PC主板上的晶振及相关电路组成的时钟电路的生成脉冲，它控制着计算机系统的时间。操作系统中所提到的RTC，指的就是在计算机主板控制下的时间，即系统时间，为计算机硬件的内部时钟。<br><strong>协调世界时（Coordinated Universal Time, UTC）</strong><br>协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。</p>
-<hr>
-<p>实践中，UTC与GMT大致重合，其时间的值基本一致，但是它们在本质上各不相同。前者以原子时为依据，是确定时间值的标准，而后者则是时区上的概念，作为世界上不同地区人口生活的时间参照。<br>UTC也是计算机系统中的一个时间衡量标准，Ubuntu默认就将机器时间视为UTC[1]。Ubuntu 16.04及更高版本的时间管理工具timedatectl中，UTC时间被单独列出来.<br>CST<br>CST同时是以下两个时区的英文缩写：</p>
-<p>中国标准时间：China Standard Time<br>中部标准时间（美国）：Central Standard Time</p>
-<p>如此缩写相同，在没有明确区分的情况下极易混淆，例如，笔者在小米Max上使用date命令查看时区时，输出以下结果：<br>$ date<br>Tue Sep  4 16:51:00 CST 2018</p>
-<p>timedatectl工具的输出也不会那么明智。如果不知道这两个时区缩写相同，我还真以为系统拿美国的CST作为时区参照，使得这里的CST指的是美国标准时间了。幸好，为了避免歧义，Ubuntu的时区设置界面中特别标明了当前时区相对UTC的时差。<br><strong>格林尼治标准时间（Greenwich Mean Time, GMT）</strong><br>格林尼治平时（英语：Greenwich Mean Time，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的经线。<br><strong>为什么时差刚好是8个小时？</strong><br>在中国，双系统导致的时差不多不少，正好是8个小时。而这8个小时的时差，正是中国所在时区东八区（GMT+8）相对于GMT的时间差。UTC正与GMT重合，加上其又是Ubuntu系统的时间依据（Ubuntu认为机器时间是UTC），因此对于时区设置为东八区的中国用户来说，这八个小时，不多不少，“刚刚好”。</p>
-
+      <p>/* 节省字数省去了所有的敬语谦辞：*/</p>
+<h4 id="务必注意事项："><a href="#务必注意事项：" class="headerlink" title="务必注意事项："></a>务必注意事项：</h4><p>1.节省使用流量，现在为了速度和稳定用的全是多倍流量，在平时不用的时候记得把vpn关了，能不用全局就不要用全局。</p>
+<p>2.按照优先级顺序从1-4使用，后面的优先级是留着所有梯子掉了的时候修复用的，把它用废了最后更新就会像今天一样要几个多小时才能修复。</p>
+<p>3.不要外传节点信息。同时在线的人越多机器负载越大，响应速度自然就越慢，何况这并不是能拿到台面上的东西。</p>
+<p>4.以后我会把更新时间放在一个节点的备注上，这个节点是不能用的不要选错了。</p>
+<h4 id="更新详细信息："><a href="#更新详细信息：" class="headerlink" title="更新详细信息："></a>更新详细信息：</h4><p>1.更换脚本文件，之前的233脚本caddy上存在问题换成了wulabing_v2ray的脚本，并且该脚本使用的也不再是过去的方案理论上稳定性有提升。</p>
+<p>2.两个域名均投入使用来隐藏节点。</p>
+<p>3.ssr和ss将不再受支持，全部换为v2ray。其中两个gcp用ws+tls，aws用mkcp。</p>
+<p>4.使用锐速作为加速核心代替bbrplus。速度提升明显但是多倍发包浪费流量。</p>
+<pre><code>2020.2.1 21:10</code></pre>
       
       <!-- 打赏 -->
       
@@ -123,10 +115,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/ubuntuhewindowsshuangxitongshijiancuoluanwenti/" data-id="ck63ljs930005gwiy056q2g5x"
+      <a data-url="https://cosz.club/guanyu2020nian2yue1ridetizishuoming/" data-id="ck63m73n40000dwiyewfk1pu3"
         class="article-share-link">分享</a>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
 
     </footer>
 
@@ -136,19 +128,10 @@
   
   <nav class="article-nav">
     
-      <a href="/gitdeshiyongzongjie/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            git 的使用总结
-          
-        </div>
-      </a>
     
-    
-      <a href="/guanyubhumanwenjianjiegou/" class="article-nav-link">
+      <a href="/guanyulinuxzhongmaildeduochongyongfa/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">关于bhuman文件结构</div>
+        <div class="article-nav-title">关于linux中mail的多种用法</div>
       </a>
     
   </nav>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    关于linux中mail的多种用法 |  cosz
+     cosz
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -28,17 +28,45 @@
 <body>
   <div id="app">
     <main class="content">
-      <section class="outer">
-  <article id="post-关于linux中mail的多种用法" class="article article-type-post" itemscope
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover4.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">cosz</a></h1>
+      <h2>Welcome to cosz club!</h2>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" target="_blank" rel="noopener" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article id="post-macbook运行移动硬盘中windows及bootcamp下载出错问题的解决-1" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
     <header class="article-header">
        
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  关于linux中mail的多种用法
-</h1>
+<h2 itemprop="name">
+  <a class="article-title" href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/"
+    >macbook运行移动硬盘中windows及bootcamp下载出错问题的解决</a
+  >
+</h2>
   
 
     </header>
@@ -46,8 +74,8 @@
 
     
     <div class="article-meta">
-      <a href="/guanyulinuxzhongmaildeduochongyongfa/" class="article-date">
-  <time datetime="2020-01-31T09:37:00.000Z" itemprop="datePublished">2020-01-31</time>
+      <a href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/" class="article-date">
+  <time datetime="2019-11-27T14:00:00.000Z" itemprop="datePublished">2019-11-27</time>
 </a>
       
   <div class="article-category">
@@ -56,34 +84,9 @@
 
       
       
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">240字</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
-        </span>
-    </span>
-</div>
-
       
     </div>
     
-
-    
-    
-
-
-
 
     
 
@@ -94,30 +97,25 @@
       
 
       
-      <p>发送邮件的几种方式（可以搭配《Linux就该这么学》P64）</p>
-<p>1.标准输入录入邮件信息</p>
-<p>直接把当前 shell 当成编辑器来用，可以输入正文，当邮件正文输入完成后，需要按 Ctrl+D 结束输入。</p>
-<pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com
-hello  # 邮件正文
-world  # 邮件正文
-EOT  # 按 Ctrl+D
-</code></pre><p>2.管道方式</p>
-<p>这种方式用的较多，其中 echo 后面的是邮件的正文。</p>
-<pre><code>[root@localhost ~]# echo &quot;邮件正文&quot; | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>以文件 file.txt 的内容为邮件正文发送。</p>
-<pre><code>[root@localhost ~]# cat file.txt | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>3.文件重定向</p>
-<p>以文件 file.txt 的内容为邮件正文发送。</p>
-<pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com &lt; file.txt</code></pre><p>注意：如果需要发送给多个收件人，收件人之间用逗号分隔，例如：<code>123456@qq.com,888888@qq.com。</code></p>
+      <p>经济原因不少人会选择128g版本或者256g版本的macbook作为入门款。<br>优秀的macos确实很吸引人，但是总有一些时候需要用到windows来处理一些事情<br>过去往往会选择使用bootcamp安装双系统或者用vm虚拟机。但是这样带来的问题在于</p>
+<h2 id="储存空间的紧张"><a href="#储存空间的紧张" class="headerlink" title="储存空间的紧张"></a>储存空间的紧张</h2><p>动辄40g的占用实在让人头疼。于是想到了这个曲线救国方法。只需要一个移动硬盘即可。</p>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><p>先在msdn上下载win镜像文件。同时下载wtg辅助程序（这里注意萝卜的连接挂了）。<br>另外打开bootcamp选择下载windows驱动程序。这里注意如果你之前使用过bootcamp这里可能会提示无法存储的错误。解决方法：</p>
+<blockquote>
+<p>到极限苹果论坛按照对应的版本下载bootcamp的zip包，解压后放在驱动盘里。<br><a href="https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/" target="_blank" rel="noopener">https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/</a></p>
+</blockquote>
+<h2 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2. 开始安装"></a>2. 开始安装</h2><p>打开wtg辅助程序，选择镜像后安装在移动硬盘中。等到安装完成提示重启时拔下硬盘，插到macbook上重启。<br>重启时按住option选择efi磁盘，继续完成安装<br>这个过程中由于没有驱动会很卡很慢还没网络。等到进入win之后插入你放bootcamp的u盘，选择setup安装。等待安装完成后激活即可。</p>
+<h2 id="3-完善工作"><a href="#3-完善工作" class="headerlink" title="3. 完善工作"></a>3. 完善工作</h2><ul>
+<li>由于wtg辅助工具安装完之后是没有分区的，你可以选择用diskgenius进行分区。</li>
+<li>网上很多实用nt6安装的方法我发现在win10下很容易出问题。比如启动选项2不能够正确加载等等，而直接安装到硬盘会导致没有引导项后续比较难以处理。wtg是个人感觉最折中的办法。</li>
+<li>bootcamp的方法如果能够直接运行，则安装完win之后直接运行桌面上的bootcamp即可。</li>
+</ul>
 
       
       <!-- 打赏 -->
       
-      <div id="reward-btn">
-        打赏
-      </div>
-      
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyulinuxzhongmaildeduochongyongfa/" data-id="ck63ljs9c000hgwiy6u9kemdd"
+      <a data-url="https://cosz.club/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/" data-id="ck63ljs8x0001gwiy6vob8sgg"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
@@ -127,37 +125,25 @@ EOT  # 按 Ctrl+D
   </div>
 
   
-  
-  <nav class="article-nav">
-    
-      <a href="/guanyu2020nian2yue1ridetizishuoming/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            关于2020年2月1日的梯子说明
-          
-        </div>
-      </a>
-    
-    
-      <a href="/guanyuv2raychuanshuxieyidexuanze/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">关于v2ray传输协议的选择</div>
-      </a>
-    
-  </nav>
-
 
   
 
-  
-
-  
-  
   
 
 </article>
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+  
 </section>
+</div>
+
       <footer class="footer">
   <div class="outer">
     <ul class="list-inline">
@@ -194,8 +180,8 @@ EOT  # 按 Ctrl+D
       </div>
     </main>
     
-    <aside class="sidebar">
-      
+      <aside class="sidebar">
+        
         <button class="navbar-toggle"></button>
 <nav class="navbar">
   
@@ -273,25 +259,6 @@ EOT  # 按 Ctrl+D
 <script src="/js/busuanzi-2.3.pure.min.js"></script>
 
 
-
-  <script src="/js/tocbot.min.js"></script>
-  <script>
-    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-    tocbot.init({
-      tocSelector: '.tocbot',
-      contentSelector: '.article-entry',
-      headingSelector: 'h1, h2, h3, h4, h5, h6',
-      hasInnerContainers: true,
-      scrollSmooth: true,
-      positionFixedSelector: '.tocbot',
-      positionFixedClass: 'is-position-fixed',
-      fixedSidebarOffset: 'auto',
-			onClick: (e) => {
-      	document.getElementById(e.target.innerText).scrollIntoView()
-      	return false;
-    	}
-    });
-  </script>
 
 
 <script>

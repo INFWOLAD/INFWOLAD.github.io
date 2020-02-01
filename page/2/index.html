@@ -55,6 +55,101 @@
     
     
     
+    <article id="post-关于y7000安装Ubuntu的一些心得体会" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/guanyuy7000anzhuangubuntudeyixiexindetihui/"
+    >关于y7000安装Ubuntu的一些心得体会</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/guanyuy7000anzhuangubuntudeyixiexindetihui/" class="article-date">
+  <time datetime="2019-11-27T14:03:00.000Z" itemprop="datePublished">2019-11-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <blockquote>
+<p>之前第一次装Ubuntu还是在另一台老设备装着玩，那时候还不是efi引导，那时候也没有secure boot。<br>如今在y7000上装Ubuntu遇到了一些设备问题和一些安装上的不同点，记录下来备用。</p>
+</blockquote>
+<h2 id="一、关于关闭secure-boot"><a href="#一、关于关闭secure-boot" class="headerlink" title="一、关于关闭secure boot"></a>一、关于关闭secure boot</h2><p>之前了解到secure还是因为当时微软推出这个的时候被喷惨了。本身一为了防止恶意软件侵入的设定不仅没有起到作用，相反还会给安装除了有密钥以外的系统带来多余的一步。<br>进入bios，<code>关闭</code>，开始制作启动盘。</p>
+<hr>
+<h2 id="二、关于系统盘的制作问题"><a href="#二、关于系统盘的制作问题" class="headerlink" title="二、关于系统盘的制作问题"></a>二、关于系统盘的制作问题</h2><p>一开始我把u盘格式化为了ntfs格式，结果发现快速启动项里面有问题，之后查阅资料发现<code>应该格式化为fat32格式</code>以方便uefi引导的ubuntu。</p>
+<hr>
+<h2 id="三、安装之后的一些问题"><a href="#三、安装之后的一些问题" class="headerlink" title="三、安装之后的一些问题"></a>三、安装之后的一些问题</h2><p>安装之后遇到了以下的几个问题</p>
+<ol>
+<li>安装过程中要自己手动分区，在那之前先压缩磁盘。我本身是512的固态所以只给Ubuntu留了100g。其中swap给了8g，/home给了50，/给了40，efi分了512mb。分区的时候<code>务必注意格式和主逻辑的选择</code>。</li>
+<li>安装之后发现wifi不能用。查驱动发现<code>联想的ideapad驱动和本身的网卡驱动有冲突</code>。于是屏蔽来实现正常使用<br>附上代码方便下次使用<pre class=" language-javascript"><code class="language-javascript">sudo su
+sudo touch <span class="token operator">/</span>etc<span class="token operator">/</span>modprobe<span class="token punctuation">.</span>d<span class="token operator">/</span>ideapad<span class="token punctuation">.</span>conf
+sudo nautilus
+<span class="token comment" spellcheck="true">//找到/etc/modprobe.d/ideapad.conf文件，文件内输入</span>
+<span class="token comment" spellcheck="true">//blacklist ideapad_laptop</span></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="四、为了方便而做的种种"><a href="#四、为了方便而做的种种" class="headerlink" title="四、为了方便而做的种种"></a>四、为了方便而做的种种</h2><ol>
+<li>搜狗输入法的调试<br>安装完搜狗滞后发现没有任何的反应，也调用不出来，后来发现需要<code>把ibus改为fcitx重启</code>之后<code>按ctrl＋blank</code>即可。但是这里导致了后续tim的一个问题。</li>
+</ol>
+<p>##########################################################################</p>
+<ol start="2">
+<li>为了方便后续的使用，我配置了<code>Flatpak框架来安装Windows程序</code>。操作过程极其类似当时在macos上配置wine（事实上发现其实就是<code>通过flatpak框架把deepin下的wine平台移植到了Ubuntu上</code>）<br>附上参考的教程链接<br><a href="https://blog.csdn.net/u011469138/article/details/82320761" target="_blank" rel="noopener">https://blog.csdn.net/u011469138/article/details/82320761</a><br>此外这里附上flatpak的使用细则<br><a href="https://linux.cn/article-10459-1.html?pr" target="_blank" rel="noopener">https://linux.cn/article-10459-1.html?pr</a><br>这方便以后的使用<br>感谢原作者</li>
+</ol>
+<p>##########################################################################</p>
+<ol start="3">
+<li>在这个过程中一直出现tim没办法使用搜狗输入法的问题。多次尝试无果想到是否应该在安装一个flatpad下的输入法才能实现。觉得麻烦的情况下尝试搜索能不能<code>直接安装wine</code>。于是在github上发现了deepin-wine Ubuntu<br>附上链接<br><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" target="_blank" rel="noopener">https://github.com/wszqkzqk/deepin-wine-ubuntu</a><br><code>打包zip下载之后文件内sudo sh ./install.sh安装</code>。因为连接问题花了十分钟左右，之后下载deb包安装<br>附上下载链接<br><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/" target="_blank" rel="noopener">http://mirrors.aliyun.com/deepin/pool/non-free/d/</a><br>这样就可以正常使用qq了。<br><strong>记得原来装Ubuntu的时候还有linux版本qq…</strong><br>附上截图<br><img src="https://img-blog.csdnimg.cn/20190703112453460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="初步只装了暂时需要的qq和微信"></li>
+</ol>
+<hr>
+<h2 id="至此Ubuntu安装完成"><a href="#至此Ubuntu安装完成" class="headerlink" title="至此Ubuntu安装完成"></a>至此Ubuntu安装完成</h2>
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/guanyuy7000anzhuangubuntudeyixiexindetihui/" data-id="ck63ljs98000agwiy18o60ijp"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+
+</article>
+    
     <article id="post-关于配置Bhuman通用平台环境心得" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -153,7 +248,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyupeizhibhumantongyongpingtaihuanjingxinde/" data-id="ck5adhxm6000kroiyhdeda8md"
+      <a data-url="https://cosz.club/guanyupeizhibhumantongyongpingtaihuanjingxinde/" data-id="ck63ljs9a000cgwiy7qluer8r"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
@@ -299,7 +394,7 @@ $ git config --global push.default simple</code></pre><p>还有一种情况，�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/gitdeshiyongzongjie/" data-id="ck5adhxls0002roiyb8o9cx0j"
+      <a data-url="https://cosz.club/gitdeshiyongzongjie/" data-id="ck63ljs8s0000gwiy0z741ktb"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
@@ -381,7 +476,7 @@ $ git config --global push.default simple</code></pre><p>还有一种情况，�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/ubuntuhewindowsshuangxitongshijiancuoluanwenti/" data-id="ck5adhxlw0006roiy4gkldplq"
+      <a data-url="https://cosz.club/ubuntuhewindowsshuangxitongshijiancuoluanwenti/" data-id="ck63ljs930005gwiy056q2g5x"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
@@ -470,7 +565,7 @@ $ git config --global push.default simple</code></pre><p>还有一种情况，�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyubhumanwenjianjiegou/" data-id="ck5adhxm0000aroiy45z46ki5"
+      <a data-url="https://cosz.club/guanyubhumanwenjianjiegou/" data-id="ck63ljs910004gwiy57x7csln"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
@@ -673,87 +768,10 @@ $ git config --global push.default simple</code></pre><p>还有一种情况，�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/duiyubhumanzhongstrikerwenjianjiexi/" data-id="ck5adhxm3000froiy9w0k22zo"
+      <a data-url="https://cosz.club/duiyubhumanzhongstrikerwenjianjiexi/" data-id="ck63ljs9e000kgwiy4ilwd2l0"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-
-</article>
-    
-    <article id="post-macbook运行移动硬盘中windows及bootcamp下载出错问题的解决-1" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/"
-    >macbook运行移动硬盘中windows及bootcamp下载出错问题的解决</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/" class="article-date">
-  <time datetime="2019-11-27T14:00:00.000Z" itemprop="datePublished">2019-11-27</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <p>经济原因不少人会选择128g版本或者256g版本的macbook作为入门款。<br>优秀的macos确实很吸引人，但是总有一些时候需要用到windows来处理一些事情<br>过去往往会选择使用bootcamp安装双系统或者用vm虚拟机。但是这样带来的问题在于</p>
-<h2 id="储存空间的紧张"><a href="#储存空间的紧张" class="headerlink" title="储存空间的紧张"></a>储存空间的紧张</h2><p>动辄40g的占用实在让人头疼。于是想到了这个曲线救国方法。只需要一个移动硬盘即可。</p>
-<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><p>先在msdn上下载win镜像文件。同时下载wtg辅助程序（这里注意萝卜的连接挂了）。<br>另外打开bootcamp选择下载windows驱动程序。这里注意如果你之前使用过bootcamp这里可能会提示无法存储的错误。解决方法：</p>
-<blockquote>
-<p>到极限苹果论坛按照对应的版本下载bootcamp的zip包，解压后放在驱动盘里。<br><a href="https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/" target="_blank" rel="noopener">https://www.applex.net/threads/boot-camp-6-0-6133-6136-win-10.60617/</a></p>
-</blockquote>
-<h2 id="2-开始安装"><a href="#2-开始安装" class="headerlink" title="2. 开始安装"></a>2. 开始安装</h2><p>打开wtg辅助程序，选择镜像后安装在移动硬盘中。等到安装完成提示重启时拔下硬盘，插到macbook上重启。<br>重启时按住option选择efi磁盘，继续完成安装<br>这个过程中由于没有驱动会很卡很慢还没网络。等到进入win之后插入你放bootcamp的u盘，选择setup安装。等待安装完成后激活即可。</p>
-<h2 id="3-完善工作"><a href="#3-完善工作" class="headerlink" title="3. 完善工作"></a>3. 完善工作</h2><ul>
-<li>由于wtg辅助工具安装完之后是没有分区的，你可以选择用diskgenius进行分区。</li>
-<li>网上很多实用nt6安装的方法我发现在win10下很容易出问题。比如启动选项2不能够正确加载等等，而直接安装到硬盘会导致没有引导项后续比较难以处理。wtg是个人感觉最折中的办法。</li>
-<li>bootcamp的方法如果能够直接运行，则安装完win之后直接运行桌面上的bootcamp即可。</li>
-</ul>
-
-      
-      <!-- 打赏 -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cosz.club/macbookyunxingyidongyingpanzhongwindowsjibootcampxiazaichucuowentidejiejue1/" data-id="ck5adhxly0008roiydjk1casr"
-        class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
 
     </footer>
 
@@ -773,7 +791,7 @@ $ git config --global push.default simple</code></pre><p>还有一种情况，�
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>
