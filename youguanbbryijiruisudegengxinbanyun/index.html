@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    关于2020年2月1日的梯子说明 |  cosz
+    有关bbr以及锐速的更新搬运 |  cosz
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -29,7 +29,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-关于2020年2月1日的梯子说明" class="article article-type-post" itemscope
+  <article id="post-有关bbr以及锐速的更新搬运" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -37,7 +37,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  关于2020年2月1日的梯子说明
+  有关bbr以及锐速的更新搬运
 </h1>
   
 
@@ -46,14 +46,10 @@
 
     
     <div class="article-meta">
-      <a href="/guanyu2020nian2yue1ridetizishuoming/" class="article-date">
-  <time datetime="2020-02-01T12:57:00.000Z" itemprop="datePublished">2020-02-01</time>
+      <a href="/youguanbbryijiruisudegengxinbanyun/" class="article-date">
+  <time datetime="2020-02-05T08:18:00.000Z" itemprop="datePublished">2020-02-05</time>
 </a>
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
-  </div>
-
       
       
 <div class="word_count">
@@ -61,7 +57,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">340字</span>
+            <span class="post-count">235字</span>
         </span>
     </span>
 
@@ -81,8 +77,6 @@
 
     
     
-    <div class="tocbot"></div>
-
 
 
 
@@ -96,16 +90,25 @@
       
 
       
-      <p>/* 节省字数省去了所有的敬语谦辞：*/</p>
-<h4 id="务必注意事项："><a href="#务必注意事项：" class="headerlink" title="务必注意事项："></a>务必注意事项：</h4><p>1.节省使用流量，现在为了速度和稳定用的全是多倍流量，在平时不用的时候记得把vpn关了，能不用全局就不要用全局。</p>
-<p>2.按照优先级顺序从1-4使用，后面的优先级是留着所有梯子掉了的时候修复用的，把它用废了最后更新就会像今天一样要几个多小时才能修复。</p>
-<p>3.不要外传节点信息。同时在线的人越多机器负载越大，响应速度自然就越慢，何况这并不是能拿到台面上的东西。</p>
-<p>4.以后我会把更新时间放在一个节点的备注上，这个节点是不能用的不要选错了。</p>
-<h4 id="更新详细信息："><a href="#更新详细信息：" class="headerlink" title="更新详细信息："></a>更新详细信息：</h4><p>1.更换脚本文件，之前的233脚本caddy上存在问题换成了wulabing_v2ray的脚本，并且该脚本使用的也不再是过去的方案理论上稳定性有提升。</p>
-<p>2.两个域名均投入使用来隐藏节点。</p>
-<p>3.ssr和ss将不再受支持，全部换为v2ray。其中两个gcp用ws+tls，aws用mkcp。</p>
-<p>4.使用锐速作为加速核心代替bbrplus。速度提升明显但是多倍发包浪费流量。</p>
-<pre><code>2020.2.1 21:10</code></pre>
+      <p>方便国内使用</p>
+<p>不卸载内核</p>
+<pre class=" language-c"><code class="language-c">wget <span class="token operator">-</span>N <span class="token operator">--</span>no<span class="token operator">-</span>check<span class="token operator">-</span>certificate <span class="token string">"https://github.com/ylx2016/Linux-NetSpeed/releases/download/sh/tcpx.sh"</span> <span class="token operator">&amp;&amp;</span> chmod <span class="token operator">+</span>x tcpx<span class="token punctuation">.</span>sh <span class="token operator">&amp;&amp;</span> <span class="token punctuation">.</span><span class="token operator">/</span>tcpx<span class="token punctuation">.</span>sh</code></pre>
+<p>卸载内核</p>
+<p><code>c
+wget -N --no-check-certificate &quot;https://github.com/ylx2016/Linux-NetSpeed/releases/download/sh/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></p>
+<p>bbr内核更新为5.5/5.4</p>
+<p>bbrplus内核更新为4.14.168</p>
+<p>bbr/bbrplus 对应的centos6,7,8 debian8,9,10 </p>
+<p>ubuntu16,18,19都是对应一一编译的,不支持32位系统</p>
+<p>锐速内核稍微更新</p>
+<p>去掉魔改版 增加xanmod 5.5.1版本<br>xanmod 只添加了centos7,8 debian9,10</p>
+<p>5.5内核支持cake队列 5.4未测试</p>
+<p>测试版本，建议先用不卸载内核版本测试，然后再用正常版本<br>不卸载内核表示不会去卸载现有的内核</p>
+<p>测试分支</p>
+<p><a href="https://github.com/ylx2016/Linux-NetSpeed/tree/2020.2.3" target="_blank" rel="noopener">https://github.com/ylx2016/Linux-NetSpeed/tree/2020.2.3</a><br><a href="https://github.com/ylx2016/Linux-NetSpeed/releases" target="_blank" rel="noopener">https://github.com/ylx2016/Linux-NetSpeed/releases</a></p>
+<p>原作者</p>
+<p><a href="https://github.com/cx9208/Linux-NetSpeed" target="_blank" rel="noopener">https://github.com/cx9208/Linux-NetSpeed</a><br><a href="https://github.com/chiakge/Linux-NetSpeed" target="_blank" rel="noopener">https://github.com/chiakge/Linux-NetSpeed</a></p>
+
       
       <!-- 打赏 -->
       
@@ -115,7 +118,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyu2020nian2yue1ridetizishuoming/" data-id="ck63lpa7f001egwiycbeh6yn1"
+      <a data-url="https://cosz.club/youguanbbryijiruisudegengxinbanyun/" data-id="ck691n6b10000e0iy8g52f8cr"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
@@ -129,9 +132,9 @@
   <nav class="article-nav">
     
     
-      <a href="/guanyulinuxzhongmaildeduochongyongfa/" class="article-nav-link">
+      <a href="/rhelzaivmxunijixiajinzhujimoshibunenglianwangdejiejuefangfa/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">关于linux中mail的多种用法</div>
+        <div class="article-nav-title">RHEL在VM虚拟机下仅主机模式不能联网的解决方法</div>
       </a>
     
   </nav>
