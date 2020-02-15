@@ -55,6 +55,80 @@
     
     
     
+    <article id="post-关于套CDN来保护节点" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/guanyutaocdnlaibaohujiedian/"
+    >关于套CDN来保护节点</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/guanyutaocdnlaibaohujiedian/" class="article-date">
+  <time datetime="2020-02-15T15:57:00.000Z" itemprop="datePublished">2020-02-15</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>关于科学上网教程2——如何套CDN</p>
+<blockquote>
+<p>最近发现ws+tls如果不套CDN也存在被封的几率<br>其实我一直很奇怪我作为小用户特征流量并不明显为什么一天到晚被封锁<br>而且更让我感到奇怪的是为什么会出现ip没被封端口没被封却就是上不了网</p>
+</blockquote>
+<p><strong>但是这里提供一下如何给套CDN以最安全的联网</strong></p>
+<p>选用cloudflare作为CDN提供商，选取免费套餐<br>cloudflare速度不快需要做好心理准备</p>
+<p>如果你使用cloudflare的dns解析就直接把ns绑成cloudflare的服务器，然后点亮云朵即可。但是这种方法无法免费自选节点</p>
+<p>如果想要自选节点就在例如萌精灵CDN上登陆你的cloudflare账户（在此之前记得解绑域名），利用cloudflare partner实现自选，具体实现方法见下：</p>
+<ul>
+<li>在萌精灵cdn中添加你的根域名</li>
+<li>（way1）dnsA解析到服务器，在域名dns管理上添加萌精灵下面列出来的CHAME地址，即www；CHAME；<a href="http://www.xxxx.cloudflare的一串，之后分流A解析到各个自选的cloudflare节点。" target="_blank" rel="noopener">www.xxxx.cloudflare的一串，之后分流A解析到各个自选的cloudflare节点。</a></li>
+<li>（way2）dnsCHAME解析到回流地址，域名dns管理上添加萌精灵解析出来的CHAME地址，同时添加回流地址指向服务器ip，之后操作同上</li>
+</ul>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/guanyutaocdnlaibaohujiedian/" data-id="ck6nsde0b00004siycnnr9fs2"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+
+</article>
+    
     <article id="post-2-15-VPN" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -75,7 +149,7 @@
     
     <div class="article-meta">
       <a href="/215vpn/" class="article-date">
-  <time datetime="2020-02-15T05:27:13.000Z" itemprop="datePublished">2020-02-15</time>
+  <time datetime="2020-02-15T05:27:00.000Z" itemprop="datePublished">2020-02-15</time>
 </a>
       
       
@@ -112,9 +186,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/215vpn/" data-id="ck6n5szyz0000f0iya57rb84b"
+      <a data-url="https://cosz.club/215vpn/" data-id="ck6n5slgf0001ywiyelx7gns5"
         class="article-share-link">分享</a>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
+
     </footer>
 
   </div>
@@ -462,83 +538,6 @@ EOT  # 按 Ctrl+D
     </div>
     <footer class="article-footer">
       <a data-url="https://cosz.club/guanyuv2raychuanshuxieyidexuanze/" data-id="ck6d0f7vw00001giygo2u7sjp"
-        class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-
-</article>
-    
-    <article id="post-科学上网的一些教程" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/kexueshangwangdeyixiejiaocheng/"
-    >科学上网的一些教程</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/kexueshangwangdeyixiejiaocheng/" class="article-date">
-  <time datetime="2020-01-16T05:17:00.000Z" itemprop="datePublished">2020-01-16</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <p><em>我将在这里留下脚本文件备份以及精简的教程。</em></p>
-<h5 id="v2ray一键脚本（2333版本）："><a href="#v2ray一键脚本（2333版本）：" class="headerlink" title="v2ray一键脚本（2333版本）："></a>v2ray一键脚本（2333版本）：</h5><pre><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></pre><h5 id="v2ray一键脚本（wulabing版本）："><a href="#v2ray一键脚本（wulabing版本）：" class="headerlink" title="v2ray一键脚本（wulabing版本）："></a>v2ray一键脚本（wulabing版本）：</h5><pre><code>wget -N --no-check-certificate -q -O install.sh &quot;https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh&quot; &amp;&amp; chmod +x install.sh &amp;&amp; bash install.sh</code></pre><h5 id="ss一键脚本："><a href="#ss一键脚本：" class="headerlink" title="ss一键脚本："></a>ss一键脚本：</h5><pre><code>bash &lt;(curl -s -L https://git.io/ss.sh)</code></pre><h5 id="SSR一键脚本："><a href="#SSR一键脚本：" class="headerlink" title="SSR一键脚本："></a>SSR一键脚本：</h5><pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre><h5 id="BBR多合一脚本："><a href="#BBR多合一脚本：" class="headerlink" title="BBR多合一脚本："></a>BBR多合一脚本：</h5><pre><code>wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot;
-chmod +x tcp.sh
-./tcp.sh</code></pre><p>(更新的bbr新脚本可以看我另一篇专门的bbr加速博客）</p>
-<h5 id="针对centos7更换内核以使用BBR"><a href="#针对centos7更换内核以使用BBR" class="headerlink" title="针对centos7更换内核以使用BBR"></a>针对centos7更换内核以使用BBR</h5><pre><code>rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
-rpm -qa | grep kernel #查看内核是否安装成功
-reboot #重启</code></pre><h5 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h5><p>至于怎么设置订阅啊怎么选择协议啊怎么调vps啊<br>好问题emmmm就靠你们自己琢磨了<br>这里没有放ssr的因为ssr一不更新了二来用v2ray多香<br>但是我的订阅里大家会发现留了一个ss懒得说为啥啦</p>
-<pre><code>这里有针对233的备份：（仅复制未更改）   
-git clone https://github.com/INFWOLAD/v2ray -b master  
-cd v2ray   
-chmod +x install.sh   
-./install.sh local  
-（记得安装git）</code></pre>
-      
-      <!-- 打赏 -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cosz.club/kexueshangwangdeyixiejiaocheng/" data-id="ck6d0f7wd000h1giy7076fenw"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>

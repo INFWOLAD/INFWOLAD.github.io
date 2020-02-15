@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    2.15 VPN |  cosz
+    关于套CDN来保护节点 |  cosz
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -29,7 +29,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-2-15-VPN" class="article article-type-post" itemscope
+  <article id="post-关于套CDN来保护节点" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -37,7 +37,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  2.15 VPN
+  关于套CDN来保护节点
 </h1>
   
 
@@ -46,8 +46,8 @@
 
     
     <div class="article-meta">
-      <a href="/215vpn/" class="article-date">
-  <time datetime="2020-02-15T05:27:00.000Z" itemprop="datePublished">2020-02-15</time>
+      <a href="/guanyutaocdnlaibaohujiedian/" class="article-date">
+  <time datetime="2020-02-15T15:57:00.000Z" itemprop="datePublished">2020-02-15</time>
 </a>
       
       
@@ -57,7 +57,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">421字</span>
+            <span class="post-count">344字</span>
         </span>
     </span>
 
@@ -77,8 +77,6 @@
 
     
     
-    <div class="tocbot"></div>
-
 
 
 
@@ -92,19 +90,19 @@
       
 
       
-      <h4 id="更新说明："><a href="#更新说明：" class="headerlink" title="更新说明："></a>更新说明：</h4><ol>
-<li>如果你发现自己连不上了，请尝试更换节点或者更换自身网络环境（例如换热点）。现在很多情况并不是节点出了问题，而是你所在的网络运行商的墙内墙（例如移动）。虽然这种情况很少出现但是还是要考虑</li>
-<li>如果你发现白天网速很快，但是到了晚上速度非常慢，那是因为你所在地区的网络运行商在晚上访问量大的时候把你的出境数据优先级排到了后面。这种情况尤其出现在移动宽带上。这种情况的唯一解决办法就是提高优先级（给宽带充钱）。万千世界充钱可达</li>
-<li>随着网络的逐渐稳定以后更新频率会放缓。这段特殊时间封锁太过于频繁现在换了安全协议不会出现之前的频繁封锁了。</li>
-<li>还有别的问题私聊我</li>
-</ol>
-<h4 id="更新日志："><a href="#更新日志：" class="headerlink" title="更新日志："></a>更新日志：</h4><ol>
-<li>将除AWS以外的全部线路套上CDN以解决封锁问题。其中CFP节点介入了cloudflare的高级节点减少套cf的网速损失。此处解决方案可见博客中cf教程</li>
-<li>均开启了bbr提升速度</li>
-<li>所有解析更换到了腾讯云统一管理</li>
-<li>ws+tls的协议CFP和CDN用的是分别是wulibang和233的脚本，其中CFP对应服务器为cosz-gcpbr，CDN对应服务器为cosz-gcpme，在此标注以便以后维护时注意</li>
-<li>以后可能会针对移动联通电信的接入A解析做一定的优化调整。但是不会体现在节点上。</li>
-</ol>
+      <p>关于科学上网教程2——如何套CDN</p>
+<blockquote>
+<p>最近发现ws+tls如果不套CDN也存在被封的几率<br>其实我一直很奇怪我作为小用户特征流量并不明显为什么一天到晚被封锁<br>而且更让我感到奇怪的是为什么会出现ip没被封端口没被封却就是上不了网</p>
+</blockquote>
+<p><strong>但是这里提供一下如何给套CDN以最安全的联网</strong></p>
+<p>选用cloudflare作为CDN提供商，选取免费套餐<br>cloudflare速度不快需要做好心理准备</p>
+<p>如果你使用cloudflare的dns解析就直接把ns绑成cloudflare的服务器，然后点亮云朵即可。但是这种方法无法免费自选节点</p>
+<p>如果想要自选节点就在例如萌精灵CDN上登陆你的cloudflare账户（在此之前记得解绑域名），利用cloudflare partner实现自选，具体实现方法见下：</p>
+<ul>
+<li>在萌精灵cdn中添加你的根域名</li>
+<li>（way1）dnsA解析到服务器，在域名dns管理上添加萌精灵下面列出来的CHAME地址，即www；CHAME；<a href="http://www.xxxx.cloudflare的一串，之后分流A解析到各个自选的cloudflare节点。" target="_blank" rel="noopener">www.xxxx.cloudflare的一串，之后分流A解析到各个自选的cloudflare节点。</a></li>
+<li>（way2）dnsCHAME解析到回流地址，域名dns管理上添加萌精灵解析出来的CHAME地址，同时添加回流地址指向服务器ip，之后操作同上</li>
+</ul>
 
       
       <!-- 打赏 -->
@@ -115,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/215vpn/" data-id="ck6n5slgf0001ywiyelx7gns5"
+      <a data-url="https://cosz.club/guanyutaocdnlaibaohujiedian/" data-id="ck6nsde0b00004siycnnr9fs2"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
@@ -128,19 +126,10 @@
   
   <nav class="article-nav">
     
-      <a href="/guanyutaocdnlaibaohujiedian/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            关于套CDN来保护节点
-          
-        </div>
-      </a>
     
-    
-      <a href="/youguanbbryijiruisudegengxinbanyun/" class="article-nav-link">
+      <a href="/215vpn/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">有关bbr以及锐速的更新搬运</div>
+        <div class="article-nav-title">2.15 VPN</div>
       </a>
     
   </nav>
