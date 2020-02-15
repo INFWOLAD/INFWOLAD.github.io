@@ -55,6 +55,74 @@
     
     
     
+    <article id="post-关于科学上网" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/guanyukexueshangwang/"
+    >关于科学上网</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/guanyukexueshangwang/" class="article-date">
+  <time datetime="2020-01-10T14:05:00.000Z" itemprop="datePublished">2020-01-10</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      The article has been encrypted, please enter your password to view.<br>
+      
+      <a class="article-more-link" href="/guanyukexueshangwang/">阅读更多...</a>
+      
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/guanyukexueshangwang/" data-id="ck6d0f7w700061giy2gev7vfd"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+
+</article>
+    
     <article id="post-程序设计基础要点" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -594,95 +662,6 @@ $ git config --global push.default simple</code></pre><p>还有一种情况，�
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-
-</article>
-    
-    <article id="post-关于bhuman文件结构" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/guanyubhumanwenjianjiegou/"
-    >关于bhuman文件结构</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/guanyubhumanwenjianjiegou/" class="article-date">
-  <time datetime="2019-11-27T14:01:16.000Z" itemprop="datePublished">2019-11-27</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">NAO机器人</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>进入Src目录，主要是Representations和Modules两个目录。其中Representations是可调用的部分，通过调用其中的函数，可以编写角色的策略代码文件。Modules是实现Representations的部分。即调用Representations是通过执行Modules中的函数而执行相关action。<br><img src="https://img-blog.csdnimg.cn/20190716155639844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="策略文件"><a href="#策略文件" class="headerlink" title="策略文件"></a>策略文件</h2><p>进入Modules下的BehaviorControl下的BehaviorControl目录。包含Options目录，以及2个h文件及1个cpp文件。</p>
-<ol>
-<li>Options文件夹：包含行为控制的文件，每一个文件是以图的结构表示</li>
-<li>Options.h ：  包含所有Options中的文件的路径，通过一个c++头文件将其关联在一起</li>
-<li>BehaviorControl.h： 包含options文件中所调用的函数，关联调用的Representations中的文件<br><img src="https://img-blog.csdnimg.cn/20190716155724355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>进入options目录下的GameControl，PlayingState文件中为比赛开始时的行为，ReadyState为比赛中ready状态时的行为，一般是机器人入场。Options/Roles中包含各种角色代码文件。</li>
-</ol>
-<h2 id="可调用接口文件"><a href="#可调用接口文件" class="headerlink" title="可调用接口文件"></a>可调用接口文件</h2><p>进入Src的Representations，可以看到8个模块</p>
-<blockquote>
-<p>这里是引用</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190716155753842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中pdf文档介绍了其中5个部分。剩余的3个部分Communication和Configuration以及Infrastructure是文档中5个的底层。<br><img src="https://img-blog.csdnimg.cn/20190716155851134.png" alt="在这里插入图片描述"><br>我们可以配合Modules修改或添加其中的内容，满足我们的要求。</p>
-<h2 id="对于representations中文件结构的解释"><a href="#对于representations中文件结构的解释" class="headerlink" title="对于representations中文件结构的解释"></a>对于representations中文件结构的解释</h2><blockquote>
-<p>基于对第四章到第八章的pdf大致理解</p>
-</blockquote>
-<p> <strong>1. perception感知模块</strong><br>基于两个摄像头，通过建立坐标系来实现对外界感知。其中涉及到防止识别自身身体，颜色管理识别，边界识别，检测黑白球（之前为橙色球），罚分和对障碍物识别以及对手的检测。<br><img src="https://img-blog.csdnimg.cn/20190717152741545.png" alt="perception"><br> <strong>2. modeling建模模块</strong><br>对于自我位置定位，对于球定位，对于障碍物定位，通过自身以及队友的感知数据来建模。同时口哨声的识别也存在于这里。<br><img src="https://img-blog.csdnimg.cn/20190717154132625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="文件"><br> <strong>3. behaviorcontrol行为控制模块</strong><br>策略的规划，包括角色安排等等（注意与motioncontrol区分）<br> <strong>4. proprioception自身感知模块</strong><br>如图所示：<br><img src="https://img-blog.csdnimg.cn/20190717162002770.png" alt="xx"><br> <strong>5. motioncontrol动作控制模块</strong><br>主要的行为操作，包括步行踢腿等等<br><img src="https://img-blog.csdnimg.cn/20190717162412103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="MOTION"></p>
-<h2 id="关于Modules与Representation的主要不同"><a href="#关于Modules与Representation的主要不同" class="headerlink" title="关于Modules与Representation的主要不同"></a>关于Modules与Representation的主要不同</h2><p>一定程度参考<code>飞_飞</code>的博客：</p>
-<ul>
-<li>Modules文件夹的内容与Representation文件夹中的内容能一一对应。比如,Modules包含了BehaviorControl、Configuration、Sensing等,而Representation也包含了这些模块。</li>
-<li>STREAM宏、以及serialize方法等“流”方法,在Representations中的所有模块都首先使用此宏进行了定义,以及blackboard也属于此文件夹,可见,Representation的真正用途为信息交流,因为STREAM的作用,所以使得各个模块可以相互传递信息。</li>
-<li>MODULES宏的真正作用是创建BehaviorControl、Sensing、Modeling等模块,在这些模块中,模块的必要条件(用REQUIRES宏包含)从Representation文件夹内的各个模块获得。即在Modules文件夹中的各个模块使用include包含所需要的Representation头文件。因此,Representation描述了机器人的各个参数、以及基本物理信息,甚至各个模块的描述(但也不完全是,需要下次进行更输入的分析)。</li>
-</ul>
-<hr>
-<p><strong>另外部署可以参考下面这篇文章：</strong><br><a href="https://blog.csdn.net/qq_34062822/article/details/80326273" target="_blank" rel="noopener">https://blog.csdn.net/qq_34062822/article/details/80326273</a><br>感谢原作者</p>
-
-      
-      <!-- 打赏 -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyubhumanwenjianjiegou/" data-id="ck6d0f7wh000p1giycpv5aajs"
-        class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
 
     </footer>
 

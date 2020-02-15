@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    有关bbr以及锐速的更新搬运 |  cosz
+    2.15 VPN |  cosz
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -29,7 +29,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-有关bbr以及锐速的更新搬运" class="article article-type-post" itemscope
+  <article id="post-2-15-VPN" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -37,7 +37,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  有关bbr以及锐速的更新搬运
+  2.15 VPN
 </h1>
   
 
@@ -46,8 +46,8 @@
 
     
     <div class="article-meta">
-      <a href="/youguanbbryijiruisudegengxinbanyun/" class="article-date">
-  <time datetime="2020-02-05T08:18:00.000Z" itemprop="datePublished">2020-02-05</time>
+      <a href="/215vpn/" class="article-date">
+  <time datetime="2020-02-15T05:27:13.000Z" itemprop="datePublished">2020-02-15</time>
 </a>
       
       
@@ -57,7 +57,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">235字</span>
+            <span class="post-count">421字</span>
         </span>
     </span>
 
@@ -77,6 +77,8 @@
 
     
     
+    <div class="tocbot"></div>
+
 
 
 
@@ -90,24 +92,19 @@
       
 
       
-      <p>方便国内使用</p>
-<p>不卸载内核</p>
-<pre class=" language-c"><code class="language-c">wget <span class="token operator">-</span>N <span class="token operator">--</span>no<span class="token operator">-</span>check<span class="token operator">-</span>certificate <span class="token string">"https://github.com/ylx2016/Linux-NetSpeed/releases/download/sh/tcpx.sh"</span> <span class="token operator">&amp;&amp;</span> chmod <span class="token operator">+</span>x tcpx<span class="token punctuation">.</span>sh <span class="token operator">&amp;&amp;</span> <span class="token punctuation">.</span><span class="token operator">/</span>tcpx<span class="token punctuation">.</span>sh</code></pre>
-<p>卸载内核</p>
-<p><code>c
-wget -N --no-check-certificate &quot;https://github.com/ylx2016/Linux-NetSpeed/releases/download/sh/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></p>
-<p>bbr内核更新为5.5/5.4</p>
-<p>bbrplus内核更新为4.14.168</p>
-<p>bbr/bbrplus 对应的centos6,7,8 debian8,9,10 </p>
-<p>ubuntu16,18,19都是对应一一编译的,不支持32位系统</p>
-<p>锐速内核稍微更新</p>
-<p>去掉魔改版 增加xanmod 5.5.1版本<br>xanmod 只添加了centos7,8 debian9,10</p>
-<p>5.5内核支持cake队列 5.4未测试</p>
-<p>测试版本，建议先用不卸载内核版本测试，然后再用正常版本<br>不卸载内核表示不会去卸载现有的内核</p>
-<p>测试分支</p>
-<p><a href="https://github.com/ylx2016/Linux-NetSpeed/tree/2020.2.3" target="_blank" rel="noopener">https://github.com/ylx2016/Linux-NetSpeed/tree/2020.2.3</a><br><a href="https://github.com/ylx2016/Linux-NetSpeed/releases" target="_blank" rel="noopener">https://github.com/ylx2016/Linux-NetSpeed/releases</a></p>
-<p>原作者</p>
-<p><a href="https://github.com/cx9208/Linux-NetSpeed" target="_blank" rel="noopener">https://github.com/cx9208/Linux-NetSpeed</a><br><a href="https://github.com/chiakge/Linux-NetSpeed" target="_blank" rel="noopener">https://github.com/chiakge/Linux-NetSpeed</a></p>
+      <h4 id="更新说明："><a href="#更新说明：" class="headerlink" title="更新说明："></a>更新说明：</h4><ol>
+<li>如果你发现自己连不上了，请尝试更换节点或者更换自身网络环境（例如换热点）。现在很多情况并不是节点出了问题，而是你所在的网络运行商的墙内墙（例如移动）。虽然这种情况很少出现但是还是要考虑</li>
+<li>如果你发现白天网速很快，但是到了晚上速度非常慢，那是因为你所在地区的网络运行商在晚上访问量大的时候把你的出境数据优先级排到了后面。这种情况尤其出现在移动宽带上。这种情况的唯一解决办法就是提高优先级（给宽带充钱）。万千世界充钱可达</li>
+<li>随着网络的逐渐稳定以后更新频率会放缓。这段特殊时间封锁太过于频繁现在换了安全协议不会出现之前的频繁封锁了。</li>
+<li>还有别的问题私聊我</li>
+</ol>
+<h4 id="更新日志："><a href="#更新日志：" class="headerlink" title="更新日志："></a>更新日志：</h4><ol>
+<li>将除AWS以外的全部线路套上CDN以解决封锁问题。其中CFP节点介入了cloudflare的高级节点减少套cf的网速损失。此处解决方案可见博客中cf教程</li>
+<li>均开启了bbr提升速度</li>
+<li>所有解析更换到了腾讯云统一管理</li>
+<li>ws+tls的协议CFP和CDN用的是分别是wulibang和233的脚本，其中CFP对应服务器为cosz-gcpbr，CDN对应服务器为cosz-gcpme，在此标注以便以后维护时注意</li>
+<li>以后可能会针对移动联通电信的接入A解析做一定的优化调整。但是不会体现在节点上。</li>
+</ol>
 
       
       <!-- 打赏 -->
@@ -118,11 +115,9 @@ wget -N --no-check-certificate &quot;https://github.com/ylx2016/Linux-NetSpeed/r
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/youguanbbryijiruisudegengxinbanyun/" data-id="ck6d0f7w9000a1giyfnpu1vg3"
+      <a data-url="https://cosz.club/215vpn/" data-id="ck6n5szyz0000f0iya57rb84b"
         class="article-share-link">分享</a>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
-
     </footer>
 
   </div>
@@ -131,19 +126,10 @@ wget -N --no-check-certificate &quot;https://github.com/ylx2016/Linux-NetSpeed/r
   
   <nav class="article-nav">
     
-      <a href="/215vpn/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            2.15 VPN
-          
-        </div>
-      </a>
     
-    
-      <a href="/rhelzaivmxunijixiajinzhujimoshibunenglianwangdejiejuefangfa/" class="article-nav-link">
+      <a href="/youguanbbryijiruisudegengxinbanyun/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">RHEL在VM虚拟机下仅主机模式不能联网的解决方法</div>
+        <div class="article-nav-title">有关bbr以及锐速的更新搬运</div>
       </a>
     
   </nav>
