@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    关于套CDN来保护节点 |  cosz
+    格雷码的规律、转换 |  cosz
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -29,7 +29,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-关于套CDN来保护节点" class="article article-type-post" itemscope
+  <article id="post-格雷码的规律、转换" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -37,7 +37,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  关于套CDN来保护节点
+  格雷码的规律、转换
 </h1>
   
 
@@ -46,10 +46,14 @@
 
     
     <div class="article-meta">
-      <a href="/guanyutaocdnlaibaohujiedian/" class="article-date">
-  <time datetime="2020-02-15T15:57:00.000Z" itemprop="datePublished">2020-02-15</time>
+      <a href="/geleimadeguiluzhuanhuan/" class="article-date">
+  <time datetime="2020-02-20T05:10:00.000Z" itemprop="datePublished">2020-02-20</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -57,7 +61,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">344字</span>
+            <span class="post-count">569字</span>
         </span>
     </span>
 
@@ -66,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">2分钟</span>
         </span>
     </span>
 </div>
@@ -77,6 +81,8 @@
 
     
     
+    <div class="tocbot"></div>
+
 
 
 
@@ -90,19 +96,28 @@
       
 
       
-      <p>关于科学上网教程2——如何套CDN</p>
-<blockquote>
-<p>最近发现ws+tls如果不套CDN也存在被封的几率<br>其实我一直很奇怪我作为小用户特征流量并不明显为什么一天到晚被封锁<br>而且更让我感到奇怪的是为什么会出现ip没被封端口没被封却就是上不了网</p>
+      <blockquote>
+<p>发现数电书中对于格雷码并没有很好地解释，这里保留下来所理解的知识供自己日后查看。这里主要说明排列规律和转换。</p>
 </blockquote>
-<p><strong>但是这里提供一下如何给套CDN以最安全的联网</strong></p>
-<p>选用cloudflare作为CDN提供商，选取免费套餐<br>cloudflare速度不快需要做好心理准备</p>
-<p>如果你使用cloudflare的dns解析就直接把ns绑成cloudflare的服务器，然后点亮云朵即可。但是这种方法无法免费自选节点</p>
-<p>如果想要自选节点就在例如萌精灵CDN上登陆你的cloudflare账户（在此之前记得解绑域名），利用cloudflare partner实现自选，具体实现方法见下：</p>
+<h4 id="格雷码特点："><a href="#格雷码特点：" class="headerlink" title="格雷码特点："></a>格雷码特点：</h4><p>任意两个相邻的代码只有一位二进制数不同。并且首尾相连，属于循环码（这里我发现百度有说不是的，特此注明）。</p>
+<h4 id="镜像排列规律："><a href="#镜像排列规律：" class="headerlink" title="镜像排列规律："></a>镜像排列规律：</h4><p>如果要画卡诺图，镜像格雷码是必须的。生成二进制格雷码方式2的n次方位元的格雷码可以从n-1位元的格雷码以上下镜射后加上新位元的方式快速的得到，如图所示。<br><img src="https://img-blog.csdnimg.cn/20200220125404276.png" alt="这个是png!"><br>具体步骤：
+　　</p>
+<ol>
+<li>写出 0, 1 </li>
+<li>在1的基础上，构造镜像0,1,1,0</li>
+<li>在2的基础上，从上向下扩展最高位0，从下到上拓展最高位1，直至对称线两个相遇停止。这样就变成了00,01,11,10 </li>
+<li>在3的基础上，重复2，3步骤，得到000,001,011,010,110,111,101,100</li>
+<li>按照上述方法不停拓展得到你需要的位数格雷码，即n位格雷码是基于n-1位格雷码产生的。</li>
+</ol>
+<h4 id="转换："><a href="#转换：" class="headerlink" title="转换："></a>转换：</h4><p><strong><em>自然二进制转换为格雷码方法：</em></strong><br>保留二进制码的最高位作为格雷码的最高位，而次高位格雷码为二进制码的高位与次高位相异或，而格雷码其余各位与次高位的求法相类似。<br>这里引用一张说明的很好的图片：<br><img src="https://img-blog.csdnimg.cn/20200220124508790.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="二进制-格雷码"><br><strong><em>格雷码转换为自然二进制码的方法：</em></strong><br>保留格雷码的最高位作为自然二进制码的最高位，而次高位自然二进制码为高位自然二进制码与次高位格雷码相异或，而自然二进制码的其余各位与次高位自然二进制码的求法相类似。<br>同样给出图解，注意这里异或的对象由待转换数变成了转换结果中的数：<img src="https://img-blog.csdnimg.cn/20200220124803802.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="格雷码到自然二进制"></p>
+<blockquote>
+<p>文章参考：</p>
 <ul>
-<li>在萌精灵cdn中添加你的根域名</li>
-<li>（way1）dnsA解析到服务器，在域名dns管理上添加萌精灵下面列出来的CHAME地址，即www；CHAME；<a href="http://www.xxxx.cloudflare的一串，之后分流A解析到各个自选的cloudflare节点。" target="_blank" rel="noopener">www.xxxx.cloudflare的一串，之后分流A解析到各个自选的cloudflare节点。</a></li>
-<li>（way2）dnsCHAME解析到回流地址，域名dns管理上添加萌精灵解析出来的CHAME地址，同时添加回流地址指向服务器ip，之后操作同上</li>
+<li>维基百科格雷码：<a href="https://zh.wikipedia.org/zh-cn/%E6%A0%BC%E9%9B%B7%E7%A0%81" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-cn/%E6%A0%BC%E9%9B%B7%E7%A0%81</a></li>
+<li>格雷码转换：<a href="https://blog.csdn.net/jingfengvae/article/details/51691124" target="_blank" rel="noopener">https://blog.csdn.net/jingfengvae/article/details/51691124</a></li>
+<li>格雷码详解：<a href="https://www.cnblogs.com/zhuruibi/p/8988044.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhuruibi/p/8988044.html</a></li>
 </ul>
+</blockquote>
 
       
       <!-- 打赏 -->
@@ -113,10 +128,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyutaocdnlaibaohujiedian/" data-id="ck6nsde0b00004siycnnr9fs2"
+      <a data-url="https://cosz.club/geleimadeguiluzhuanhuan/" data-id="ck6uafig40000sgiy76lg0tt1"
         class="article-share-link">分享</a>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
 
     </footer>
 
@@ -126,19 +141,10 @@
   
   <nav class="article-nav">
     
-      <a href="/geleimadeguiluzhuanhuan/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            格雷码的规律、转换
-          
-        </div>
-      </a>
     
-    
-      <a href="/215vpn/" class="article-nav-link">
+      <a href="/guanyutaocdnlaibaohujiedian/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">2.15 VPN</div>
+        <div class="article-nav-title">关于套CDN来保护节点</div>
       </a>
     
   </nav>

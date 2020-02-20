@@ -55,6 +55,93 @@
     
     
     
+    <article id="post-格雷码的规律、转换" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/geleimadeguiluzhuanhuan/"
+    >格雷码的规律、转换</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/geleimadeguiluzhuanhuan/" class="article-date">
+  <time datetime="2020-02-20T05:10:00.000Z" itemprop="datePublished">2020-02-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <blockquote>
+<p>发现数电书中对于格雷码并没有很好地解释，这里保留下来所理解的知识供自己日后查看。这里主要说明排列规律和转换。</p>
+</blockquote>
+<h4 id="格雷码特点："><a href="#格雷码特点：" class="headerlink" title="格雷码特点："></a>格雷码特点：</h4><p>任意两个相邻的代码只有一位二进制数不同。并且首尾相连，属于循环码（这里我发现百度有说不是的，特此注明）。</p>
+<h4 id="镜像排列规律："><a href="#镜像排列规律：" class="headerlink" title="镜像排列规律："></a>镜像排列规律：</h4><p>如果要画卡诺图，镜像格雷码是必须的。生成二进制格雷码方式2的n次方位元的格雷码可以从n-1位元的格雷码以上下镜射后加上新位元的方式快速的得到，如图所示。<br><img src="https://img-blog.csdnimg.cn/20200220125404276.png" alt="这个是png!"><br>具体步骤：
+　　</p>
+<ol>
+<li>写出 0, 1 </li>
+<li>在1的基础上，构造镜像0,1,1,0</li>
+<li>在2的基础上，从上向下扩展最高位0，从下到上拓展最高位1，直至对称线两个相遇停止。这样就变成了00,01,11,10 </li>
+<li>在3的基础上，重复2，3步骤，得到000,001,011,010,110,111,101,100</li>
+<li>按照上述方法不停拓展得到你需要的位数格雷码，即n位格雷码是基于n-1位格雷码产生的。</li>
+</ol>
+<h4 id="转换："><a href="#转换：" class="headerlink" title="转换："></a>转换：</h4><p><strong><em>自然二进制转换为格雷码方法：</em></strong><br>保留二进制码的最高位作为格雷码的最高位，而次高位格雷码为二进制码的高位与次高位相异或，而格雷码其余各位与次高位的求法相类似。<br>这里引用一张说明的很好的图片：<br><img src="https://img-blog.csdnimg.cn/20200220124508790.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="二进制-格雷码"><br><strong><em>格雷码转换为自然二进制码的方法：</em></strong><br>保留格雷码的最高位作为自然二进制码的最高位，而次高位自然二进制码为高位自然二进制码与次高位格雷码相异或，而自然二进制码的其余各位与次高位自然二进制码的求法相类似。<br>同样给出图解，注意这里异或的对象由待转换数变成了转换结果中的数：<img src="https://img-blog.csdnimg.cn/20200220124803802.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="格雷码到自然二进制"></p>
+<blockquote>
+<p>文章参考：</p>
+<ul>
+<li>维基百科格雷码：<a href="https://zh.wikipedia.org/zh-cn/%E6%A0%BC%E9%9B%B7%E7%A0%81" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-cn/%E6%A0%BC%E9%9B%B7%E7%A0%81</a></li>
+<li>格雷码转换：<a href="https://blog.csdn.net/jingfengvae/article/details/51691124" target="_blank" rel="noopener">https://blog.csdn.net/jingfengvae/article/details/51691124</a></li>
+<li>格雷码详解：<a href="https://www.cnblogs.com/zhuruibi/p/8988044.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhuruibi/p/8988044.html</a></li>
+</ul>
+</blockquote>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/geleimadeguiluzhuanhuan/" data-id="ck6uafig40000sgiy76lg0tt1"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+
+</article>
+    
     <article id="post-关于套CDN来保护节点" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -465,82 +552,6 @@ EOT  # 按 Ctrl+D
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-
-</article>
-    
-    <article id="post-关于v2ray传输协议的选择" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/guanyuv2raychuanshuxieyidexuanze/"
-    >关于v2ray传输协议的选择</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/guanyuv2raychuanshuxieyidexuanze/" class="article-date">
-  <time datetime="2020-01-22T15:51:00.000Z" itemprop="datePublished">2020-01-22</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h2 id="关于传输协议选择问题"><a href="#关于传输协议选择问题" class="headerlink" title="关于传输协议选择问题"></a>关于传输协议选择问题</h2><blockquote>
-<p>本文章不再写关于ss或者ssr的传输协议的选择，更多的是描述v2ray的传输协议的选择</p>
-</blockquote>
-<h4 id="1-tcp"><a href="#1-tcp" class="headerlink" title="1.tcp"></a>1.tcp</h4><p>该种方法是最简单的方式，也是233默认方式。实际使用情况看看人品，特征流量不多的情况下其实也可以选用。</p>
-<h4 id="2-mkcp"><a href="#2-mkcp" class="headerlink" title="2.mkcp"></a>2.mkcp</h4><p>低延迟首选，但是由于协议问题会成倍耗费流量，在前段时间被封锁过但是又可以使用，总而言之想要省事首选。但是注意流量，对于流量计费的gcp以及固定限额的aws慎用。另外mkcp伪装成微信啊bt下载啊之类的个人觉得可选可不选，本身mkcp对于个人使用来说被ban的几率就很小。</p>
-<p>*更新情况：春节期间针对kcp的封锁也多了起来</p>
-<h4 id="3-ws"><a href="#3-ws" class="headerlink" title="3.ws"></a>3.ws</h4><p>不加tls基本上直接gg。本质上，ws直接http协议传输，虽然实际内容是vmess加密的，但是ws的http特征还是明文的，这就给监听和分析留下了把柄。</p>
-<h4 id="4-ws-tls"><a href="#4-ws-tls" class="headerlink" title="4.ws+tls"></a>4.ws+tls</h4><p>为什么之前我一直不采用这种传输方式其主要原因是需要自有域名。我本身的cosz.club用作搭建个人网站，而最近新域名cosz.xyz开始使用才有机会使用ws+tls。域名解析到vps后设置即可，没什么难度。将流量伪装成访问网址会安全得多，而且速度上看不会有太多的影响。</p>
-<p>但是！这并不是说一定是万能的。如果你不套cf依然会被封锁，而且就春节期间情况来看现在的针对性会更强，有时候甚至不如tcp。只要特征流量不多其实tcp也不是说瞬间封。</p>
-<h4 id="5-Quic"><a href="#5-Quic" class="headerlink" title="5.Quic"></a>5.Quic</h4><p>未使用过，油管上的经验来看基本处于不可用状态。</p>
-<h6 id="PS：mkcp的最令我烦恼的："><a href="#PS：mkcp的最令我烦恼的：" class="headerlink" title="PS：mkcp的最令我烦恼的："></a>PS：mkcp的最令我烦恼的：</h6><p>2-5倍流量损耗。虽说用了udp就该做好准备但是…谷歌一块多一g流量真的伤不起，上个月单月跑了50刀损失巨大…</p>
-
-      
-      <!-- 打赏 -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyuv2raychuanshuxieyidexuanze/" data-id="ck6d0f7vw00001giygo2u7sjp"
-        class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
 
     </footer>
 

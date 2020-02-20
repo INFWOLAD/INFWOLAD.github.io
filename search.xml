@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>格雷码的规律、转换</title>
+    <url>/geleimadeguiluzhuanhuan/</url>
+    <content><![CDATA[<blockquote>
+<p>发现数电书中对于格雷码并没有很好地解释，这里保留下来所理解的知识供自己日后查看。这里主要说明排列规律和转换。</p>
+</blockquote>
+<h4 id="格雷码特点："><a href="#格雷码特点：" class="headerlink" title="格雷码特点："></a>格雷码特点：</h4><p>任意两个相邻的代码只有一位二进制数不同。并且首尾相连，属于循环码（这里我发现百度有说不是的，特此注明）。</p>
+<h4 id="镜像排列规律："><a href="#镜像排列规律：" class="headerlink" title="镜像排列规律："></a>镜像排列规律：</h4><p>如果要画卡诺图，镜像格雷码是必须的。生成二进制格雷码方式2的n次方位元的格雷码可以从n-1位元的格雷码以上下镜射后加上新位元的方式快速的得到，如图所示。<br><img src="https://img-blog.csdnimg.cn/20200220125404276.png" alt="这个是png!"><br>具体步骤：
+　　</p>
+<ol>
+<li>写出 0, 1 </li>
+<li>在1的基础上，构造镜像0,1,1,0</li>
+<li>在2的基础上，从上向下扩展最高位0，从下到上拓展最高位1，直至对称线两个相遇停止。这样就变成了00,01,11,10 </li>
+<li>在3的基础上，重复2，3步骤，得到000,001,011,010,110,111,101,100</li>
+<li>按照上述方法不停拓展得到你需要的位数格雷码，即n位格雷码是基于n-1位格雷码产生的。</li>
+</ol>
+<h4 id="转换："><a href="#转换：" class="headerlink" title="转换："></a>转换：</h4><p><strong><em>自然二进制转换为格雷码方法：</em></strong><br>保留二进制码的最高位作为格雷码的最高位，而次高位格雷码为二进制码的高位与次高位相异或，而格雷码其余各位与次高位的求法相类似。<br>这里引用一张说明的很好的图片：<br><img src="https://img-blog.csdnimg.cn/20200220124508790.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="二进制-格雷码"><br><strong><em>格雷码转换为自然二进制码的方法：</em></strong><br>保留格雷码的最高位作为自然二进制码的最高位，而次高位自然二进制码为高位自然二进制码与次高位格雷码相异或，而自然二进制码的其余各位与次高位自然二进制码的求法相类似。<br>同样给出图解，注意这里异或的对象由待转换数变成了转换结果中的数：<img src="https://img-blog.csdnimg.cn/20200220124803802.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="格雷码到自然二进制"></p>
+<blockquote>
+<p>文章参考：</p>
+<ul>
+<li>维基百科格雷码：<a href="https://zh.wikipedia.org/zh-cn/%E6%A0%BC%E9%9B%B7%E7%A0%81" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-cn/%E6%A0%BC%E9%9B%B7%E7%A0%81</a></li>
+<li>格雷码转换：<a href="https://blog.csdn.net/jingfengvae/article/details/51691124" target="_blank" rel="noopener">https://blog.csdn.net/jingfengvae/article/details/51691124</a></li>
+<li>格雷码详解：<a href="https://www.cnblogs.com/zhuruibi/p/8988044.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhuruibi/p/8988044.html</a></li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>计算机相关</category>
+      </categories>
+      <tags>
+        <tag>计算机相关</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于套CDN来保护节点</title>
     <url>/guanyutaocdnlaibaohujiedian/</url>
     <content><![CDATA[<p>关于科学上网教程2——如何套CDN</p>
