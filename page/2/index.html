@@ -55,6 +55,84 @@
     
     
     
+    <article id="post-关于linux中mail的多种用法" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/guanyulinuxzhongmaildeduochongyongfa/"
+    >关于linux中mail的多种用法</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/guanyulinuxzhongmaildeduochongyongfa/" class="article-date">
+  <time datetime="2020-01-31T09:37:00.000Z" itemprop="datePublished">2020-01-31</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/">计算机相关</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>发送邮件的几种方式（可以搭配《Linux就该这么学》P64）</p>
+<p>1.标准输入录入邮件信息</p>
+<p>直接把当前 shell 当成编辑器来用，可以输入正文，当邮件正文输入完成后，需要按 Ctrl+D 结束输入。</p>
+<pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com
+hello  # 邮件正文
+world  # 邮件正文
+EOT  # 按 Ctrl+D
+</code></pre><p>2.管道方式</p>
+<p>这种方式用的较多，其中 echo 后面的是邮件的正文。</p>
+<pre><code>[root@localhost ~]# echo &quot;邮件正文&quot; | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>以文件 file.txt 的内容为邮件正文发送。</p>
+<pre><code>[root@localhost ~]# cat file.txt | mail -s &quot;邮件主题&quot; 123456@qq.com</code></pre><p>3.文件重定向</p>
+<p>以文件 file.txt 的内容为邮件正文发送。</p>
+<pre><code>[root@localhost ~]# mail -s &quot;邮件主题&quot; 123456@qq.com &lt; file.txt</code></pre><p>注意：如果需要发送给多个收件人，收件人之间用逗号分隔，例如：<code>123456@qq.com,888888@qq.com。</code></p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/guanyulinuxzhongmaildeduochongyongfa/" data-id="ck6d0f7wl00101giy1gba6pho"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+
+</article>
+    
     <article id="post-关于v2ray传输协议的选择" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -472,121 +550,6 @@ sudo nautilus
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-
-</article>
-    
-    <article id="post-关于配置Bhuman通用平台环境心得" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/guanyupeizhibhumantongyongpingtaihuanjingxinde/"
-    >关于配置Bhuman通用平台环境心得</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/guanyupeizhibhumantongyongpingtaihuanjingxinde/" class="article-date">
-  <time datetime="2019-11-27T14:03:00.000Z" itemprop="datePublished">2019-11-27</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/">NAO机器人</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <blockquote>
-<p>   因为实验室考核，从19.7.3开始接触Bhuman，在此之前的第一步是配置环境<br>根据Coderelease2107上面的信息开始部署</p>
-</blockquote>
-<pre><code>写在最前面</code></pre><h2 id="整体的步骤"><a href="#整体的步骤" class="headerlink" title="整体的步骤"></a>整体的步骤</h2><ol>
-<li>安装Ubuntu系统（见我的另一篇博文：<a href="https://blog.csdn.net/Athus_c/article/details/94495664" target="_blank" rel="noopener">https://blog.csdn.net/Athus_c/article/details/94495664</a></li>
-<li>安装相应软件包（alcommon单独安装）</li>
-<li>在主文件下make编译（包括安装codelite）</li>
-</ol>
-<pre><code>接下来是详细的步骤以及操作中遇到的问题</code></pre><h2 id="一、关于coderelease2017的一些"><a href="#一、关于coderelease2017的一些" class="headerlink" title="一、关于coderelease2017的一些"></a>一、关于coderelease2017的一些</h2><p>由于全英文一些时候不方便阅读，我是Adobe Acrobat DC pro转成word之后方便阅读、拷贝代码和对一些不了解的地方进行翻译。例外拆分成小文件谷歌直接翻译也可以。但是由于有一定专业名词直接翻译会影响阅读体验。</p>
-<p>另外coderelease里面<code>很多代码存在空格问题</code>，需要复制的时候先改一下之后在继续进行操作（例如下面图片的部分）<br><img src="https://img-blog.csdnimg.cn/20190703131721125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="该部分">这里面的qtbase5 - dev里面-左右是没用空格的。</p>
-<hr>
-<h2 id="二、解压过程中出现的问题（关联四）"><a href="#二、解压过程中出现的问题（关联四）" class="headerlink" title="二、解压过程中出现的问题（关联四）"></a>二、解压过程中出现的问题（关联四）</h2><p>在下载了群内的buhuman文件之后，我在ubuntu里面解压发现出现这样的提示：<br><img src="https://img-blog.csdnimg.cn/20190703223833462.png" alt="错误"><br>我一开始在想是不是文件出现了问题，于是重新下载了一次发现依然打不开。于是我换我的mac下载发现在mac上面是可以打开的，结果发现<code>ubuntu是不支持rar的</code><br><img src="https://img-blog.csdnimg.cn/20190703135109452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="mac上打开正常">于是我就在mac上先解压之后用u盘传到装ubuntu的电脑上了。<code>但是这也为出现下面的错误埋下了伏笔</code></p>
-<hr>
-<h2 id="三、安装除alcommon以外的软件"><a href="#三、安装除alcommon以外的软件" class="headerlink" title="三、安装除alcommon以外的软件"></a>三、安装除alcommon以外的软件</h2><p>直接在终端里运行下面代码即可（注意空格）</p>
-<pre class=" language-javascript"><code class="language-javascript">sudo apt install clang qtbase5<span class="token operator">-</span>dev libqt5svg5<span class="token operator">-</span>dev libglew<span class="token operator">-</span>dev libxml2<span class="token operator">-</span>dev graphviz xterm</code></pre>
-<p>但是我是先安装的clang5.0，后安装的剩下部分（如图）<br><img src="https://img-blog.csdnimg.cn/20190703224056992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="clang"><br><img src="https://img-blog.csdnimg.cn/20190703224120360.png" alt="第二部分"><br><code>再次注意要把-左右的空格删除</code>，不然会出现连接错误的提示。</p>
-<hr>
-<h2 id="四、安装alcommon遇到的解压缩问题"><a href="#四、安装alcommon遇到的解压缩问题" class="headerlink" title="四、安装alcommon遇到的解压缩问题"></a>四、安装alcommon遇到的解压缩问题</h2><p>按照文章的要求：<br><img src="https://img-blog.csdnimg.cn/20190703140312508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="alcommon"><br>我把在mac上解压的文件拷贝到home下，和naoqi-sdk-2.1.4.13-linux32.tar.gz一同放在了一个bhuman的文件夹里。之后把解压的bhuman重命名为bhumancode方便区分主目录和分目录。此时在bhumancode文件夹下面运行终端执行</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token operator">/</span>Install<span class="token operator">/</span>installAlcommon <span class="token operator">/</span>home<span class="token operator">/</span>bhuman<span class="token operator">/</span>naoqi<span class="token operator">-</span>sdk<span class="token number">-2.1</span><span class="token punctuation">.</span><span class="token number">4.13</span><span class="token operator">-</span>linux32<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz</code></pre>
-<p>但是出现了错误：<br><img src="https://img-blog.csdnimg.cn/20190703140759361.png" alt="第一次错误">我开始检查是不是naoqi-sdk-2.1.4.13-linux32.tar.gz的目录有问题，结果属性发现地址为</p>
-<blockquote>
-<p>/home/cosz/bhuman     （cosz是我的用户名）</p>
-</blockquote>
-<p>之后我就修改了但是运行还是错误。我仔细看了下报错信息发现<code>报错问题出在bhumancode文件里面</code>。我按照路径找到文件<br><img src="https://img-blog.csdnimg.cn/2019070314111488.png" alt="alcommon文件">并没有发现什么问题…</p>
-<p>网上也有几位也出现了问题，突然看到一篇文章：<br><a href="https://www.cnblogs.com/pangblog/p/3290028.html" target="_blank" rel="noopener">https://www.cnblogs.com/pangblog/p/3290028.html</a><br>写到windows下更改过文件导致这种问题出现</p>
-<blockquote>
-<p>原因：<br>  这个文件在Windows 下编辑过，在Windows下每一行结尾是\n\r，而Linux下则是\n</p>
-</blockquote>
-<p>豁然开朗，文章同时也给出了解决的办法：</p>
-<blockquote>
-<p>使用在终端输入sed -i ‘s/\r$//‘ make-all-linux-project.sh即可<br>其中make-all-linux-project.sh为我的文件名，这里改成自己需要的即可</p>
-</blockquote>
-<hr>
-<p><strong>但是这里我并没有这样操作</strong>，既然不能解压rar我就<code>安装解压rar的程序</code>呗</p>
-<pre class=" language-javascript"><code class="language-javascript"> sudo apt<span class="token operator">-</span><span class="token keyword">get</span> install unrar</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190703142302125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="rar"><br>之后打开提取，解压问题搞定。</p>
-<hr>
-<h2 id="五、权限问题"><a href="#五、权限问题" class="headerlink" title="五、权限问题"></a>五、权限问题</h2><p>之后在解压完成的文件夹中运行./Install/installAlcommon /home/cosz/bhuman/naoqi-sdk-2.1.4.13-linux32.tar.gz，出现了新问题<br><img src="https://img-blog.csdnimg.cn/2019070314274456.png" alt="权限问题">ok那就获取root权限</p>
-<p>但是<code>获取root之后发现依然出现问题，还是会出现上面的编译问题。</code></p>
-<p>于是我开始疯狂找问题所在，无意间在github上找到了Bhuman的账号<br><img src="https://img-blog.csdnimg.cn/2019070315115822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="bhuman"><a href="https://github.com/bhuman" target="_blank" rel="noopener">https://github.com/bhuman</a></p>
-<p>在上面下载了BHumanCodeRelease，解压重复上面的操作，<code>运行成功</code><br><img src="https://img-blog.csdnimg.cn/20190703224317261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="成功"><br>我详细对照了群里面文件和github文件中的installAlcommon文件<br><img src="https://img-blog.csdnimg.cn/20190703151614328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="对比"><br>未发现什么不同点，可能<code>问题还是出现在换行符的不同所造成的</code>。</p>
-<p>目前为止alcommon配置完成</p>
-<hr>
-<h2 id="六、编译"><a href="#六、编译" class="headerlink" title="六、编译"></a>六、编译</h2><p>依旧按照要求在目录下make<br><img src="https://img-blog.csdnimg.cn/20190703154525174.png" alt="要求">但是<code>出现了提示缺少clang++的问题...</code>我就重新装了一下clang<br><img src="https://img-blog.csdnimg.cn/20190703154612337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="clang">话说clang现在6.0了啊…发现第一步单独来一下有点多此一举。</p>
-<p>之后就正常的运行了。整个过程比较漫长，附上最后成功截图<br><img src="https://img-blog.csdnimg.cn/20190703154742443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="完成"></p>
-<hr>
-<h2 id="七、安装codelite"><a href="#七、安装codelite" class="headerlink" title="七、安装codelite"></a>七、安装codelite</h2><p>看到好像要用我就搜了一下安装了….<br>遵循下面这部分<br><img src="https://img-blog.csdnimg.cn/20190703161337143.png" alt="文件"><br>就一条代码</p>
-<pre class=" language-javascript"><code class="language-javascript"> sudo apt<span class="token operator">-</span><span class="token keyword">get</span> install codelite</code></pre>
-<p> 之后等待即可<br> <img src="https://img-blog.csdnimg.cn/20190703160353590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="codelite"><br> 之后在文件夹下运行Make/LinuxCodeLite/generate，提示完成<br> <img src="https://img-blog.csdnimg.cn/20190703161424873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F0aHVzX2M=,size_16,color_FFFFFF,t_70" alt="完成提示"></p>
-<h2 id="至此完成部署"><a href="#至此完成部署" class="headerlink" title="至此完成部署"></a><strong>至此完成部署</strong></h2><hr>
-
-      
-      <!-- 打赏 -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cosz.club/guanyupeizhibhumantongyongpingtaihuanjingxinde/" data-id="ck6d0f7wj000s1giye5w9da7n"
-        class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NAO%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">NAO机器人</a></li></ul>
 
     </footer>
 

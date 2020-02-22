@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="欢迎来到奇奇怪怪的分享站" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    利用you-get实现b站批量下载 |  cosz
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/logo.ico" />
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-利用you-get实现b站批量下载" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  利用you-get实现b站批量下载
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/liyongyougetshixianbzhanpiliangxiazai/" class="article-date">
+  <time datetime="2020-02-22T12:14:00.000Z" itemprop="datePublished">2020-02-22</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.1k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">4分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <blockquote>
+<p>因为资源保存问题我需要下载b站的一组视频，一共64p</p>
+</blockquote>
+<p><strong>如果只是单纯的下载某1p的视频，可以利用以下的办法：</strong></p>
+<ol>
+<li>使用idm抓取视频直接下载（如果视频是分块的需要多次下载）</li>
+<li>使用chrome插件捕获链接下载</li>
+<li>在网址url的bilibili后面加jj跳转到唧唧下载（需要有一定用户缓存才能，否则可能出现失败）</li>
+<li>使用硕鼠进行下载</li>
+<li><del>使用tubeget下载（已不再支持）</del> </li>
+<li>使用you-get</li>
+</ol>
+<p>对于单p视频其实并不建议使用you-get，因为你还要设置下载目录还要为了安装you-get设置环境变量。idm抓取最快最好用，但是遇到分块问题会很麻烦。分块是什么见下面</p>
+<p>但是难免出现你需要一次性下载一整套视频（例如网课），此时上面的1、2只能1p1p下载，3如果你遇到了小众视频便失败，而4一定情况下无法激活自动识别连接中全部p，而且批量下载超过20个就需要会员了。</p>
+<p><strong>此时you-get变成了不二之选</strong></p>
+<hr>
+<p><strong>下面介绍you-get在windows下怎么安装怎么用：</strong></p>
+<h4 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h4><p>官网还提供了windows下预装包但是发现新版并不更新预装包了，所以建议还是老老实实装依赖吧：<br><strong>Python3</strong><br>如果你之前安装了python2.7，安装完python3后（记得安装的时候勾选addtopath，没勾选的话后面自己添加也可以）需要在设置-系统-关于-系统信息-高级系统选项-环境变量-path中把你的python3路径上移到pyhton2.7之前。（此方法也可随时切换你所需要的python版本）<br><strong>FFmpeg</strong><br>上官网下载源代码之后解压到你想安装的文件夹，把该文件夹的目录按照上面的方法添加到path中。随后cmd中运行ffmpeg查看是否成功<br>ffmpeg为必要依赖，以下载流式视频以及合并分块视频（例如b站会把一个视频分割成很多个小片段，idm每次就只能捕捉到一个小片段），以及YouTube的1080p或更高分辨率.</p>
+<h4 id="二、安装you-get"><a href="#二、安装you-get" class="headerlink" title="二、安装you-get"></a>二、安装you-get</h4><p>执行完上面的操作之后便可以开始安装you-get<br>首先更新一下pip，不然可能会出现<code>Fatal error in launcher: Unable to create process using</code>的错误<br>在cmd中执行</p>
+<pre class=" language-Python"><code class="language-Python">python -m pip install -U pip</code></pre>
+<p>更新完成后会显示：</p>
+<pre class=" language-python"><code class="language-python">Collecting pip
+  Downloading https<span class="token punctuation">:</span><span class="token operator">//</span>files<span class="token punctuation">.</span>pythonhosted<span class="token punctuation">.</span>org<span class="token operator">/</span>packages<span class="token operator">/</span><span class="token number">54</span><span class="token operator">/</span><span class="token number">0c</span><span class="token operator">/</span>d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3<span class="token operator">/</span>pip<span class="token number">-20.0</span><span class="token punctuation">.</span><span class="token number">2</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span>any<span class="token punctuation">.</span>whl <span class="token punctuation">(</span><span class="token number">1.</span>4MB<span class="token punctuation">)</span>
+     <span class="token operator">|</span>████████████████████████████████<span class="token operator">|</span> <span class="token number">1.</span>4MB 16kB<span class="token operator">/</span>s
+Installing collected packages<span class="token punctuation">:</span> pip
+  Found existing installation<span class="token punctuation">:</span> pip <span class="token number">19.2</span><span class="token punctuation">.</span><span class="token number">3</span>
+    Uninstalling pip<span class="token number">-19.2</span><span class="token punctuation">.</span><span class="token number">3</span><span class="token punctuation">:</span>
+      Successfully uninstalled pip<span class="token number">-19.2</span><span class="token punctuation">.</span><span class="token number">3</span>
+Successfully installed pip<span class="token number">-20.0</span><span class="token punctuation">.</span><span class="token number">2</span></code></pre>
+<p>随后安装you-get</p>
+<pre class=" language-python"><code class="language-python">pip3 install you<span class="token operator">-</span>get</code></pre>
+<p>运行you-get检查一下是否安装成功，成功之后便可以开始下载</p>
+<h4 id="三、开始下载"><a href="#三、开始下载" class="headerlink" title="三、开始下载"></a>三、开始下载</h4><p>新版本的you-get中支持了批量下载，命令如下：</p>
+<pre class=" language-python"><code class="language-python">you<span class="token operator">-</span>get <span class="token operator">-</span><span class="token operator">-</span>playlist 网址（此处网址为不带p<span class="token operator">=</span>x的）</code></pre>
+<p>默认下载是最清晰的版本。如果您想下载前查看一下下载的内容啊格式啊可用清晰度啊可以利用-i命令，即：</p>
+<pre class=" language-python"><code class="language-python">you<span class="token operator">-</span>get <span class="token operator">-</span>i 网址</code></pre>
+<p>之后按照上面的提示输入对应的命令下载对应的版本即可<br>建议下载的时候添加-o指定一下下载路径，不然会默认下载到user文件夹中，，于是命令变成了：</p>
+<pre class=" language-python"><code class="language-python">you<span class="token operator">-</span>get <span class="token operator">-</span>o D<span class="token punctuation">:</span>\Download\视频\名字 <span class="token operator">-</span><span class="token operator">-</span>playlist 网址</code></pre>
+<p>ctrl+c可以暂停下载，再次提交相同下载请求的时候会默认继续下载。如果要强制重新下载添加-f即可</p>
+<h4 id="四、不下载直接传进播放器"><a href="#四、不下载直接传进播放器" class="headerlink" title="四、不下载直接传进播放器"></a>四、不下载直接传进播放器</h4><p>you-get也可以实现直接将视频传进播放器<br>你需要把你的播放器的执行文件目录放到path中，随后调用如下命令：</p>
+<pre class=" language-python"><code class="language-python">you<span class="token operator">-</span>get <span class="token operator">-</span>p 你的播放器名字 地址
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>例如
+you<span class="token operator">-</span>get <span class="token operator">-</span>p PotPlayerMini 地址</code></pre>
+<p>随后你的播放器便会打开播放。但是实测有些网站不可，例如b站…</p>
+<p>更多的使用方法可以参考官方文本：<br><a href="https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E#getting-started" target="_blank" rel="noopener">you-get说明</a></p>
+<blockquote>
+<p>本文参考：<br>you-get项目说明：<a href="https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E#getting-started" target="_blank" rel="noopener">https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E#getting-started</a></p>
+</blockquote>
+
+      
+      <!-- 打赏 -->
+      
+      <div id="reward-btn">
+        打赏
+      </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cosz.club/liyongyougetshixianbzhanpiliangxiazai/" data-id="ck6xkhoj40000lwiy01dc4o6k"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" rel="tag">计算机相关</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/geleimadeguiluzhuanhuan/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">格雷码的规律、转换</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2015-2020
+        Athus_c
+      </li>
+      <li>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.svg" alt="cosz"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>如果你有所收获可以请我喝杯嘿糖~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+  <script src="/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>
